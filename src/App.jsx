@@ -5,10 +5,12 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
-      <div className='bg-[url("/src/assets/hotelhero.jpg")] bg-cover bg-center h-screen w-full'>
+      <div className="">
+        <div className='bg-[url("/src/assets/Home.jpg")] bg-cover bg-center h-screen w-full backdrop-brightness-50'>
         <Navbar  />
         <Home />
-        
+
+      </div>
       </div>
     </>
   );
