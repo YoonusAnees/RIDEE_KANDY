@@ -1,4 +1,10 @@
 import React from "react";
+import { IoRestaurant } from "react-icons/io5";
+import { FaHouseChimneyUser } from "react-icons/fa6";
+import { FaPerson } from "react-icons/fa6";
+import { FaPersonRunning } from "react-icons/fa6";
+
+
 
 export default function Home() {
   return (
@@ -28,40 +34,35 @@ export default function Home() {
         </div>
       </section>
 
-       {/* NEXT SECTION-2-elcome to Ridee Boutique */}
+      {/* NEXT SECTION-2-elcome to Ridee Boutique */}
       <section
         className="relative  w-full h-screen
        bg-[url('/src/assets/Rectangle.png')]
        bg-center bg-no-repeat bg-cover
        flex items-center justify-center text-center text-white bg-white"
       >
+        <div className=" md:absolute md:-left-1 md: bg-black/3 md:w-[553px] md:h-[730px]" />
 
-        <div className="absolute -left-1  bg-black/3 w-[553px] h-[730px]"/>
-          
-      
-        
         <div className="absolute  md:right-10 md:bottom-7 ">
           <div className="relative">
-             <div
-              className="absolute w-[150px] h-[250px] bg-[url('/src/assets/Rectangle183.svg')]
-       bg-center bg-no-repeat bg-cover -top-10 -rotate-90 right-123"
+            <div
+              className="absolute md:w-[150px] md: h-[250px] h-[10px] w-[10px] bg-[url('/src/assets/Rectangle183.svg')]
+       bg-center bg-no-repeat bg-cover md:-top-10 -rotate-90 right-123"
             ></div>
             <div
-              className="absolute w-[150px] h-[250px] bg-[url('/src/assets/Rectangle183.svg')]
-       bg-center bg-no-repeat bg-cover top-87 -rotate-270 right-6"
+              className="absolute md:w-[150px] md:h-[250px] w-10 h-10 bg-[url('/src/assets/Rectangle183.svg')]
+       bg-center bg-no-repeat bg-cover md:top-88 md:-rotate-270 md:right-6 -rotate-90 "
             ></div>
-
-           
           </div>
-          <div className=" md:h-140 md:w-165 bg-white/80 border-2">
+          <div className=" md:h-140 md:w-165 bg-white/80 border-2 h-80 w-100 p-5">
             <div className="flex flex-col gap-2 text-center">
-              <div className="mt-20 text-black">
+              <div className="md:mt-20 text-black">
                 <p className="md:text-5xl font-Wasted my-5 font-extralight font-wasted">
                   Welcome to
                 </p>
                 <p className="md:text-6xl font-Wasted">Ridee Boutique</p>
               </div>
-              <div className="text-black px-[50px] font-medium  py-6 text-center text-xl font-Wasted">
+              <div className="text-black md:px-[50px] font-medium  md:py-6 text-center md:text-xl font-Wasted">
                 <p className="font-source">
                   Ridee Boutique is located in the last kingdom of Sri Lanka
                   Kandy. A beautific abode offering you the comfort of privacy,
@@ -76,25 +77,91 @@ export default function Home() {
       </section>
 
       {/* NEXT SECTION-3-Experience the best we provide */}
-      <section className="relative w-full h-screen">
-        <div className=" bg-black/3 w-[549px] h-[650px]"></div>
+      <section className="relative w-full h-screen flex flex-col justify-center items-center md:mt-50">
+        <div
+          className="
+      absolute
+      left-0 top-1/2 -translate-y-1/2
+      w-[549px] h-[10016px]
+      bg-black/3
+      z-0
+    "
+        />
+
+        <div className="relative z-10 p-5  mt-60 md:mt-0">
+          <p className="font-Wasted md:text-6xl text-2xl text-center">
+            Experience the best we provide
+          </p>
+          <p className="font-Wasted text-xl text-center md:px-72 mt-6">
+            Experience the perfect blend of elegance, comfort, and authentic Sri
+            Lankan charm at Ridee Boutique Hotel. Here’s why we are the ideal
+            choice for your stay in Kandy
+          </p>
+        </div>
+
+        <div className="relative z-10 flex flex-col md:flex-row w-full gap-4 md:gap-3 justify-evenly items-stretch md:items-center md:mt-5 px-4 md:px-0">
+  {/* LEFT COLUMN */}
+  <div className="flex flex-col gap-4 md:gap-3 w-full md:w-auto">
+    <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
+      <IoRestaurant size={30} />
+      <p className="text-xl font-bold">DINING & BEVERAGES</p>
+      <p className="px-4 md:px-20 mt-4">
+        Savor delightful meals and beverages with our on-site restaurant and café.
+      </p>
+    </div>
+
+    <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
+      <FaHouseChimneyUser size={30} />
+      <p className="text-xl font-bold">HOUSE KEEPING & MAINTENANCE</p>
+      <p className="px-4 md:px-30 mt-4">
+        Daily housekeeping ensures your room remains pristine
+      </p>
+    </div>
+  </div>
+
+  {/* CENTER CARD */}
+  <div className="flex flex-col items-center justify-center p-5 md:h-60 md:w-150 w-full text-center">
+    <FaPerson size={30} />
+    <p className="text-xl font-bold">GUEST SERVICES</p>
+    <p className="px-4 md:px-2 mt-4">
+      Our team is here to make every moment seamless — from 24-hour reception
+    </p>
+  </div>
+
+  {/* RIGHT COLUMN */}
+  <div className="flex flex-col gap-4 md:gap-3 w-full md:w-auto">
+    <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
+      <IoRestaurant size={30} />
+      <p className="text-xl font-bold">Business & Connectivity</p>
+      <p className="px-4 md:px-20 mt-4">
+        Stay connected with high-speed Wi-Fi and business-ready rooms
+      </p>
+    </div>
+
+    <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
+      <FaPersonRunning size={30} />
+      <p className="text-xl font-bold">LEISURE & RECREATION</p>
+      <p className="px-4 md:px-20 mt-4">
+        Relax and unwind in our lounge areas, gardens, or outdoor seating..
+      </p>
+    </div>
+  </div>
+</div>
+
       </section>
 
       {/* NEXT SECTION-4-Explore Our Rooms */}
-      <section className="bg-amber-200 w-full h-screen">
-        {/* content */}
-      </section>
+      {/* <section className="bg-amber-200 w-full h-screen">
+      </section> */}
 
       {/* NEXT SECTION-5- Experience The City */}
-      <section className="bg-amber-200 w-full h-screen">
-        {/* content */}
-      </section>
+      {/* <section className="bg-amber-200 w-full h-screen">
+      </section> */}
 
       {/* NEXT SECTOIN-6- THE TEMPLE OF TOOTH RELIC  */}
 
-      <section className="bg-amber-200 w-full h-screen">
-        {/* content */}
-      </section>
+      {/* <section className="bg-amber-200 w-full h-screen">
+      </section> */}
     </div>
   );
 }
