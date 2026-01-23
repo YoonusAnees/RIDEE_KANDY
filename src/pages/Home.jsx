@@ -190,7 +190,7 @@ export default function Home() {
             Explore Our Rooms
           </div>
 
-          <p className="text-center text-xl text-white px-40 font-source">
+          <p className="text-center text-xl text-white md:px-40 px-2 font-source">
             Experience the perfect blend of elegance, comfort, and authentic Sri
             Lankan charm at Ridee Boutique Hotel. Here’s why we are the ideal
             choice for your stay in Kandy.
