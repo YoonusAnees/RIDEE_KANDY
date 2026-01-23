@@ -11,7 +11,7 @@ export default function Navbar() {
           <img src="/src/assets/logo.svg" alt="logo" />
         </div>
 
-        <div className="hidden md:flex gap-6 items-center md:text-[18px] justify-evenly font-extralight  font-wasted">
+        <div className="hidden md:flex gap-6 items-center md:text-[18px] justify-evenly font-extralight  font-Wasted">
           <div className="mt-2 md:mx-8">Home</div>
           <div className="mt-2 md:mx-8">About Us</div>
           <div className="mt-2 md:mx-8">Rooms & Suites</div>
@@ -20,7 +20,7 @@ export default function Navbar() {
           <div className="mt-2 md:mx-8">CONTACT US</div>
         </div>
 
-        <div className=" md:flex  md:items-center md:justify-start md:mt-4  md:text-xl font-wasted">
+        <div className=" md:flex  md:items-center md:justify-start md:mt-1  md:text-xl font-Wasted">
           <div className="hidden md:flex justify-center items-center  border-2 border-white p-2  md:w-42 text-center md:h-14">
             Call Now
           </div>
@@ -33,7 +33,7 @@ export default function Navbar() {
         </div>
       </div>
       {open && (
-  <div className="md:hidden fixed top-14 left-0 w-full h-screen bg-black/90 backdrop-blur-md flex flex-col justify-center items-center space-y-6 text-center z-50">
+  <div className="md:hidden fixed top-14 left-0 w-full h-screen bg-black/90 backdrop-blur-md flex flex-col justify-center items-center space-y-6 text-center z-50  font-Wasted">
     <div className="text-2xl">Home</div>
     <div className="text-2xl">About Us</div>
     <div className="text-2xl">Rooms & Suites</div>
