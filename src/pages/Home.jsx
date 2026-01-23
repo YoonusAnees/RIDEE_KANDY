@@ -35,8 +35,22 @@ export default function Home() {
        bg-center bg-no-repeat bg-cover
        flex items-center justify-center text-center text-white"
       >
+
+        
         <div className="absolute  md:right-10 md:bottom-7 ">
-          <div className=" md:h-140 md:w-165 bg-white/80">
+          <div className="relative">
+             <div
+              className="absolute w-[150px] h-[250px] bg-[url('/src/assets/Rectangle183.svg')]
+       bg-center bg-no-repeat bg-cover -top-10 -rotate-90 right-123"
+            ></div>
+            <div
+              className="absolute w-[150px] h-[250px] bg-[url('/src/assets/Rectangle183.svg')]
+       bg-center bg-no-repeat bg-cover top-87 -rotate-270 right-6"
+            ></div>
+
+           
+          </div>
+          <div className=" md:h-140 md:w-165 bg-white/80 border-2">
             <div className="flex flex-col gap-2 text-center">
               <div className="mt-20 text-black">
                 <p className="md:text-5xl font-serif my-5 font-extralight font-wasted">
