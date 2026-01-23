@@ -3,10 +3,33 @@ import { IoRestaurant } from "react-icons/io5";
 import { FaHouseChimneyUser } from "react-icons/fa6";
 import { FaPerson } from "react-icons/fa6";
 import { FaPersonRunning } from "react-icons/fa6";
-
-
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function Home() {
+  const rooms = [
+    {
+      id: 1,
+      title: "PREMIUM ROOM",
+      image: "./src/assets/Room1.jpg",
+      description:
+        "Generously designed with a separate seating area. Enjoy a balcony with lush greenery or scenic views, ideal for indulgent or extended stays.",
+    },
+    {
+      id: 2,
+      title: "EXECUTIVE  SUITE",
+      image: "./src/assets/Room2.jpg",
+      description:
+        "Generously designed with a separate seating area. Enjoy a balcony with lush greenery or scenic views, ideal for indulgent or extended stays",
+    },
+    {
+      id: 3,
+      title: "EXECUTIVE SUITE",
+      image: "./src/assets/Room3.jpg",
+      description:
+        "Generously designed with a separate seating area. Enjoy a balcony with lush greenery or scenic views, ideal for indulgent or extended stays.",
+    },
+  ];
+
   return (
     <div className="w-full md:max-h-screen">
       {/* HERO with background image */}
@@ -81,10 +104,10 @@ export default function Home() {
         <div
           className="
       absolute
-      left-0 top-1/2 -translate-y-1/2
-      w-[549px] h-[10016px]
+      left-0 top-1/5 -translate-y-1/2
+      w-[549px] h-[980px]
       bg-black/3
-      z-0
+      z-0 
     "
         />
 
@@ -100,59 +123,136 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 flex flex-col md:flex-row w-full gap-4 md:gap-3 justify-evenly items-stretch md:items-center md:mt-5 px-4 md:px-0">
-  {/* LEFT COLUMN */}
-  <div className="flex flex-col gap-4 md:gap-3 w-full md:w-auto">
-    <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
-      <IoRestaurant size={30} />
-      <p className="text-xl font-bold">DINING & BEVERAGES</p>
-      <p className="px-4 md:px-20 mt-4">
-        Savor delightful meals and beverages with our on-site restaurant and café.
-      </p>
-    </div>
+          {/* LEFT COLUMN */}
+          <div className="flex flex-col gap-4 md:gap-3 w-full md:w-auto">
+            <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
+              <IoRestaurant size={30} />
+              <p className="text-xl font-bold">DINING & BEVERAGES</p>
+              <p className="px-4 md:px-20 mt-4 font-bold">
+                Savor delightful meals and beverages with our on-site restaurant
+                and café.
+              </p>
+            </div>
 
-    <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
-      <FaHouseChimneyUser size={30} />
-      <p className="text-xl font-bold">HOUSE KEEPING & MAINTENANCE</p>
-      <p className="px-4 md:px-30 mt-4">
-        Daily housekeeping ensures your room remains pristine
-      </p>
-    </div>
-  </div>
+            <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
+              <FaHouseChimneyUser size={30} />
+              <p className="text-xl font-bold">HOUSE KEEPING & MAINTENANCE</p>
+              <p className="px-4 md:px-30 font-bold mt-4">
+                Daily housekeeping ensures your room remains pristine
+              </p>
+            </div>
+          </div>
 
-  {/* CENTER CARD */}
-  <div className="flex flex-col items-center justify-center p-5 md:h-60 md:w-150 w-full text-center">
-    <FaPerson size={30} />
-    <p className="text-xl font-bold">GUEST SERVICES</p>
-    <p className="px-4 md:px-2 mt-4">
-      Our team is here to make every moment seamless — from 24-hour reception
-    </p>
-  </div>
+          {/* CENTER CARD */}
+          <div className="flex flex-col items-center justify-center p-5 md:h-60 md:w-150 w-full text-center">
+            <FaPerson size={30} />
+            <p className="text-xl font-bold">GUEST SERVICES</p>
+            <p className="px-4 md:px-1 mt-4 font-bold">
+              Our team is here to make every moment seamless — from 24-hour
+              reception
+            </p>
+          </div>
 
-  {/* RIGHT COLUMN */}
-  <div className="flex flex-col gap-4 md:gap-3 w-full md:w-auto">
-    <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
-      <IoRestaurant size={30} />
-      <p className="text-xl font-bold">Business & Connectivity</p>
-      <p className="px-4 md:px-20 mt-4">
-        Stay connected with high-speed Wi-Fi and business-ready rooms
-      </p>
-    </div>
+          {/* RIGHT COLUMN */}
+          <div className="flex flex-col gap-4 md:gap-3 w-full md:w-auto">
+            <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
+              <IoRestaurant size={30} />
+              <p className="text-xl font-bold">Business & Connectivity</p>
+              <p className="px-4 md:px-20 mt-4 font-bold">
+                Stay connected with high-speed Wi-Fi and business-ready rooms
+              </p>
+            </div>
 
-    <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
-      <FaPersonRunning size={30} />
-      <p className="text-xl font-bold">LEISURE & RECREATION</p>
-      <p className="px-4 md:px-20 mt-4">
-        Relax and unwind in our lounge areas, gardens, or outdoor seating..
-      </p>
-    </div>
-  </div>
-</div>
-
+            <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
+              <FaPersonRunning size={30} />
+              <p className="text-xl font-bold">LEISURE & RECREATION</p>
+              <p className="px-4 md:px-20 mt-4 font-bold">
+                Relax and unwind in our lounge areas, gardens, or outdoor
+                seating..
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* NEXT SECTION-4-Explore Our Rooms */}
-      {/* <section className="bg-amber-200 w-full h-screen">
-      </section> */}
+      <section
+        className="relative mt-70 md:mt-0 aspect-[1/1] 
+             md:aspect-[3/2] bg-[url('/src/assets/SECTION-4.jpg')] 
+             bg-center bg-cover"
+      >
+        {/* Background overlay */}
+        <div className="absolute inset-0 bg-black/50 z-0" />
+
+        {/* CONTENT (above overlay) */}
+        <div className="relative z-10 flex flex-col gap-3">
+          <div className="text-6xl font-Wasted p-5 text-center text-blue-300 md:mt-20">
+            Explore Our Rooms
+          </div>
+
+          <p className="text-center text-xl text-white px-40 font-source">
+            Experience the perfect blend of elegance, comfort, and authentic Sri
+            Lankan charm at Ridee Boutique Hotel. Here’s why we are the ideal
+            choice for your stay in Kandy.
+          </p>
+
+          <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 p-20">
+
+               <div
+              className="absolute md:w-[150px] md:h-[250px] w-10 h-10 bg-[url('/src/assets/Rectangle183.svg')]
+       bg-center bg-no-repeat bg-cover md:top-145 md:-rotate-270 md:right-253 -rotate-90 "
+            ></div>
+
+            <div
+              className="absolute md:w-[150px] md:h-[250px] w-10 h-10 bg-[url('/src/assets/Rectangle183.svg')]
+       bg-center bg-no-repeat bg-cover md:top-145 md:-rotate-270 md:right-22 -rotate-90 "
+            ></div>
+
+            <div
+              className="absolute md:w-[150px] md:h-[250px] w-10 h-10 bg-[url('/src/assets/Rectangle183.svg')]
+       bg-center bg-no-repeat bg-cover md:top-145 md:-rotate-270 md:right-138 -rotate-90 "
+            ></div>
+            {rooms.map((room) => (
+              <div
+                key={room.id}
+                className="flex flex-col items-center justify-center border-2 border-black/55"
+              >
+                {/* IMAGE */}
+                <div
+                  className="w-full h-[300px] aspect-[1/1] md:aspect-[3/2] bg-center bg-cover"
+                  style={{ backgroundImage: `url(${room.image})` }}
+                />
+
+                {/* CONTENT */}
+                <div className="flex flex-col w-full h-[400px] bg-black/50 text-white shadow-2xl">
+                  <div className="p-5">
+                    <p className="text-center text-xl font-Wasted mt-8">
+                      {room.title}
+                    </p>
+                  </div>
+
+                  <p className="text-center text-[15px] font-source px-6 md:px-15 mt-8">
+                    {room.description}
+                  </p>
+
+                  <div className="flex flex-col p-5 items-center justify-center font-source">
+                    <button className="text-xl md:mt-20 underline cursor-pointer">
+                      VIEW ROOM
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-row justify-center items-center gap-2 text-center text-xl text-white p-5 font-source cursor-pointer md:mt-10">
+            <div>SEE ALL</div>
+            <div>
+              <FaArrowRight />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* NEXT SECTION-5- Experience The City */}
       {/* <section className="bg-amber-200 w-full h-screen">
