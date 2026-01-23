@@ -1,4 +1,18 @@
+@font-face {
+  font-family: 'Wasted Vindey';
+  src: url('../src/assets/fonts/Wasted-Vindey.ttf');
+  font-family: 'source-serif-4';
+  src: url('../src/assets/fonts/SourceSerif4-VariableFont_opsz,wght.ttf');
+
+}
 @import "tailwindcss";
+
+
+
+@theme {
+  --font-Wasted:Wasted Vindey,"sans-serif";
+  --font-source:source-serif-4;
+}
 
 
 

@@ -19,23 +19,26 @@ export default function Home() {
 
         {/* content */}
         <div className="relative z-10 max-w-6xl md:max-w-5xl mx-auto pt-24 md:pt-24">
-          <p className="text-5xl font-serif my-4 font-extralight font-wasted">
+          <p className="text-5xl  my-4  font-Wasted">
             Embrace the Beauty of Timeless Stay
           </p>
-          <p className="md:px-96 px-4 text-xl font-serif mt-10">
+          <p className="md:px-96 px-4 text-xl  mt-6 font-Wasted">
             with Ridee Boutique Hotel
           </p>
         </div>
       </section>
 
-      {/* NEXT SECTION-2-elcome to Ridee Boutique */}
+       {/* NEXT SECTION-2-elcome to Ridee Boutique */}
       <section
         className="relative  w-full h-screen
        bg-[url('/src/assets/Rectangle.png')]
        bg-center bg-no-repeat bg-cover
-       flex items-center justify-center text-center text-white"
+       flex items-center justify-center text-center text-white bg-white"
       >
 
+        <div className="absolute -left-1  bg-black/3 w-[553px] h-[730px]"/>
+          
+      
         
         <div className="absolute  md:right-10 md:bottom-7 ">
           <div className="relative">
@@ -53,13 +56,13 @@ export default function Home() {
           <div className=" md:h-140 md:w-165 bg-white/80 border-2">
             <div className="flex flex-col gap-2 text-center">
               <div className="mt-20 text-black">
-                <p className="md:text-5xl font-serif my-5 font-extralight font-wasted">
+                <p className="md:text-5xl font-Wasted my-5 font-extralight font-wasted">
                   Welcome to
                 </p>
-                <p className="md:text-6xl font-serif">Ridee Boutique</p>
+                <p className="md:text-6xl font-Wasted">Ridee Boutique</p>
               </div>
-              <div className="text-black px-[50px] font-bold  py-6 text-center text-xl">
-                <p>
+              <div className="text-black px-[50px] font-medium  py-6 text-center text-xl font-Wasted">
+                <p className="font-source">
                   Ridee Boutique is located in the last kingdom of Sri Lanka
                   Kandy. A beautific abode offering you the comfort of privacy,
                   this luxury hotel is conveniently placed in front of the Kandy
@@ -73,8 +76,8 @@ export default function Home() {
       </section>
 
       {/* NEXT SECTION-3-Experience the best we provide */}
-      <section className="bg-amber-200 w-full h-screen">
-        {/* content */}
+      <section className="relative w-full h-screen">
+        <div className=" bg-black/3 w-[549px] h-[650px]"></div>
       </section>
 
       {/* NEXT SECTION-4-Explore Our Rooms */}
