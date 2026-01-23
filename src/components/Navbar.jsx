@@ -4,12 +4,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav
-      className="md:sticky md:top-0 md:z-50 
-      h-14 md:h-30 p-4 md:px-2 py-2 text-white
-      bg-[#1A1A1A40] backdrop-blur-md backdrop-brightness-50"
-    >
-      <div className="flex md:max-w-7xl  md:mx-auto md:flex justify-between items-center mt-2">
+<nav className="fixed top-0 left-0 w-full z-50 h-14 md:h-24 px-4 py-2 text-white bg-[#1A1A1A40] backdrop-blur-md">
+
+  <div className="flex md:max-w-7xl md:mx-auto justify-between items-center h-full">
         <div className="hidden md:block h-5 w-5 md:h-12 md:w-20 mb-8">
           <img src="/src/assets/logo.svg" alt="logo" />
         </div>
