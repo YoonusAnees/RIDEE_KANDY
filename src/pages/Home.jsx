@@ -31,8 +31,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="w-full md:max-h-screen">
-      {/* HERO with background image */}
+    <div className="w-full h-[] md:max-h-screen">     {/* HERO with background image */}
       <section
         className="
     relative w-full
@@ -255,8 +254,18 @@ export default function Home() {
       </section>
 
       {/* NEXT SECTION-5- Experience The City */}
-      {/* <section className="bg-amber-200 w-full h-screen">
-      </section> */}
+      <section className="bg-amber-200 w-full md:h-[350px]">
+        <div className="flex flex-col items-center justify-center p-20">
+           <div className="text-center text-6xl font-Wasted  ">
+            Experience The City
+           </div>
+
+           <div className="text-2xl p-5">
+            Discover the heart of Kandy beyond your stay. From the sacred Temple of the Tooth to the peaceful Kandy 
+Lake and colorful local markets, every corner tells a story.
+           </div>
+        </div>
+      </section>
 
       {/* NEXT SECTOIN-6- THE TEMPLE OF TOOTH RELIC  */}
 

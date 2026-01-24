@@ -4,45 +4,93 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-<nav className="fixed top-0 left-0 w-full z-50 h-14 md:h-24 px-4 py-2 text-white bg-[#1A1A1A40] backdrop-blur-md">
+    <nav
+      className="
+        fixed top-0 left-0 w-[100vw] z-50
+        h-[14vw] md:h-[8vw] max-h-30  px-[4vw]
+        text-white
+        backdrop-blur-2xl
+        bg-gradient-to from-white/18 via-white/10 to-white/5
+        
+        shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+      "
+    >
+      {/* glass highlight + subtle glow */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-[1px] bg-white/40" />
+        <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[60vw] h-[60vw] rounded-full bg-white/10 blur-3xl opacity-40" />
+      </div>
 
-  <div className="flex md:max-w-7xl md:mx-auto justify-between items-center h-full">
-        <div className="hidden md:block h-5 w-5 md:h-12 md:w-20 mb-8">
-          <img src="/src/assets/logo.svg" alt="logo" />
+      {/* MAIN BAR */}
+      <div className="relative flex max-w-[90vw] mx-auto justify-between items-center h-full">
+        {/* LOGO */}
+        <div className="hidden md:block w-[6vw] max-w-20">
+          <img src="/src/assets/logo.svg" alt="logo" className="w-full" />
         </div>
 
-        <div className="hidden md:flex gap-6 items-center md:text-[18px] justify-evenly font-extralight  font-Wasted">
-          <div className="mt-2 md:mx-8">Home</div>
-          <div className="mt-2 md:mx-8">About Us</div>
-          <div className="mt-2 md:mx-8">Rooms & Suites</div>
-          <div className="mt-2 md:mx-8">PACKAGES</div>
-
-          <div className="mt-2 md:mx-8">CONTACT US</div>
+        {/* DESKTOP MENU */}
+        <div className="hidden md:flex items-center gap-[3vw] text-[1.2vw] font-extralight font-Wasted">
+          <div className="hover:text-white/90 cursor-pointer">Home</div>
+          <div className="hover:text-white/90 cursor-pointer">About Us</div>
+          <div className="hover:text-white/90 cursor-pointer">Rooms & Suites</div>
+          <div className="hover:text-white/90 cursor-pointer">Packages</div>
+          <div className="hover:text-white/90 cursor-pointer">Contact Us</div>
         </div>
 
-        <div className=" md:flex  md:items-center md:justify-start md:mt-1  md:text-xl font-Wasted">
-          <div className="hidden md:flex justify-center items-center  border-2 border-white p-2  md:w-42 text-center md:h-14">
+        {/* RIGHT SIDE */}
+        <div className="flex items-center">
+          {/* CALL BUTTON */}
+          <div
+            className="
+              hidden md:flex items-center justify-center
+              px-[2vw] py-[0.8vw] text-[1.2vw] font-Wasted
+              border-2 border-amber-50
+            "
+          >
             Call Now
           </div>
+
+          {/* HAMBURGER */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden mb-2  text-xl items-end-safe ml-105"
+            className="md:hidden text-[6vw] relative"
           >
             ☰
           </button>
         </div>
       </div>
-      {open && (
-  <div className="md:hidden fixed top-14 left-0 w-full h-screen bg-black/90 backdrop-blur-md flex flex-col justify-center items-center space-y-6 text-center z-50  font-Wasted">
-    <div className="text-2xl">Home</div>
-    <div className="text-2xl">About Us</div>
-    <div className="text-2xl">Rooms & Suites</div>
-    <div className="text-2xl">Packages</div>
-    <div className="text-2xl">Contact Us</div>
-    <div className="border border-white py-2 px-6 mt-4 text-xl">Call Now</div>
-  </div>
-)}
 
+      {/* MOBILE MENU (Liquid Glass) */}
+      {open && (
+        <div
+          className="
+            md:hidden fixed top-[14vw] left-0 w-[100vw] h-[100vh]
+            backdrop-blur-2xl
+            bg-gradient-to-b from-black/60 via-black/50 to-black/40
+            border-t border-white/10
+            flex flex-col justify-center items-center gap-[6vw]
+            text-center z-50 font-Wasted
+          "
+        >
+          <div className="text-[6vw]">Home</div>
+          <div className="text-[6vw]">About Us</div>
+          <div className="text-[6vw]">Rooms & Suites</div>
+          <div className="text-[6vw]">Packages</div>
+          <div className="text-[6vw]">Contact Us</div>
+
+          <div
+            className="
+              px-[6vw] py-[2vw] text-[5vw]
+              border border-white/25
+              bg-white/10
+              backdrop-blur-xl
+              shadow-[inset_0_1px_0_rgba(255,255,255,0.25)]
+            "
+          >
+            Call Now
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
