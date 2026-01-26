@@ -36,7 +36,7 @@ export default function Home() {
       {/* HERO with background image */}
       <section
         className="
-    relative w-full
+    relative 
     bg-[url('/src/assets/Home.jpg')]
     bg-center bg-no-repeat bg-cover
     aspect-[1/1] 
@@ -77,7 +77,7 @@ export default function Home() {
        bg-center bg-no-repeat bg-cover md:top-88 md:-rotate-270 md:right-6 -rotate-90 "
             ></div>
           </div>
-          <div className=" md:h-140 md:w-165 bg-white/80 border-2 h-80 w-100 p-5">
+          <div className=" md:h-140 md:w-165 bg-white/80 border-2 h-80  p-5">
             <div className="flex flex-col gap-2 text-center">
               <div className="md:mt-20 text-black">
                 <p className="md:text-5xl font-Wasted my-5 font-extralight font-wasted">
@@ -103,11 +103,12 @@ export default function Home() {
 
             <div
           className="absolute
-      w-[46vw] h-[95vh]
+      md:w-[46vw] md:h-[95vh]
       bg-[url('/src/assets/Rectangle-4.png')]
       bg-no-repeat bg-center bg-contain
       rotate-330 md:-top-42 md:left-238
-      -top-80  left-80
+      -top-65  left-55
+      w-[60vw] h-[95vh]
     "
         ></div>
 
@@ -122,7 +123,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="relative z-10 flex flex-col md:flex-row w-full gap-4 md:gap-3 justify-evenly items-stretch md:items-center md:-mt-36 px-4 md:px-0">
+        <div className="relative z-10 flex flex-col md:flex-row w-full gap-4 md:gap-3 justify-evenly items-stretch md:items-center md:-mt-36  px-4 md:px-0">
           {/* LEFT COLUMN */}
           <div className="flex flex-col gap-4 md:gap-3 w-full md:w-auto">
             <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
@@ -252,20 +253,24 @@ export default function Home() {
         </div>
       </section>
       {/* NEXT SECTION-5- Experience The City */}
-      <section className="relative w-full md:h-[370px] overflow-hidden">
+      <section className="relative w-full md:h-[400px] overflow-hidden">
         <div
           className="absolute
-      w-[26vw] h-[85vh]
+      md:w-[26vw] md:h-[85vh]
       bg-[url('/src/assets/Rectangle-4.png')]
       bg-no-repeat bg-center bg-contain
       rotate-210 md:-top-42 md:-left-12
-      -top-64  -left-14
+      -top-50  -left-8
+
+
+      w-[60vw] h-[90vh]
+
     "
         ></div>
 
         <div className="absolute bg-black/5 h-screen w-1/2 -right-2"></div>
 
-        <div className="relative z-10 flex flex-col items-center justify-center p-20 md:py-30">
+        <div className="relative z-10 flex flex-col items-center justify-center p-20 md:py-40">
           <div className="text-center text-5xl font-Wasted">
             Experience The City
           </div>
