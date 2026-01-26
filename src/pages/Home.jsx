@@ -271,7 +271,7 @@ export default function Home() {
     aspect-[1/1] md:aspect-[16/8]
     bg-[url('/src/assets/temple.png')]
     bg-no-repeat bg-cover
-    grid  grid-rows-5
+    grid grid-rows-2 md:grid-rows-5
   "
       >
         {/* ROW 1 – TITLE */}
@@ -324,6 +324,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
     </div>
   );
 }
