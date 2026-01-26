@@ -1,8 +1,7 @@
 import {
   FaInstagram,
-  FaTwitter,
+ FaYoutube ,
   FaFacebookF,
-  FaLinkedinIn,
 } from "react-icons/fa";
 import { HiArchive } from "react-icons/hi";
 
@@ -15,7 +14,7 @@ export default function Footer() {
     border-t border-gray-200
     pt-24 pb-4
     p-24
-    -mt-9 md:-mt-9.5
+    -mt-9 md:-mt-58
   "
 >
       <div className="max-w-8xl md:mx-auto md:h-[40vh]  grid grid-cols-1 md:grid-cols-4">
@@ -33,16 +32,16 @@ export default function Footer() {
             <p>Where  timeless Sri Lankan charm meets modern comfort. Stay with us
             and make every moment unforgettable</p>
           </div>
-          <div className="flex space-x-3 text-xl text-gray-500">
+          <div className="flex space-x-3 text-xl text-white">
             <a href="/">
-              <FaFacebookF className="hover:text-black transition" />
+              <FaFacebookF className="hover:text-gray-500 transition" />
             </a>
             <a href="/">
-              <FaInstagram className="hover:text-black transition" />
+              <FaInstagram className="hover:text-gray-500 transition" />
             </a>
 
             <a href="/">
-              <FaLinkedinIn className="hover:text-black transition" />
+              <FaYoutube className="hover:text-gray-500 transition" />
             </a>
           </div>
         </div>
@@ -111,7 +110,7 @@ export default function Footer() {
               placeholder="Your email"
               className="flex-1 border border-gray-300 bg-white  text-gray-900 px-4 py-3 focus:outline-none focus:ring-1 focus:ring-black"
             />
-            <button className="bg-gray-400 text-black px-4 ">Subscribe</button>
+            <button className="bg-gray-400 text-black px-4 cursor-pointer">Subscribe</button>
           </div>
         </div>
       </div>

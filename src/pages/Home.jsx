@@ -250,19 +250,27 @@ export default function Home() {
         </div>
       </section>
       {/* NEXT SECTION-5- Experience The City */}
-      <section className=" w-full md:h-[350px]">
-        <div className="flex flex-col items-center justify-center p-20">
-          <div className="text-center text-6xl font-Wasted  ">
-            Experience The City
-          </div>
+  <section className="relative w-full md:h-[370px] overflow-hidden">
+  <div
+    className="absolute
+      w-[26vw] h-[85vh]
+      bg-[url('/src/assets/Rectangle-4.png')]
+      bg-no-repeat bg-center bg-contain
+      rotate-210 md:-top-42 md:-left-12
+    "
+  ></div>
 
-          <div className="text-2xl p-5 text-center">
-            Discover the heart of Kandy beyond your stay. From the sacred Temple
-            of the Tooth to the peaceful Kandy Lake and colorful local markets,
-            every corner tells a story.
-          </div>
-        </div>
-      </section>
+  <div className="relative z-10 flex flex-col items-center justify-center p-20 md:py-30">
+    <div className="text-center text-5xl font-Wasted">
+      Experience The City
+    </div>
+
+    <div className="text-lg p-5 text-center md:px-60 font-medium">
+Discover the heart of Kandy beyond your stay. From the sacred Temple of the Tooth to the peaceful Kandy 
+Lake and colorful local markets, every corner tells a story.    </div>
+  </div>
+</section>
+
       {/* NEXT SECTOIN-6- THE TEMPLE OF TOOTH RELIC  */}
       <section
         className="

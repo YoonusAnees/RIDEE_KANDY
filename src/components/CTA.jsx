@@ -3,8 +3,16 @@ import React from 'react'
 export default function CTA() {
   return (
     <section>
-        <div className="flex flex-col gap-3 w-full">
+        <div className="relative flex flex-col gap-3 w-full h-[95vh] overflow-hidden">
           <div className=" p-5  md:py-10 font-source">
+              <div
+          className="absolute
+      w-[36vw] h-[95vh]
+      bg-[url('/src/assets/Rectangle-4.png')]
+      bg-no-repeat bg-center bg-contain
+      rotate-315 md:-top-1/3 md:-right-1/28
+    "
+        ></div>
             <h1 className="text-center text-3xl">
               Discover the Soul of Sri Lankan Serenity
             </h1>
