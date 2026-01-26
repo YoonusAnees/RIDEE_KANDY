@@ -11,6 +11,7 @@ export default function CTA() {
       bg-[url('/src/assets/Rectangle-4.png')]
       bg-no-repeat bg-center bg-contain
       rotate-315 md:-top-1/3 md:-right-1/28
+      -top-60 -right-20
     "
         ></div>
             <h1 className="text-center text-3xl">

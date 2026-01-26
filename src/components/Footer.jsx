@@ -14,7 +14,7 @@ export default function Footer() {
     border-t border-gray-200
     pt-24 pb-4
     p-24
-    -mt-9 md:-mt-58
+    -mt-54 md:-mt-58  
   "
 >
       <div className="max-w-8xl md:mx-auto md:h-[40vh]  grid grid-cols-1 md:grid-cols-4">

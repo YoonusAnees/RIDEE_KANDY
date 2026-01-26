@@ -4,6 +4,7 @@ import { FaHouseChimneyUser } from "react-icons/fa6";
 import { FaPerson } from "react-icons/fa6";
 import { FaPersonRunning } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 export default function Home() {
   const rooms = [
@@ -250,67 +251,82 @@ export default function Home() {
         </div>
       </section>
       {/* NEXT SECTION-5- Experience The City */}
-  <section className="relative w-full md:h-[370px] overflow-hidden">
-  <div
-    className="absolute
+      <section className="relative w-full md:h-[370px] overflow-hidden">
+        <div
+          className="absolute
       w-[26vw] h-[85vh]
       bg-[url('/src/assets/Rectangle-4.png')]
       bg-no-repeat bg-center bg-contain
       rotate-210 md:-top-42 md:-left-12
+      -top-64  -left-14
     "
-  ></div>
+        ></div>
 
-  <div className="relative z-10 flex flex-col items-center justify-center p-20 md:py-30">
-    <div className="text-center text-5xl font-Wasted">
-      Experience The City
-    </div>
+        <div className="relative z-10 flex flex-col items-center justify-center p-20 md:py-30">
+          <div className="text-center text-5xl font-Wasted">
+            Experience The City
+          </div>
 
-    <div className="text-lg p-5 text-center md:px-60 font-medium">
-Discover the heart of Kandy beyond your stay. From the sacred Temple of the Tooth to the peaceful Kandy 
-Lake and colorful local markets, every corner tells a story.    </div>
-  </div>
-</section>
+          <div className="text-lg p-5 text-center md:px-60 font-medium">
+            Discover the heart of Kandy beyond your stay. From the sacred Temple
+            of the Tooth to the peaceful Kandy Lake and colorful local markets,
+            every corner tells a story.{" "}
+          </div>
+        </div>
+      </section>
 
       {/* NEXT SECTOIN-6- THE TEMPLE OF TOOTH RELIC  */}
-      <section
-        className="
+     <section
+  className="
     relative
     aspect-[1/1] md:aspect-[16/8]
     bg-[url('/src/assets/temple.png')]
     bg-no-repeat bg-cover
     grid grid-rows-2 md:grid-rows-5
   "
-      >
-        {/* ROW 1 – TITLE */}
-        <div className="md:px-24 md:py-16 p-12">
-          <p className="md:text-[55px] text-2xl font-source font-bold text-white">
-            THE TEMPLE OF TOOTH RELIC
-          </p>
-        </div>
+>
+  {/* ROW 1 – TITLE */}
+  <div className="md:px-24 md:py-16 p-12">
+    <p className="md:text-[55px] text-2xl font-source font-bold text-white">
+      THE TEMPLE OF TOOTH RELIC
+    </p>
+  </div>
 
-        <div></div>
-        <div></div>
-        {/* ROW 3 – TEXT BOX */}
-        <div className="flex items-start md:px-24 p-12">
-          <div
-            className="bg-zinc-800/80 backdrop-blur-md 
-                    w-full md:w-[28vw]
-                    p-6 md:px-10 md:py-12
-                    text-center text-white font-source"
-          >
-            <p>
-              Kandy is home to the iconic Temple of the Sacred Tooth Relic, one
-              of Buddhism’s most revered sites. You’ll also find other temples
-              and historic churches scattered around the city, each offering a
-              glimpse into the rich religious tapestry of the region.
-            </p>
-          </div>
-        </div>
-      </section>
-     
+  <div></div>
+  <div></div>
 
+  {/* TEXT BOX */}
+  <div className="flex items-start md:px-24 p-12">
+    <div
+      className="bg-zinc-800/80 backdrop-blur-md 
+        w-full md:w-[28vw]
+        p-6 md:px-10 md:py-12
+        text-center text-white font-source"
+    >
+      <p>
+        Kandy is home to the iconic Temple of the Sacred Tooth Relic, one
+        of Buddhism’s most revered sites...
+      </p>
+    </div>
+  </div>
 
+  <div
+    className="
+      absolute
+      bottom-6 right-6
+      md:bottom-12 md:right-24
+      flex gap-3
+    "
+  >
+    <button className="bg-gray-400/70 hover:bg-gray-500/80 transition rounded-full p-3">
+      <FaChevronLeft size={24} className="text-white" />
+    </button>
 
+    <button className="bg-gray-400/70 hover:bg-gray-500/80 transition rounded-full p-3">
+      <FaChevronRight size={24} className="text-white" />
+    </button>
+  </div>
+</section>
 
     </div>
   );
