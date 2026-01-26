@@ -265,51 +265,65 @@ export default function Home() {
         </div>
       </section>
       {/* NEXT SECTOIN-6- THE TEMPLE OF TOOTH RELIC  */}
-    <section
-  className="
+      <section
+        className="
     relative
     aspect-[1/1] md:aspect-[16/8]
     bg-[url('/src/assets/temple.png')]
     bg-no-repeat bg-cover
-    grid grid-rows-5
+    grid  grid-rows-5
   "
->
-  {/* ROW 1 – TITLE */}
-  <div className="md:px-24 md:py-16 p-12">
-    <p className="md:text-[55px] text-2xl font-source font-bold text-white">
-      THE TEMPLE OF TOOTH RELIC
-    </p>
-  </div>
+      >
+        {/* ROW 1 – TITLE */}
+        <div className="md:px-24 md:py-16 p-12">
+          <p className="md:text-[55px] text-2xl font-source font-bold text-white">
+            THE TEMPLE OF TOOTH RELIC
+          </p>
+        </div>
 
-<div></div>
-<div></div>
-  {/* ROW 3 – TEXT BOX */}
-  <div className="flex items-start md:px-24 p-12">
-    <div className="bg-zinc-800/80 backdrop-blur-md 
+        <div></div>
+        <div></div>
+        {/* ROW 3 – TEXT BOX */}
+        <div className="flex items-start md:px-24 p-12">
+          <div
+            className="bg-zinc-800/80 backdrop-blur-md 
                     w-full md:w-[28vw]
                     p-6 md:px-10 md:py-12
-                    text-center text-white font-source">
-      <p>
-        Kandy is home to the iconic Temple of the Sacred Tooth Relic, one
-        of Buddhism’s most revered sites. You’ll also find other temples
-        and historic churches scattered around the city, each offering a
-        glimpse into the rich religious tapestry of the region.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div className="flex flex-col gap-3 w-full">
-    <div className="bg-amber-200 p-5">
-      <h1 className="text-center text-2xl">Discover the Soul of Sri Lankan Serenity</h1>
-    </div>
-        <div className="bg-amber-200 p-5"></div>
-    <div className="bg-amber-200 p-5"></div>
-
-  </div>
-</section>
-
+                    text-center text-white font-source"
+          >
+            <p>
+              Kandy is home to the iconic Temple of the Sacred Tooth Relic, one
+              of Buddhism’s most revered sites. You’ll also find other temples
+              and historic churches scattered around the city, each offering a
+              glimpse into the rich religious tapestry of the region.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="flex flex-col gap-3 w-full">
+          <div className=" p-5  md:py-10 font-source">
+            <h1 className="text-center text-3xl">
+              Discover the Soul of Sri Lankan Serenity
+            </h1>
+          </div>
+          <div className=" p-5 md:px-50 text-center  md:text-[1.5vw] font-sourc">
+            Step into Ridee Boutique Hotel , where modern comfort embraces the
+            soul of old Sri Lankan charm. Set in the heart of Kandy, our serene
+            retreat invites you to discover authentic hospitality, rich
+            traditions, and the gentle beauty of a place that feels like home,
+            yet unlike anywhere else.
+          </div>
+          <div className="flex justify-center items-center  p-5 md:px-2 md:py-4  ">
+            <div className="bg-black flex items-center justify-center border-2 md:w-[15vw] w-[30vw] h-[8vh] font-source text-xl text-white text-center ">
+              Call to Book
+            </div>
+          </div>
+          <div className="bg-black/5 flex items-center justify-center p-2 md:px-1">
+            <div className=" h-[13vh] w-[50vw]   bg-[url('/src/assets/SECTION-5.svg')] bg-no-repeat bg-center"></div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
