@@ -8,8 +8,10 @@ function App() {
       <>
       <Navbar />
       <Home />
-      <CTA/>
-      <Footer/>
+       <div className="relative">
+        <CTA />
+        <Footer />
+      </div>
       </>
   );
 }

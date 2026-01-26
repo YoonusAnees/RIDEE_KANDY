@@ -8,7 +8,16 @@ import { HiArchive } from "react-icons/hi";
 
 export default function Footer() {
   return (
-    <footer className="bg-black  text-amber-50 border-t border-gray-200 pt-8 pb-4 mt-auto p-24">
+<footer
+  className="
+    relative z-20
+    bg-black text-amber-50
+    border-t border-gray-200
+    pt-24 pb-4
+    p-24
+    -mt-9 md:-mt-9.5
+  "
+>
       <div className="max-w-8xl md:mx-auto md:h-[40vh]  grid grid-cols-1 md:grid-cols-4">
         {/* Column 1 */}
         <div>
