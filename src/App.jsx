@@ -5,14 +5,15 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-      <>
+    <>
       <Navbar />
-      <Home />
-       <div className="relative">
+
+      {/* <main className="pt-[clamp(64px,8vh,90px)]"> */}
+        <Home />
         <CTA />
         <Footer />
-      </div>
-      </>
+      {/* </main> */}
+    </>
   );
 }
 

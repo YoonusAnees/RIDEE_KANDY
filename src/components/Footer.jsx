@@ -1,22 +1,18 @@
-import {
-  FaInstagram,
- FaYoutube ,
-  FaFacebookF,
-} from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaFacebookF } from "react-icons/fa";
 import { HiArchive } from "react-icons/hi";
 
 export default function Footer() {
   return (
-<footer
-  className="
+    <footer
+      className="
     relative z-20
     bg-black text-amber-50
     border-t border-gray-200
     pt-24 pb-4
     p-24
-    -mt-54 md:-mt-58  
+    md:-mt-54 -mt-52
   "
->
+    >
       <div className="max-w-8xl md:mx-auto md:h-[40vh]  grid grid-cols-1 md:grid-cols-4">
         {/* Column 1 */}
         <div>
@@ -29,8 +25,10 @@ export default function Footer() {
             className="text-white mb-4  md:text-lg 
              font-source tracking-[.25em]"
           >
-            <p>Where  timeless Sri Lankan charm meets modern comfort. Stay with us
-            and make every moment unforgettable</p>
+            <p>
+              Where timeless Sri Lankan charm meets modern comfort. Stay with us
+              and make every moment unforgettable
+            </p>
           </div>
           <div className="flex space-x-3 text-xl text-white">
             <a href="/">
@@ -92,7 +90,12 @@ export default function Footer() {
 
           <p className="mt-4 font-Wasted">+94 XX XXX XXXX</p>
 
-          <a href="mailto:rideebotique@gmail.com" className="cursor-pointer font-Wasted">rideebotique@gmail.com</a>
+          <a
+            href="mailto:rideebotique@gmail.com"
+            className="cursor-pointer font-Wasted"
+          >
+            rideebotique@gmail.com
+          </a>
         </div>
 
         {/* Column 4 */}
@@ -101,8 +104,8 @@ export default function Footer() {
             Subscribe to Our Newsletter
           </h4>
           <p className="text-white-500 mb-3 font-source text-base">
-           Stay updated with exclusive offers and the latest 
-           news from Ridee Boutique.
+            Stay updated with exclusive offers and the latest news from Ridee
+            Boutique.
           </p>
           <div className="flex gap-4 w-full max-w-sm">
             <input
@@ -110,7 +113,9 @@ export default function Footer() {
               placeholder="Your email"
               className="flex-1 border border-gray-300 bg-white  text-gray-900 px-4 py-3 focus:outline-none focus:ring-1 focus:ring-black"
             />
-            <button className="bg-gray-400 text-black px-4 cursor-pointer">Subscribe</button>
+            <button className="bg-gray-400 text-black px-4 cursor-pointer">
+              Subscribe
+            </button>
           </div>
         </div>
       </div>

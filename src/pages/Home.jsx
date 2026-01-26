@@ -59,8 +59,8 @@ export default function Home() {
       </section>
       {/* NEXT SECTION-2-elcome to Ridee Boutique */}
       <section
-        className="relative  w-full h-screen
-       bg-[url('/src/assets/Rectangle.png')]
+        className="relative  w-full h-[100vh]
+       bg-[url('/src/assets/BG.png')]
        bg-center bg-no-repeat bg-cover
        flex items-center justify-center text-center text-white bg-white"
       >
@@ -69,7 +69,7 @@ export default function Home() {
         <div className="absolute  md:right-10 md:bottom-7 ">
           <div className="relative">
             <div
-              className="absolute md:w-[150px] md: h-[250px] h-[10px] w-[10px] bg-[url('/src/assets/Rectangle183.svg')]
+              className="absolute md:w-[150px] md: h-[250px]  bg-[url('/src/assets/Rectangle183.svg')]
        bg-center bg-no-repeat bg-cover md:-top-10 -rotate-90 right-123"
             ></div>
             <div
@@ -99,7 +99,16 @@ export default function Home() {
         </div>
       </section>
       {/* NEXT SECTION-3-Experience the best we provide */}
-      <section className="relative w-full h-screen flex flex-col justify-center items-center md:mt-50">
+      <section className="relative w-full h-[80vh] flex flex-col justify-center items-center md:mt-50 overflow-hidden">
+        <div
+          className="absolute
+      w-[1/2vw] h-[80vh]
+      bg-[url('/src/assets/Rectangle-4.png')]
+      bg-no-repeat bg-center bg-contain
+      rotate-370 md:-top-48 md:right-120
+      -top-64  -left-14
+    "
+        ></div>
         <div
           className="
       absolute
@@ -110,8 +119,8 @@ export default function Home() {
     "
         />
 
-        <div className="relative z-10 p-5  mt-60 md:mt-0">
-          <p className="font-Wasted md:text-6xl text-2xl text-center">
+        <div className="relative z-10 p-5  mt-50 md:mt-0">
+          <p className="font-Wasted md:text-5xl text-2xl text-center">
             Experience the best we provide
           </p>
           <p className="font-Wasted text-xl text-center md:px-72 mt-6">
@@ -262,6 +271,8 @@ export default function Home() {
     "
         ></div>
 
+        <div className="absolute bg-black/5 h-screen w-1/2 -right-2"></div>
+
         <div className="relative z-10 flex flex-col items-center justify-center p-20 md:py-30">
           <div className="text-center text-5xl font-Wasted">
             Experience The City
@@ -270,64 +281,63 @@ export default function Home() {
           <div className="text-lg p-5 text-center md:px-60 font-medium">
             Discover the heart of Kandy beyond your stay. From the sacred Temple
             of the Tooth to the peaceful Kandy Lake and colorful local markets,
-            every corner tells a story.{" "}
+            every corner tells a story.
           </div>
         </div>
       </section>
 
       {/* NEXT SECTOIN-6- THE TEMPLE OF TOOTH RELIC  */}
-     <section
-  className="
+      <section
+        className="
     relative
     aspect-[1/1] md:aspect-[16/8]
     bg-[url('/src/assets/temple.png')]
     bg-no-repeat bg-cover
     grid grid-rows-2 md:grid-rows-5
   "
->
-  {/* ROW 1 – TITLE */}
-  <div className="md:px-24 md:py-16 p-12">
-    <p className="md:text-[55px] text-2xl font-source font-bold text-white">
-      THE TEMPLE OF TOOTH RELIC
-    </p>
-  </div>
+      >
+        {/* ROW 1 – TITLE */}
+        <div className="md:px-24 md:py-16 p-12">
+          <p className="md:text-[55px] text-2xl font-source font-bold text-white">
+            THE TEMPLE OF TOOTH RELIC
+          </p>
+        </div>
 
-  <div></div>
-  <div></div>
+        <div></div>
+        <div></div>
 
-  {/* TEXT BOX */}
-  <div className="flex items-start md:px-24 p-12">
-    <div
-      className="bg-zinc-800/80 backdrop-blur-md 
+        {/* TEXT BOX */}
+        <div className="flex items-start md:px-24 p-12">
+          <div
+            className="bg-zinc-800/80 backdrop-blur-md 
         w-full md:w-[28vw]
         p-6 md:px-10 md:py-12
         text-center text-white font-source"
-    >
-      <p>
-        Kandy is home to the iconic Temple of the Sacred Tooth Relic, one
-        of Buddhism’s most revered sites...
-      </p>
-    </div>
-  </div>
+          >
+            <p>
+              Kandy is home to the iconic Temple of the Sacred Tooth Relic, one
+              of Buddhism’s most revered sites...
+            </p>
+          </div>
+        </div>
 
-  <div
-    className="
+        <div
+          className="
       absolute
       bottom-6 right-6
       md:bottom-12 md:right-24
       flex gap-3
     "
-  >
-    <button className="bg-gray-400/70 hover:bg-gray-500/80 transition rounded-full p-3">
-      <FaChevronLeft size={24} className="text-white" />
-    </button>
+        >
+          <button className="bg-gray-400/70 hover:bg-gray-500/80 transition rounded-full p-3">
+            <FaChevronLeft size={24} className="text-white" />
+          </button>
 
-    <button className="bg-gray-400/70 hover:bg-gray-500/80 transition rounded-full p-3">
-      <FaChevronRight size={24} className="text-white" />
-    </button>
-  </div>
-</section>
-
+          <button className="bg-gray-400/70 hover:bg-gray-500/80 transition rounded-full p-3">
+            <FaChevronRight size={24} className="text-white" />
+          </button>
+        </div>
+      </section>
     </div>
   );
 }
