@@ -99,27 +99,9 @@ export default function Home() {
         </div>
       </section>
       {/* NEXT SECTION-3-Experience the best we provide */}
-      <section className="relative w-full h-[80vh] flex flex-col justify-center items-center md:mt-50 overflow-hidden">
-        <div
-          className="absolute
-      w-[1/2vw] h-[80vh]
-      bg-[url('/src/assets/Rectangle-4.png')]
-      bg-no-repeat bg-center bg-contain
-      rotate-370 md:-top-48 md:right-120
-      -top-64  -left-14
-    "
-        ></div>
-        <div
-          className="
-      absolute
-      left-0 top-1/5 -translate-y-1/2
-      w-[549px] h-[980px]
-      bg-black/3
-      z-0 
-    "
-        />
+      <section className="relative w-full flex flex-col justify-center items-center  overflow-hidden">
 
-        <div className="relative z-10 p-5  mt-50 md:mt-0">
+        <div className="relative z-10 p-5  md:px-5 md:py-45 mt-50 md:mt-0">
           <p className="font-Wasted md:text-5xl text-2xl text-center">
             Experience the best we provide
           </p>
@@ -130,7 +112,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="relative z-10 flex flex-col md:flex-row w-full gap-4 md:gap-3 justify-evenly items-stretch md:items-center md:mt-5 px-4 md:px-0">
+        <div className="relative z-10 flex flex-col md:flex-row w-full gap-4 md:gap-3 justify-evenly items-stretch md:items-center md:-mt-36 px-4 md:px-0">
           {/* LEFT COLUMN */}
           <div className="flex flex-col gap-4 md:gap-3 w-full md:w-auto">
             <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
@@ -184,7 +166,7 @@ export default function Home() {
       </section>
       {/* NEXT SECTION-4-Explore Our Rooms */}
       <section
-        className="relative mt-70 md:mt-0 aspect-[1/1] 
+        className="relative mt-70 md:mt-28 aspect-[1/1] 
              md:aspect-[3/2] bg-[url('/src/assets/SECTION-4.jpg')] 
              bg-center bg-cover"
       >
