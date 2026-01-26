@@ -31,7 +31,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="w-full h-[] md:max-h-screen">     {/* HERO with background image */}
+    <div className="w-full h-[] md:max-h-screen">
+      {" "}
+      {/* HERO with background image */}
       <section
         className="
     relative w-full
@@ -55,7 +57,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
       {/* NEXT SECTION-2-elcome to Ridee Boutique */}
       <section
         className="relative  w-full h-screen
@@ -97,7 +98,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* NEXT SECTION-3-Experience the best we provide */}
       <section className="relative w-full h-screen flex flex-col justify-center items-center md:mt-50">
         <div
@@ -173,7 +173,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* NEXT SECTION-4-Explore Our Rooms */}
       <section
         className="relative mt-70 md:mt-0 aspect-[1/1] 
@@ -196,8 +195,7 @@ export default function Home() {
           </p>
 
           <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 p-20">
-
-               <div
+            <div
               className="absolute md:w-[150px] md:h-[250px] w-10 h-10 bg-[url('/src/assets/Rectangle183.svg')]
        bg-center bg-no-repeat bg-cover md:top-145 md:-rotate-270 md:right-253 -rotate-90 "
             ></div>
@@ -252,28 +250,66 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* NEXT SECTION-5- Experience The City */}
       <section className=" w-full md:h-[350px]">
         <div className="flex flex-col items-center justify-center p-20">
-           <div className="text-center text-6xl font-Wasted  ">
+          <div className="text-center text-6xl font-Wasted  ">
             Experience The City
-           </div>
+          </div>
 
-           <div className="text-2xl p-5 text-center">
-            Discover the heart of Kandy beyond your stay. From the sacred Temple of the Tooth to the peaceful Kandy 
-Lake and colorful local markets, every corner tells a story.
-           </div>
+          <div className="text-2xl p-5 text-center">
+            Discover the heart of Kandy beyond your stay. From the sacred Temple
+            of the Tooth to the peaceful Kandy Lake and colorful local markets,
+            every corner tells a story.
+          </div>
         </div>
       </section>
-
       {/* NEXT SECTOIN-6- THE TEMPLE OF TOOTH RELIC  */}
+    <section
+  className="
+    relative
+    aspect-[1/1] md:aspect-[16/8]
+    bg-[url('/src/assets/temple.png')]
+    bg-no-repeat bg-cover
+    grid grid-rows-5
+  "
+>
+  {/* ROW 1 – TITLE */}
+  <div className="md:px-24 md:py-16 p-12">
+    <p className="md:text-[55px] text-2xl font-source font-bold text-white">
+      THE TEMPLE OF TOOTH RELIC
+    </p>
+  </div>
 
-      <section className="relative w-full h-screen  bg-[url('/src/assets/temple.png')]
-    bg-center bg-no-repeat bg-cover">
+<div></div>
+<div></div>
+  {/* ROW 3 – TEXT BOX */}
+  <div className="flex items-start md:px-24 p-12">
+    <div className="bg-zinc-800/80 backdrop-blur-md 
+                    w-full md:w-[28vw]
+                    p-6 md:px-10 md:py-12
+                    text-center text-white font-source">
+      <p>
+        Kandy is home to the iconic Temple of the Sacred Tooth Relic, one
+        of Buddhism’s most revered sites. You’ll also find other temples
+        and historic churches scattered around the city, each offering a
+        glimpse into the rich religious tapestry of the region.
+      </p>
+    </div>
+  </div>
+</section>
 
-      <div className="">siuuu</div>
-      </section>
+<section>
+  <div className="flex flex-col gap-3 w-full">
+    <div className="bg-amber-200 p-5">
+      <h1 className="text-center text-2xl">Discover the Soul of Sri Lankan Serenity</h1>
+    </div>
+        <div className="bg-amber-200 p-5"></div>
+    <div className="bg-amber-200 p-5"></div>
+
+  </div>
+</section>
+
     </div>
   );
 }
