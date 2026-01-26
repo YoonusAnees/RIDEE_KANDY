@@ -24,7 +24,7 @@ export default function Navbar() {
       {/* MAIN BAR */}
       <div className="relative flex max-w-[90vw] mx-auto justify-between items-center h-full">
         {/* LOGO */}
-        <div className="hidden md:block w-[6vw] max-w-20">
+        <div className="block w-[6vw] max-w-20">
           <img src="/src/assets/logo.svg" alt="logo" className="w-full" />
         </div>
 
