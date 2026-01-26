@@ -101,11 +101,21 @@ export default function Home() {
       {/* NEXT SECTION-3-Experience the best we provide */}
       <section className="relative w-full flex flex-col justify-center items-center  overflow-hidden">
 
+            <div
+          className="absolute
+      w-[46vw] h-[95vh]
+      bg-[url('/src/assets/Rectangle-4.png')]
+      bg-no-repeat bg-center bg-contain
+      rotate-330 md:-top-42 md:left-238
+      -top-80  left-80
+    "
+        ></div>
+
         <div className="relative z-10 p-5  md:px-5 md:py-45 mt-50 md:mt-0">
-          <p className="font-Wasted md:text-5xl text-2xl text-center">
+          <p className="font-Wasted md:text-6xl text-2xl text-center">
             Experience the best we provide
           </p>
-          <p className="font-Wasted text-xl text-center md:px-72 mt-6">
+          <p className="font-Wasted text-xl text-center md:px-78 mt-6">
             Experience the perfect blend of elegance, comfort, and authentic Sri
             Lankan charm at Ridee Boutique Hotel. Here’s why we are the ideal
             choice for your stay in Kandy
