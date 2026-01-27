@@ -146,8 +146,22 @@ export default function Home() {
       z-0
     "
   />
-
-<hr class="h-px my-8 bg-neutral-quaternary border-0"></hr>
+       {/* Horizontel */}
+          <div className="absolute flex p-5 w-full top-1 md:ml-19">
+            <div
+              className="absolute
+              border-t-3 border-gray-200 p-5 w-4/6 h-screen -right-8 mt-1 md:mt-14  md:mr-34
+    "
+            ></div>
+          </div>
+            {/* Vertical */}
+          <div className="absolute flex p-5 mt-15 md:mr-21 right-1 top-1">
+            <div
+              className="absolute
+      border-r-3 border-gray-200 p-5 w-3/19  md:h-165 max-h-1000  h-1/6
+    "
+            ></div>
+          </div>
 
   {/* Heading */}
   <div className="relative z-10 p-5 mt-20 md:mt-10">
