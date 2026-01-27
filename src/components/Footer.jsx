@@ -1,5 +1,4 @@
 import { FaInstagram, FaYoutube, FaFacebookF } from "react-icons/fa";
-import { HiArchive } from "react-icons/hi";
 
 export default function Footer() {
   return (
@@ -17,96 +16,65 @@ export default function Footer() {
       <div className="max-w-8xl md:mx-auto md:h-[40vh]  grid grid-cols-1 md:grid-cols-4">
         {/* Column 1 */}
         <div>
-          <div className="flex items-center space-x-2 mb-3">
-            <div className="block w-[6vw] max-w-20">
-              <img src="/src/assets/logo.svg" alt="logo" className="w-full" />
-            </div>
+          <div className="mb-4 w-28">
+            <img src="/src/assets/logo.svg" alt="logo" className="w-full" />
           </div>
-          <div
-            className="text-white mb-4  md:text-lg 
-             font-source tracking-[.25em]"
-          >
-            <p>
-              Where timeless Sri Lankan charm meets modern comfort. Stay with us
-              and make every moment unforgettable
-            </p>
-          </div>
-          <div className="flex space-x-3 text-xl text-white">
-            <a href="/">
-              <FaFacebookF className="hover:text-gray-500 transition" />
-            </a>
-            <a href="/">
-              <FaInstagram className="hover:text-gray-500 transition" />
-            </a>
 
-            <a href="/">
-              <FaYoutube className="hover:text-gray-500 transition" />
-            </a>
+          <p className="font-source tracking-wider text-sm sm:text-base leading-relaxed mb-6">
+            Where timeless Sri Lankan charm meets modern comfort. Stay with us
+            and make every moment unforgettable.
+          </p>
+
+          <div className="flex gap-4 text-xl">
+            <FaFacebookF className="hover:text-gray-400 transition cursor-pointer" />
+            <FaInstagram className="hover:text-gray-400 transition cursor-pointer" />
+            <FaYoutube className="hover:text-gray-400 transition cursor-pointer" />
           </div>
         </div>
 
         {/* Column 2 */}
-        <div className="md:ml-24">
-          <h4 className=" uppercase text-base mb-4 text-white font-extrabold font-source tracking-widest">
-            Quick links
+        <div>
+          <h4 className="uppercase text-sm mb-4 font-extrabold tracking-widest">
+            Quick Links
           </h4>
-          <ul className=" text-white font-Wasted">
-            <li>
-              <a href="/about" className="hover:text-black transition">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/careers" className="hover:text-black transition">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="/press" className="hover:text-black transition">
-                Rooms & Suits
-              </a>
-            </li>
-            <li>
-              <a href="/blog" className="hover:text-black transition">
-                packages
-              </a>
-            </li>
-            <li>
-              <a href="/partners" className="hover:text-black transition">
-                Contact
-              </a>
-            </li>
+          <ul className="space-y-2 font-Wasted text-sm">
+            <li><a href="/" className="hover:text-gray-400">Home</a></li>
+            <li><a href="/about" className="hover:text-gray-400">About Us</a></li>
+            <li><a href="/rooms" className="hover:text-gray-400">Rooms & Suites</a></li>
+            <li><a href="/packages" className="hover:text-gray-400">Packages</a></li>
+            <li><a href="/contact" className="hover:text-gray-400">Contact</a></li>
           </ul>
         </div>
 
         {/* Column 3 */}
-        <div className="flex flex-col ">
-          <h4 className=" uppercase text-base mb-4 text-white font-extrabold font-source tracking-widest">
-            Contact US
+        <div>
+          <h4 className="uppercase text-sm mb-4 font-extrabold tracking-widest">
+            Contact Us
           </h4>
-
-          <p className="font-Wasted">
-            123, Walawwa Road, <br></br>Kandy,<br></br> Sri Lanka.
+          <p className="font-Wasted text-sm leading-relaxed">
+            123, Walawwa Road,<br />
+            Kandy,<br />
+            Sri Lanka.
           </p>
 
-          <p className="mt-4 font-Wasted">+94 XX XXX XXXX</p>
+          <p className="mt-4 font-Wasted text-sm">+94 XX XXX XXXX</p>
 
           <a
-            href="mailto:rideebotique@gmail.com"
-            className="cursor-pointer font-Wasted"
+            href="mailto:rideeboutique@gmail.com"
+            className="block mt-2 hover:text-gray-400 text-sm"
           >
-            rideebotique@gmail.com
+            rideeboutique@gmail.com
           </a>
         </div>
 
         {/* Column 4 */}
         <div>
-          <h4 className=" uppercase text-base mb-4 text-white font-extrabold font-Wasted tracking-widest">
-            Subscribe to Our Newsletter
+          <h4 className="uppercase text-sm mb-4 font-extrabold tracking-widest">
+            Newsletter
           </h4>
-          <p className="text-white-500 mb-3 font-source text-base">
-            Stay updated with exclusive offers and the latest news from Ridee
-            Boutique.
+
+          <p className="text-sm mb-4">
+            Stay updated with exclusive offers and the latest news.
           </p>
           <div className="flex flex-col md:flex-row  gap-4   w-full max-w-sm">
             <input
@@ -121,19 +89,15 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom section */}
-      <div className="mt-8 border-t border-gray-200 pt-4 flex flex-col md:flex-row items-center justify-between  text-white-500 max-w-7xl mx-auto px-6">
-        <p className="text-lg">rideeboutique@2025. All rights reserved..</p>
-        <div className="flex space-x-4 mt-2 md:mt-0 text-[16px]">
-          <a href="/privacy" className="hover:text-black transition">
-            Privacy Policy
-          </a>
-          <a href="/terms" className="hover:text-black transition">
-            Terms & Conditions
-          </a>
-          <a href="/sitemap" className="hover:text-black transition">
-            Help & Support{" "}
-          </a>
+      {/* Bottom bar */}
+      <div className="border-t border-gray-200 py-6 px-6">
+        <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+          <p>© 2025 Ridee Boutique. All rights reserved.</p>
+          <div className="flex gap-4">
+            <a href="/privacy" className="hover:text-gray-400">Privacy Policy</a>
+            <a href="/terms" className="hover:text-gray-400">Terms</a>
+            <a href="/help" className="hover:text-gray-400">Help</a>
+          </div>
         </div>
       </div>
     </footer>

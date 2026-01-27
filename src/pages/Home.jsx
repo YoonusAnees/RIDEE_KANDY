@@ -143,14 +143,14 @@ export default function Home() {
           <p className="font-Wasted md:text-5xl text-3xl px-20 text-center">
             Experience the best we provide
           </p>
-          <p className="font-Wasted text-xl text-center md:px-72 mt-6">
+          <p className="font-Wasted text-xl text-center md:px-78 mt-6">
             Experience the perfect blend of elegance, comfort, and authentic Sri
             Lankan charm at Ridee Boutique Hotel. Here’s why we are the ideal
             choice for your stay in Kandy
           </p>
         </div>
 
-        <div className="relative z-10 flex flex-col md:flex-row w-full gap-4 md:gap-3 justify-evenly items-stretch md:items-center md:mt-5 px-4 md:px-0">
+        <div className="relative z-10 flex flex-col md:flex-row w-full gap-4 md:gap-3 justify-evenly items-stretch md:items-center md:-mt-36  px-4 md:px-0">
           {/* LEFT COLUMN */}
           <div className="flex flex-col gap-4 md:gap-3 w-full md:w-auto">
             <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
@@ -204,7 +204,7 @@ export default function Home() {
       </section>
       {/* NEXT SECTION-4-Explore Our Rooms */}
       <section
-        className="relative mt-70 md:mt-0 aspect-[1/1] 
+        className="relative mt-70 md:mt-28 aspect-[1/1] 
              md:aspect-[3/2] bg-[url('/src/assets/SECTION-4.jpg')] 
              bg-center bg-cover"
       >
@@ -283,11 +283,13 @@ export default function Home() {
       <section className="relative w-full md:h-[370px]  overflow-hidden">
         <div
           className="absolute
-      w-[26vw] h-[85vh]
+      md:w-[26vw] md:h-[85vh]
       bg-[url('/src/assets/Rectangle-4.png')]
       bg-no-repeat bg-center bg-contain
       rotate-230 md:bottom-1 md:-left-12
-   bottom-9 -left-5
+      bottom-20 -left-5
+      w-[40vw] h-[85vh]
+
       
     "
         ></div>
