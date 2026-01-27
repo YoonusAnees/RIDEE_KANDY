@@ -3,59 +3,92 @@ import React, { useState, useEffect } from "react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
   }, [open]);
 
   return (
     <>
-      {/* NAVBAR */}
+      {/* NAVBAR FRAME */}
       <nav
         className="
           fixed top-0 left-0 w-full z-50
-          h-16 sm:h-20 lg:h-24
-          px-4 sm:px-8 lg:px-16
-          text-white
+          h-[122px]
           backdrop-blur-2xl
           bg-white/10
-          shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+          shadow-[0_20px_60px_rgba(0,0,0,0.35)]
+          border-b border-white/20
+          text-white
         "
       >
-        {/* Glass highlight */}
+        {/* glass light */}
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-[1px] bg-white/40" />
-          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[60vw] h-[60vw] rounded-full bg-white/10 blur-3xl opacity-40" />
+          <div className="absolute inset-x-0 top-0 h-px bg-white/40" />
+          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[70vw] h-[70vw] rounded-full bg-white/10 blur-3xl opacity-40" />
         </div>
 
-        <div className="relative flex max-w-7xl mx-auto justify-between items-center h-full">
+        {/* NAVBAR CONTENT */}
+        <div
+          className="
+            relative
+            max-w-[1250px]
+            mx-auto
+            h-full
+            flex items-center justify-between
+            px-6
+          "
+        >
           {/* LOGO */}
-          <div className="w-12 sm:w-14 lg:w-16">
+          <div className="w-14 lg:w-16">
             <img
               src="/src/assets/logo.svg"
-              alt="logo"
+              alt="Ridee Boutique"
               className="w-full object-contain"
             />
           </div>
 
-          {/* DESKTOP MENU */}
-          <div className="hidden md:flex items-center gap-10 text-base lg:text-lg font-extralight font-Wasted">
-            <div className="cursor-pointer hover:text-white/80">Home</div>
-            <div className="cursor-pointer hover:text-white/80">About Us</div>
-            <div className="cursor-pointer hover:text-white/80">
+          {/* LINKS */}
+          <div
+            className="
+              hidden md:flex
+              items-center
+              gap-12
+              font-Wasted
+              font-normal
+              text-[18px]
+              leading-[24px]
+            "
+          >
+            <span className="cursor-pointer hover:text-white/80">Home</span>
+            <span className="cursor-pointer hover:text-white/80">About Us</span>
+            <span className="cursor-pointer hover:text-white/80">
               Rooms & Suites
-            </div>
-            <div className="cursor-pointer hover:text-white/80">Packages</div>
-            <div className="cursor-pointer hover:text-white/80">Contact Us</div>
+            </span>
+            <span className="cursor-pointer hover:text-white/80">Packages</span>
+            <span className="cursor-pointer hover:text-white/80">Contact Us</span>
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="flex items-center gap-3">
-            <div className="hidden md:flex px-6 py-2 border border-white/60 font-Wasted">
+          <div className="flex items-center gap-4">
+            {/* CALL BUTTON */}
+            <div
+              className="
+                hidden md:flex
+                items-center justify-center
+                h-[55px]
+                px-[49px]
+                border border-white/60
+                font-Wasted
+                text-[16px]
+                leading-[24px]
+                hover:bg-white/10
+                transition
+              "
+            >
               Call Now
             </div>
 
-            {/* Mobile toggle */}
+            {/* MOBILE TOGGLE */}
             <button
               onClick={() => setOpen(!open)}
               className="md:hidden text-3xl"
@@ -67,16 +100,12 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* MOBILE MENU OVERLAY */}
+      {/* MOBILE MENU */}
       <div
         className={`
           fixed inset-0 z-40 md:hidden
           transition-opacity duration-300
-          ${
-            open
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
-          }
+          ${open ? "opacity-100" : "opacity-0 pointer-events-none"}
         `}
       >
         <div
@@ -84,28 +113,29 @@ export default function Navbar() {
             absolute inset-0
             bg-black/70
             backdrop-blur-2xl
-            flex flex-col justify-center items-center
-            gap-8 text-center
+            flex flex-col items-center justify-center
+            gap-8
+            text-white
             font-Wasted
           "
         >
-          <div className="text-2xl" onClick={() => setOpen(false)}>
-            Home
-          </div>
-          <div className="text-2xl" onClick={() => setOpen(false)}>
-            About Us
-          </div>
-          <div className="text-2xl" onClick={() => setOpen(false)}>
-            Rooms & Suites
-          </div>
-          <div className="text-2xl" onClick={() => setOpen(false)}>
-            Packages
-          </div>
-          <div className="text-2xl" onClick={() => setOpen(false)}>
-            Contact Us
-          </div>
+          {[
+            "Home",
+            "About Us",
+            "Rooms & Suites",
+            "Packages",
+            "Contact Us",
+          ].map((item) => (
+            <div
+              key={item}
+              onClick={() => setOpen(false)}
+              className="text-2xl cursor-pointer"
+            >
+              {item}
+            </div>
+          ))}
 
-          <div className="mt-6 px-10 py-3 border border-white/40 text-xl">
+          <div className="mt-6 px-12 py-4 border border-white/40 text-xl">
             Call Now
           </div>
         </div>

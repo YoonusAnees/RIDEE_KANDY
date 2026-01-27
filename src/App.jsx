@@ -9,9 +9,9 @@ function App() {
       <Navbar />
 
       {/* <main className="pt-[clamp(64px,8vh,90px)]"> */}
-        <Home />
-        <CTA />
-        <Footer />
+      <Home />
+      <CTA />
+      <Footer />
       {/* </main> */}
     </>
   );

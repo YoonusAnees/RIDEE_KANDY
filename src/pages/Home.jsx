@@ -32,31 +32,54 @@ export default function Home() {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
       {/* HERO with background image */}
       <section
         className="
-    relative w-full h-screen
+    relative w-full min-h-screen
     bg-[url('/src/assets/Home.jpg')]
     bg-center bg-no-repeat bg-cover
-    aspect-[1/1] 
-    md:aspect-[16/2] 
-    flex items-center justify-center text-center text-white
+    flex items-center justify-center
+    text-white
   "
       >
         {/* dark overlay */}
         <div className="absolute inset-0 bg-black/50" />
 
         {/* content */}
-        <div className="relative z-10 max-w-6xl md:max-w-5xl mx-auto pt-24 md:pt-24">
-          <p className="text-5xl  my-4  font-Wasted">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-6 text-center">
+
+          {/* main heading — EXACT FIGMA */}
+          <p
+            className="
+        font-Wasted font-normal
+        text-[36px] leading-[40px]
+        sm:text-[44px] sm:leading-[48px]
+        md:text-[60px] md:leading-[60px]
+        my-4
+      "
+          >
             Embrace the Beauty of Timeless Stay
           </p>
-          <p className="md:px-96 px-4 text-xl  mt-6 font-Wasted">
+
+          {/* sub heading */}
+          <p
+            className="
+        font-Wasted font-normal
+        mt-6
+        text-[16px] leading-[24px]
+        sm:text-[18px] sm:leading-[28px]
+        md:text-[24px] md:leading-[32px]
+        max-w-2xl mx-auto
+        
+      "
+          >
             with Ridee Boutique Hotel
           </p>
+
         </div>
       </section>
+
       {/* NEXT SECTION-2-elcome to Ridee Boutique */}
       <section
         className="relative  w-full h-screen
@@ -67,32 +90,56 @@ export default function Home() {
         <div className=" md:absolute md:-left-1 md: bg-black/3 md:w-[553px] md:h-[730px]" />
 
         <div className="absolute  md:right-10 md:bottom-7 ">
-          <div className="relative">
-            {/* Left */}
-            <div
-              className="absolute md:w-[150px] md: h-[250px]  bg-[url('/src/assets/Rectangle183.svg')]
-       bg-center bg-no-repeat bg-cover md:-top-7 -rotate-90 md:right-130 md:-rotate-90  rotate-270 top-4 right-107"
-            ></div>
 
-            <div
-              className="
-    absolute
-    block md:hidden
-    w-10 h-10
-    bg-[url('/src/assets/Rectangle183.svg')]
-    bg-center bg-no-repeat bg-cover
-    rotate-270
-    top-4 right-[428px]
-  "
-            ></div>
-
-            {/* Right */}
-            <div
-              className="absolute md:w-[150px] md:h-[250px] w-10 h-10 bg-[url('/src/assets/Rectangle183.svg')]
-       bg-center bg-no-repeat bg-cover md:top-95 md:-rotate-270 md:right-7 rotate-90 top-76 right-4"
-            ></div>
-          </div>
           <div className="p-5">
+            <div className="relative ">
+              {/* TOP */}
+              <div className="absolute
+               w-[158px] h-[187px]
+               bg-[url('/src/assets/Rectangle183.svg')]
+               bg-cover bg-center bg-no-repeat
+               rotate-[-90deg]
+               -top-4 -left-1
+               hidden md:block"
+              ></div>
+              {/* Mobile */}
+              <div
+                className="
+              absolute md:hidden
+              w-10 h-10
+              bg-[url('/src/assets/Rectangle183.svg')]
+              bg-cover bg-center
+              rotate-[-90deg]
+              top-1 left-1">
+              </div>
+
+              {/* BOTTOM - match TOP */}
+              <div className="absolute
+               w-[158px] h-[187px]
+               bg-[url('/src/assets/Rectangle183.svg')]
+               bg-cover bg-center bg-no-repeat
+               rotate-[-270deg]
+               -bottom-145 left-124
+               hidden md:block"
+              ></div>
+              {/* Mobile BOTTOM - match TOP */}
+              <div
+                className="absolute md:hidden
+                w-10 h-10
+                bg-[url('/src/assets/Rectangle183.svg')]
+                bg-cover bg-center
+                rotate-[-270deg]
+                -bottom-80 right-1"
+              >
+              </div>
+
+
+
+
+
+
+
+            </div>
             <div className=" md:h-140 md:w-165 bg-white/80 border-2 h-80 w-full p-5">
               <div className="flex flex-col gap-2 text-center">
                 <div className="md:mt-20 text-black">
@@ -115,6 +162,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+
+
       {/* NEXT SECTION-3 - Experience the best we provide */}
       <section className="relative w-full md:min-h-screen flex flex-col justify-center items-center overflow-hidden">
         {/* Background shape */}
@@ -281,7 +332,7 @@ export default function Home() {
        bg-center bg-no-repeat bg-cover md:top-117 md:-rotate-270 md:right-7 rotate-90 top-135 right-9 invert  "
                   ></div>
 
-                    <div
+                  <div
                     className="absolute md:w-[150px] md:h-[150px] w-10 h-10 bg-[url('/src/assets/Rectangle183.svg')]
        bg-center bg-no-repeat bg-cover md:top-117 md:-rotate-270 md:right-7 rotate-90 top-279 right-9 invert  "
                   ></div>
@@ -291,7 +342,7 @@ export default function Home() {
        bg-center bg-no-repeat bg-cover md:top-117  md:-rotate-270  md:right-12 rotate-90 top-425 left-102 invert  "
                   ></div>
 
-                
+
                 </div>
               </div>
             ))}
