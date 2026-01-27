@@ -147,8 +147,10 @@ export default function Home() {
     "
   />
 
+<hr class="h-px my-8 bg-neutral-quaternary border-0"></hr>
+
   {/* Heading */}
-  <div className="relative z-10 p-5 mt-20 md:mt-36">
+  <div className="relative z-10 p-5 mt-20 md:mt-10">
     <p className="font-Wasted md:text-5xl text-3xl px-6 text-center">
       Experience the best we provide
     </p>
@@ -271,34 +273,59 @@ export default function Home() {
 </section>
 
       {/* NEXT SECTION-5- Experience The City */}
-      <section className="relative w-full md:h-[370px]  overflow-hidden">
-        <div
-          className="absolute
-      md:w-[26vw] md:h-[85vh]
+ <section className="relative w-full h-auto md:h-[370px] overflow-hidden">
+  {/* Rotated rectangle background */}
+  <div
+    className="
+      absolute
+      w-[40vw] h-[55vh]
+      md:w-[28vw] md:h-[85vh]
       bg-[url('/src/assets/Rectangle-4.png')]
       bg-no-repeat bg-center bg-contain
-      rotate-230 md:bottom-1 md:-left-12
-      bottom-20 -left-5
-      w-[40vw] h-[85vh]
-
-      
+      rotate-210
+      bottom-12 -left-5
+      md:-bottom-20 md:-left-25
+      pointer-events-none
+      z-10
     "
-        ></div>
+  ></div>
 
-        <div className="absolute bg-black/5 h-screen w-1/2 -right-2"></div>
+  {/* Line SVG overlay */}
+ <div className="absolute flex p-5 w-full mt-20 md:ml-19">
+   <div
+    className="absolute
+      border-t-3 border-gray-200 p-5 w-3/19 h-screen
+    "
+  ></div>
+ </div>
+ 
 
-        <div className="relative z-10 flex flex-col items-center justify-center p-20 md:py-30">
-          <div className="text-center text-5xl  font-Wasted">
-            Experience The City
-          </div>
+ <div className="absolute flex p-5 mt-20 md:ml-19">
+<div
+    className="absolute
+      border-l-3 border-gray-200 p-5 w-3/19 h-screen
+    "
+  ></div>
+ </div>
 
-          <div className="text-lg p-5 text-center   md:px-60 font-medium">
-            Discover the heart of Kandy beyond your stay. From the sacred Temple
-            of the Tooth to the peaceful Kandy Lake and colorful local markets,
-            every corner tells a story.
-          </div>
-        </div>
-      </section>
+  {/* Right overlay */}
+  <div className="absolute inset-y-0 right-1 w-7/9  bg-black/5 z-15"></div>
+
+  {/* Content */}
+  <div className="relative z-30 flex flex-col items-center justify-center px-6 py-20 md:py-30">
+    <h2 className="text-center text-4xl md:text-5xl font-Wasted">
+      Experience The City
+    </h2>
+
+    <p className="text-base md:text-lg p-5 text-center md:px-60 font-medium">
+      Discover the heart of Kandy beyond your stay. From the sacred Temple
+      of the Tooth to the peaceful Kandy Lake and colorful local markets,
+      every corner tells a story.
+    </p>
+  </div>
+</section>
+
+
 
       {/* NEXT SECTOIN-6- THE TEMPLE OF TOOTH RELIC  */}
       <section
