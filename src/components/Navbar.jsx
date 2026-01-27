@@ -13,6 +13,7 @@ export default function Navbar() {
         backdrop-blur-2xl
         bg-white/10
         shadow-[0_10px_40px_rgba(0,0,0,0.35)]
+        overflow-hidden
       "
     >
       {/* glass highlight */}

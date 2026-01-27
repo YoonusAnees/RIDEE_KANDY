@@ -11,6 +11,7 @@ export default function Footer() {
     pt-24 pb-4
     p-24
     md:-mt-54 -mt-52
+
   "
     >
       <div className="max-w-8xl md:mx-auto md:h-[40vh]  grid grid-cols-1 md:grid-cols-4">
@@ -107,13 +108,13 @@ export default function Footer() {
             Stay updated with exclusive offers and the latest news from Ridee
             Boutique.
           </p>
-          <div className="flex gap-4 w-full max-w-sm">
+          <div className="flex flex-col md:flex-row  gap-4   w-full max-w-sm">
             <input
               type="email"
               placeholder="Your email"
-              className="flex-1 border border-gray-300 bg-white  text-gray-900 px-4 py-3 focus:outline-none focus:ring-1 focus:ring-black"
+              className="flex  border border-gray-300 bg-white  text-gray-900 px-2 py-3 focus:outline-none focus:ring-1 focus:ring-black"
             />
-            <button className="bg-gray-400 text-black px-4 cursor-pointer">
+            <button className="bg-gray-400 text-black px-4  cursor-pointer">
               Subscribe
             </button>
           </div>

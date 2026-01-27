@@ -32,15 +32,15 @@ export default function Home() {
   ];
 
   return (
-    <div className="w-full ">
+    <div className="w-full">
       {/* HERO with background image */}
       <section
         className="
-    relative w-full
+    relative w-full h-screen
     bg-[url('/src/assets/Home.jpg')]
     bg-center bg-no-repeat bg-cover
     aspect-[1/1] 
-    md:aspect-[16/9] 
+    md:aspect-[16/2] 
     flex items-center justify-center text-center text-white
   "
       >
@@ -59,7 +59,7 @@ export default function Home() {
       </section>
       {/* NEXT SECTION-2-elcome to Ridee Boutique */}
       <section
-        className="relative  w-full h-[100vh]
+        className="relative  w-full h-screen
        bg-[url('/src/assets/BG.png')]
        bg-center bg-no-repeat bg-cover
        flex items-center justify-center text-center text-white bg-white"
@@ -68,16 +68,33 @@ export default function Home() {
 
         <div className="absolute  md:right-10 md:bottom-7 ">
           <div className="relative">
+            {/* Left */}
             <div
               className="absolute md:w-[150px] md: h-[250px]  bg-[url('/src/assets/Rectangle183.svg')]
-       bg-center bg-no-repeat bg-cover md:-top-10 -rotate-90 right-123"
+       bg-center bg-no-repeat bg-cover md:-top-7 -rotate-90 md:right-130 md:-rotate-90  rotate-270 top-4 right-107"
             ></div>
+
+             <div
+  className="
+    absolute
+    block md:hidden
+    w-10 h-10
+    bg-[url('/src/assets/Rectangle183.svg')]
+    bg-center bg-no-repeat bg-cover
+    rotate-270
+    top-4 right-[428px]
+  "
+></div>
+
+
+            {/* Right */}
             <div
               className="absolute md:w-[150px] md:h-[250px] w-10 h-10 bg-[url('/src/assets/Rectangle183.svg')]
-       bg-center bg-no-repeat bg-cover md:top-88 md:-rotate-270 md:right-6 -rotate-90 "
+       bg-center bg-no-repeat bg-cover md:top-95 md:-rotate-270 md:right-7 rotate-90 top-76 right-4"
             ></div>
           </div>
-          <div className=" md:h-140 md:w-165 bg-white/80 border-2 h-80 w-100 p-5">
+          <div className="p-5">
+            <div className=" md:h-140 md:w-165 bg-white/80 border-2 h-80 w-full p-5">
             <div className="flex flex-col gap-2 text-center">
               <div className="md:mt-20 text-black">
                 <p className="md:text-5xl font-Wasted my-5 font-extralight font-wasted">
@@ -96,21 +113,24 @@ export default function Home() {
               </div>
             </div>
           </div>
+          </div>
         </div>
       </section>
       {/* NEXT SECTION-3-Experience the best we provide */}
-      <section className="relative w-full h-[80vh] flex flex-col justify-center items-center md:mt-50 overflow-hidden">
-        <div
-          className="absolute
-      w-[1/2vw] h-[80vh]
+      <section className="relative w-full md:h-screen flex flex-col justify-center items-center overflow-hidden   ">
+          <div
+          className="absolute 
+      w-[90vw] h-[99vh]
+      md:w-[46vw] md:h-[99vh]
+
       bg-[url('/src/assets/Rectangle-4.png')]
       bg-no-repeat bg-center bg-contain
-      rotate-370 md:-top-48 md:right-120
-      -top-64  -left-14
-    "
-        ></div>
-        <div
-          className="
+      md:rotate-315 md:-top-1/3 md:-right-1/16
+      rotate-300
+      -top-75 -right-15
+   ">  
+      </div>
+    <div  className="
       absolute
       left-0 top-1/5 -translate-y-1/2
       w-[549px] h-[980px]
@@ -119,8 +139,8 @@ export default function Home() {
     "
         />
 
-        <div className="relative z-10 p-5  mt-50 md:mt-0">
-          <p className="font-Wasted md:text-5xl text-2xl text-center">
+        <div className="relative z-10 p-5  mt-60 md:mt-0">
+          <p className="font-Wasted md:text-5xl text-3xl px-20 text-center">
             Experience the best we provide
           </p>
           <p className="font-Wasted text-xl text-center md:px-72 mt-6">
@@ -260,25 +280,26 @@ export default function Home() {
         </div>
       </section>
       {/* NEXT SECTION-5- Experience The City */}
-      <section className="relative w-full md:h-[370px] overflow-hidden">
+      <section className="relative w-full md:h-[370px]  overflow-hidden">
         <div
           className="absolute
       w-[26vw] h-[85vh]
       bg-[url('/src/assets/Rectangle-4.png')]
       bg-no-repeat bg-center bg-contain
-      rotate-210 md:-top-42 md:-left-12
-      -top-64  -left-14
+      rotate-230 md:bottom-1 md:-left-12
+   bottom-9 -left-5
+      
     "
         ></div>
 
         <div className="absolute bg-black/5 h-screen w-1/2 -right-2"></div>
 
         <div className="relative z-10 flex flex-col items-center justify-center p-20 md:py-30">
-          <div className="text-center text-5xl font-Wasted">
+          <div className="text-center text-5xl  font-Wasted">
             Experience The City
           </div>
 
-          <div className="text-lg p-5 text-center md:px-60 font-medium">
+          <div className="text-lg p-5 text-center   md:px-60 font-medium">
             Discover the heart of Kandy beyond your stay. From the sacred Temple
             of the Tooth to the peaceful Kandy Lake and colorful local markets,
             every corner tells a story.
@@ -311,12 +332,15 @@ export default function Home() {
           <div
             className="bg-zinc-800/80 backdrop-blur-md 
         w-full md:w-[28vw]
+        lg:w-[40vw] lg:h-[25vh]
         p-6 md:px-10 md:py-12
         text-center text-white font-source"
           >
             <p>
               Kandy is home to the iconic Temple of the Sacred Tooth Relic, one
-              of Buddhism’s most revered sites...
+              of Buddhism’s most revered sites. You’ll also find other temples
+              and historic churches scattered around the city, each offering a
+              glimpse into the rich religious tapestry of the region
             </p>
           </div>
         </div>

@@ -7,13 +7,13 @@ export default function CTA() {
         <div className="font-source">
           <div
             className="absolute
-      w-[36vw] h-[95vh]
+      w-[36vw] h-[99vh]
       bg-[url('/src/assets/Rectangle-4.png')]
       bg-no-repeat bg-center bg-contain
-      rotate-315 md:-top-1/3 md:-right-1/28
-      -top-60 -right-20
-
-    "
+      md:rotate-315 md:-top-1/3 md:-right-1/28
+      rotate-300
+      -top-80 -right-10
+       "
           ></div>
 
           <div
@@ -26,7 +26,7 @@ export default function CTA() {
   "
           ></div>
 
-          <h1 className="text-center text-3xl p-6 md:px-12 md:mt-20  ">
+          <h1 className="text-center text-3xl p-6 md:px-12 md:mt-20">
             Discover the Soul of Sri Lankan Serenit
           </h1>
         </div>
