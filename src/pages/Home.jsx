@@ -140,8 +140,9 @@ export default function Home() {
     className="
       absolute
       left-0 top-1/5 -translate-y-1/2
-      w-[549px] h-[980px]
-      bg-black/5
+      w-[549px] md:h-[980px]
+      h-[1800px]
+      bg-black/10
       z-0
     "
   />
