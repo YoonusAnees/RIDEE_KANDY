@@ -56,7 +56,7 @@ export default function CTA() {
             Call to Book
           </div>
         </div>
-        <div className="bg-black/5 flex items-center justify-center p-2 md:px-1">
+        <div className="bg-black/5 flex items-center justify-center p-2 md:px-1 md:mt-54  mt-54">
           <div className=" h-[13vh] w-[50vw]   bg-[url('/src/assets/SECTION-5.svg')] bg-no-repeat bg-center"></div>
         </div>
       </div>

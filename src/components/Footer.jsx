@@ -8,19 +8,30 @@ export default function Footer() {
     bg-black text-amber-50
     border-t border-gray-200
     pt-24 pb-4
-    p-24
-    md:-mt-54 -mt-52
+    md:px-10 px-5
+    md:-mt-56'
+    overflow-hidden
 
   "
     >
+      <div
+        className="md:absolute  md:w-[50px] md:h-[100px]  bg-[url('/src/assets/Rectangle183.svg')]
+       bg-center bg-no-repeat bg-cover md:top-99 md:-rotate-270 md:right-2 rotate-90  invert "
+      ></div>
+
+      <div
+        className="md:absolute  md:w-[50px] md:h-[100px]  bg-[url('/src/assets/Rectangle183.svg')]
+       bg-center bg-no-repeat bg-cover md:top-98 md:-rotate-180 md:left-1 rotate-90  invert "
+      ></div>
+
       <div className="max-w-8xl md:mx-auto md:h-[40vh]  grid grid-cols-1 md:grid-cols-4">
         {/* Column 1 */}
         <div>
-          <div className="mb-4 w-28">
+          <div className="mb-4 w-28 ">
             <img src="/src/assets/logo.svg" alt="logo" className="w-full" />
           </div>
 
-          <p className="font-source tracking-wider text-sm sm:text-base leading-relaxed mb-6">
+          <p className="font-source tracking-wider text-sm sm:text-base leading-relaxed mb-6 px-3">
             Where timeless Sri Lankan charm meets modern comfort. Stay with us
             and make every moment unforgettable.
           </p>
@@ -38,11 +49,31 @@ export default function Footer() {
             Quick Links
           </h4>
           <ul className="space-y-2 font-Wasted text-sm">
-            <li><a href="/" className="hover:text-gray-400">Home</a></li>
-            <li><a href="/about" className="hover:text-gray-400">About Us</a></li>
-            <li><a href="/rooms" className="hover:text-gray-400">Rooms & Suites</a></li>
-            <li><a href="/packages" className="hover:text-gray-400">Packages</a></li>
-            <li><a href="/contact" className="hover:text-gray-400">Contact</a></li>
+            <li>
+              <a href="/" className="hover:text-gray-400">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/about" className="hover:text-gray-400">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="/rooms" className="hover:text-gray-400">
+                Rooms & Suites
+              </a>
+            </li>
+            <li>
+              <a href="/packages" className="hover:text-gray-400">
+                Packages
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="hover:text-gray-400">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -52,8 +83,10 @@ export default function Footer() {
             Contact Us
           </h4>
           <p className="font-Wasted text-sm leading-relaxed">
-            123, Walawwa Road,<br />
-            Kandy,<br />
+            123, Walawwa Road,
+            <br />
+            Kandy,
+            <br />
             Sri Lanka.
           </p>
 
@@ -82,7 +115,7 @@ export default function Footer() {
               placeholder="Your email"
               className="flex  border border-gray-300 bg-white  text-gray-900 px-2 py-3 focus:outline-none focus:ring-1 focus:ring-black"
             />
-            <button className="bg-gray-400 text-black px-4  cursor-pointer">
+            <button className="bg-gray-400 text-black px-6  cursor-pointer mb-6 md:mb-0">
               Subscribe
             </button>
           </div>
@@ -94,9 +127,15 @@ export default function Footer() {
         <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <p>© 2025 Ridee Boutique. All rights reserved.</p>
           <div className="flex gap-4">
-            <a href="/privacy" className="hover:text-gray-400">Privacy Policy</a>
-            <a href="/terms" className="hover:text-gray-400">Terms</a>
-            <a href="/help" className="hover:text-gray-400">Help</a>
+            <a href="/privacy" className="hover:text-gray-400">
+              Privacy Policy
+            </a>
+            <a href="/terms" className="hover:text-gray-400">
+              Terms
+            </a>
+            <a href="/help" className="hover:text-gray-400">
+              Help
+            </a>
           </div>
         </div>
       </div>
