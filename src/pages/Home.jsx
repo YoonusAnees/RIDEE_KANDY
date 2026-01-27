@@ -121,11 +121,11 @@ export default function Home() {
           <div
           className="absolute 
       w-[90vw] h-[99vh]
-      md:w-[46vw] md:h-[99vh]
+      md:w-[46vw] md:h-[130vh]
 
       bg-[url('/src/assets/Rectangle-4.png')]
       bg-no-repeat bg-center bg-contain
-      md:rotate-315 md:-top-1/3 md:-right-1/16
+      md:rotate-325 md:-top-1/3 md:-right-1/16
       rotate-300
       -top-75 -right-15
    ">  
@@ -139,18 +139,18 @@ export default function Home() {
     "
         />
 
-        <div className="relative z-10 p-5  mt-60 md:mt-0">
+        <div className="relative z-10 p-5  mt-66 md:mt-35">
           <p className="font-Wasted md:text-5xl text-3xl px-20 text-center">
             Experience the best we provide
           </p>
-          <p className="font-Wasted text-xl text-center md:px-78 mt-6">
+          <p className="font-Wasted text-xl text-center md:px-78 mt-10">
             Experience the perfect blend of elegance, comfort, and authentic Sri
             Lankan charm at Ridee Boutique Hotel. Here’s why we are the ideal
             choice for your stay in Kandy
           </p>
         </div>
 
-        <div className="relative z-10 flex flex-col md:flex-row w-full gap-4 md:gap-3 justify-evenly items-stretch md:items-center md:-mt-36  px-4 md:px-0">
+        <div className="relative z-10 flex flex-col md:flex-row w-full gap-4 md:gap-3 justify-evenly items-stretch md:items-center md:mt-5  px-4 md:px-0">
           {/* LEFT COLUMN */}
           <div className="flex flex-col gap-4 md:gap-3 w-full md:w-auto">
             <div className="flex flex-col items-center justify-center p-5 md:h-40 md:w-150 w-full text-center">
