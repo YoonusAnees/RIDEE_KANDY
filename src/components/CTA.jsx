@@ -13,7 +13,7 @@ export default function CTA() {
             w-[94vw] h-[33vw]
             max-w-[1804px] max-h-[633px]
             min-w-[360px] min-h-[140px]
-            bg-[url('/src/assets/Rectangle-4.png')]
+            bg-[url('/src/assets/images/Rectangle-4.png')]
             bg-no-repeat bg-center bg-contain
             rotate-[109.316936deg]
             -top-[12vh] -right-[18vw]
@@ -112,7 +112,7 @@ export default function CTA() {
               w-[31.7vw] h-[6.8vw]
               max-w-[456px] max-h-[98px]
               min-w-[220px] min-h-[48px]
-              bg-[url('/src/assets/SECTION-5.svg')]
+              bg-[url('/src/assets/images/SECTION-5.svg')]
               bg-no-repeat bg-center bg-contain
             "
           />

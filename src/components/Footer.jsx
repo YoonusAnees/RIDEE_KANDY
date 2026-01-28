@@ -16,7 +16,7 @@ export default function Footer() {
           hidden md:block
           absolute
           w-[50px] h-[100px]
-          bg-[url('/src/assets/Rectangle183.svg')]
+          bg-[url('/src/assets/images/Rectangle183.svg')]
           bg-cover bg-center bg-no-repeat
           top-[90px] right-2
           rotate-[270deg]
@@ -29,7 +29,7 @@ export default function Footer() {
           hidden md:block
           absolute
           w-[50px] h-[100px]
-          bg-[url('/src/assets/Rectangle183.svg')]
+          bg-[url('/src/assets/images/Rectangle183.svg')]
           bg-cover bg-center bg-no-repeat
           top-[90px] left-2
           rotate-180
@@ -44,7 +44,7 @@ export default function Footer() {
           {/* Col 1 */}
           <div>
             <div className="mb-4 w-24 sm:w-28">
-              <img src="/src/assets/logo.svg" alt="logo" className="w-full" />
+              <img src="/src/assets/images/logo.svg" alt="logo" className="w-full" />
             </div>
 
             <p className="font-source tracking-wider text-sm sm:text-base leading-relaxed mb-6 max-w-md">

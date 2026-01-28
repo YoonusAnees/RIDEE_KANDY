@@ -41,7 +41,7 @@ export default function Navbar() {
           {/* LOGO */}
           <div className="w-14 lg:w-16">
             <img
-              src="/src/assets/logo.svg"
+              src="/src/assets/images/logo.svg"
               alt="Ridee Boutique"
               className="w-full object-contain"
             />

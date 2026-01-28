@@ -5,11 +5,11 @@ import { FaPerson } from "react-icons/fa6";
 import { FaPersonRunning } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import HousekeepingMaintanace from "../assets/HousekeepingMaintanace.svg";
-import BusinessConnectivity from "../assets/Business&Connectivity.svg";
-import DININGBEVERAGES from "../assets/DININGBEVERAGES.svg";
-import GUESTSERVICES from "../assets/GUESTSERVICES.svg";
-import LEISURERECREATION from "../assets/LEISURERECREATION.svg";
+import HousekeepingMaintanace from "../assets/images/HousekeepingMaintanace.svg";
+import BusinessConnectivity from "../assets/images/Business&Connectivity.svg";
+import DININGBEVERAGES from "../assets/images/DININGBEVERAGES.svg";
+import GUESTSERVICES from "../assets/images/GUESTSERVICES.svg";
+import LEISURERECREATION from "../assets/images/LEISURERECREATION.svg";
 
 export default function Home() {
   const rooms = [
@@ -42,7 +42,7 @@ export default function Home() {
       <section
         className="
     relative w-full min-h-screen
-    bg-[url('/src/assets/Home.jpg')]
+    bg-[url('/src/assets/images/Home.jpg')]
     bg-center bg-no-repeat bg-cover
     flex items-center justify-center
     text-white
@@ -88,7 +88,7 @@ export default function Home() {
       {/* NEXT SECTION-2-elcome to Ridee Boutique */}
       <section
         className="relative  w-full h-screen
-       bg-[url('/src/assets/BG.png')]
+       bg-[url('/src/assets/images/BG.png')]
        bg-center bg-no-repeat bg-cover
        flex items-center justify-center text-center text-white bg-white"
       >
@@ -101,7 +101,7 @@ export default function Home() {
               {/* TOP */}
               <div className="absolute
                w-[158px] h-[187px]
-               bg-[url('/src/assets/Rectangle183.svg')]
+               bg-[url('/src/assets/images/Rectangle183.svg')]
                bg-cover bg-center bg-no-repeat
                rotate-[-90deg]
                -top-6 -left-3
@@ -112,7 +112,7 @@ export default function Home() {
                 className="
               absolute md:hidden
               w-10 h-10
-              bg-[url('/src/assets/Rectangle183.svg')]
+              bg-[url('/src/assets/images/Rectangle183.svg')]
               bg-cover bg-center
               rotate-[-90deg]
               top-1 left-1">
@@ -121,7 +121,7 @@ export default function Home() {
               {/* BOTTOM - match TOP */}
               <div className="absolute
                w-[158px] h-[187px]
-               bg-[url('/src/assets/Rectangle183.svg')]
+               bg-[url('/src/assets/images/Rectangle183.svg')]
                bg-cover bg-center bg-no-repeat
                rotate-[-270deg]
                -bottom-146 left-128
@@ -131,7 +131,7 @@ export default function Home() {
               <div
                 className="absolute md:hidden
                 w-10 h-10
-                bg-[url('/src/assets/Rectangle183.svg')]
+                bg-[url('/src/assets/images/Rectangle183.svg')]
                 bg-cover bg-center
                 rotate-[-270deg]
                 -bottom-80 right-1"
@@ -172,7 +172,7 @@ export default function Home() {
           className="
     absolute
     w-[42.2vw] h-[47vw]
-    bg-[url('/src/assets/Rectangle-4.png')]
+    bg-[url('/src/assets/images/Rectangle-4.png')]
     bg-no-repeat bg-center bg-contain
     rotate-[325deg]
     right-[-6vw] top-[-10vh]
@@ -376,7 +376,7 @@ export default function Home() {
         relative
         w-full
         min-h-screen
-        bg-[url('/src/assets/SECTION-4.jpg')]
+        bg-[url('/src/assets/images/SECTION-4.jpg')]
         bg-center bg-cover
         overflow-hidden
         py-16 sm:py-20 md:py-24
@@ -603,7 +603,7 @@ export default function Home() {
     min-w-[260px]
     min-h-[320px]
 
-    bg-[url('/src/assets/Rectangle-4.png')]
+    bg-[url('/src/assets/images/Rectangle-4.png')]
     bg-no-repeat bg-center bg-contain
     rotate-[240deg]
 
@@ -702,7 +702,7 @@ export default function Home() {
     w-full
     min-h-[520px] sm:min-h-[560px] md:min-h-[520px]
     md:aspect-[16/8]
-    bg-[url('/src/assets/temple.png')]
+    bg-[url('/src/assets/images/temple.png')]
     bg-no-repeat bg-cover bg-center
     overflow-hidden
   "
