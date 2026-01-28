@@ -16,21 +16,21 @@ export default function Home() {
     {
       id: 1,
       title: "PREMIUM ROOM",
-      image: "./src/assets/Room1.jpg",
+      image: "./src/assets/images/Room1.jpg",
       description:
         "Generously designed with a separate seating area. Enjoy a balcony with lush greenery or scenic views, ideal for indulgent or extended stays.",
     },
     {
       id: 2,
       title: "EXECUTIVE  SUITE",
-      image: "./src/assets/Room2.jpg",
+      image: "./src/assets/images/Room2.jpg",
       description:
         "Generously designed with a separate seating area. Enjoy a balcony with lush greenery or scenic views, ideal for indulgent or extended stays",
     },
     {
       id: 3,
       title: "EXECUTIVE SUITE",
-      image: "./src/assets/Room3.jpg",
+      image: "./src/assets/images/Room3.jpg",
       description:
         "Generously designed with a separate seating area. Enjoy a balcony with lush greenery or scenic views, ideal for indulgent or extended stays.",
     },
@@ -453,24 +453,23 @@ export default function Home() {
               >
                 {/* Image */}
                 <div
-                  className="w-full h-[240px] sm:h-[280px] md:h-[300px] bg-center bg-cover"
+                  className="w-full h-[240px] sm:h-[280px] md:h-[320px] bg-center bg-cover"
                   style={{ backgroundImage: `url(${room.image})` }}
                 />
 
                 {/* Content */}
-                <div className="relative p-6 text-white">
+                <div className="relative p-6 text-white w-full">
                   <p
-                    className="
-    font-source-serif
-    font-normal
-    text-[18px]
-    leading-[20px]
-    tracking-normal
-    text-center
-    text-white
-    mx-auto
-    max-w-[275.615px]
-  "
+                    className="font-source-serif
+                  font-normal
+                   text-[18px]
+                   leading-[20px]
+                   tracking-normal
+                   text-center
+                   text-white
+                   mx-auto
+                   max-w-[275.615px]
+                  "
                   >
                     {room.title}
                   </p>
@@ -486,7 +485,7 @@ export default function Home() {
     text-center
     text-white
     mx-auto
-    max-w-[300.762px]
+    max-w-[358.762px]
   "
                   >
                     {room.description}
@@ -514,54 +513,28 @@ export default function Home() {
 
 
                   {/* SMALL DECOR inside card (responsive + valid) */}
-                  {/* <div
+
+                  <div
                     className="
                     pointer-events-none
                     absolute
-                    top-6 right-6
-                    w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14
-                    bg-[url('/src/assets/Rectangle183.svg')]
+                    -bottom-5 left-72
+                    w-8 h-8 sm:w-10 sm:h-10 md:w-24 md:h-28
+                    bg-[url('/src/assets/images/Rectangle183.svg')]
                     bg-center bg-no-repeat bg-contain
                     rotate-90
                     invert
                     opacity-80
                   "
                   />
-                  <div
-                    className="
-                    pointer-events-none
-                    absolute
-                    top-[110px] right-6
-                    w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14
-                    bg-[url('/src/assets/Rectangle183.svg')]
-                    bg-center bg-no-repeat bg-contain
-                    rotate-90
-                    invert
-                    opacity-80
-                  "
-                  />
-                  <div
-                    className="
-                    pointer-events-none
-                    absolute
-                    bottom-6 left-6
-                    w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14
-                    bg-[url('/src/assets/Rectangle183.svg')]
-                    bg-center bg-no-repeat bg-contain
-                    rotate-90
-                    invert
-                    opacity-80
-                  "
-                  /> */}
+
                 </div>
               </div>
             ))}
-          </div>
 
-          <div
-            className="
-    mt-10
-    flex items-center justify-center gap-2
+            <div
+              className="absolute
+    flex items-center justify-center items-center gap-2 
     font-source-serif
     font-normal
     text-[18px]
@@ -569,13 +542,22 @@ export default function Home() {
     tracking-normal
     text-white
     cursor-pointer
+    text-center
     mx-auto
     max-w-[112.66px]
+    -bottom-15
+    left-1/2
+    -translate-x-1/2
+    z-10
+    
   "
-          >
-            <span className="text-center tracking-widest">SEE ALL</span>
-            <FaArrowRight size={18} />
+            >
+              <span className="text-center tracking-widest hover:text-gray-200 transition duration-300 ease-in-out">SEE ALL</span>
+              <FaArrowRight size={18} className="animate-bounce" />
+            </div>
           </div>
+
+
 
         </div>
       </section>
