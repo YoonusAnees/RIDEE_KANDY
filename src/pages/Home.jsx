@@ -5,6 +5,11 @@ import { FaPerson } from "react-icons/fa6";
 import { FaPersonRunning } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import HousekeepingMaintanace from "../assets/HousekeepingMaintanace.svg";
+import BusinessConnectivity from "../assets/Business&Connectivity.svg";
+import DININGBEVERAGES from "../assets/DININGBEVERAGES.svg";
+import GUESTSERVICES from "../assets/GUESTSERVICES.svg";
+import LEISURERECREATION from "../assets/LEISURERECREATION.svg";
 
 export default function Home() {
   const rooms = [
@@ -52,7 +57,7 @@ export default function Home() {
           {/* main heading — EXACT FIGMA */}
           <p
             className="
-        font-Wasted font-normal
+        font-wasted font-normal
         text-[36px] leading-[40px]
         sm:text-[44px] sm:leading-[48px]
         md:text-[60px] md:leading-[60px]
@@ -65,11 +70,11 @@ export default function Home() {
           {/* sub heading */}
           <p
             className="
-        font-Wasted font-normal
+        font-wasted font-normal
         mt-6
         text-[16px] leading-[24px]
         sm:text-[18px] sm:leading-[28px]
-        md:text-[24px] md:leading-[32px]
+        md:text-[32px] md:leading-[32px]
         max-w-2xl mx-auto
         
       "
@@ -87,7 +92,7 @@ export default function Home() {
        bg-center bg-no-repeat bg-cover
        flex items-center justify-center text-center text-white bg-white"
       >
-        <div className=" md:absolute md:-left-1 md: bg-black/3 md:w-[553px] md:h-[730px]" />
+        <div className=" md:absolute md:-left-1 md: bg-black/3 md:w-[600px] md:h-[782px]" />
 
         <div className="absolute  md:right-10 md:bottom-7 ">
 
@@ -99,7 +104,7 @@ export default function Home() {
                bg-[url('/src/assets/Rectangle183.svg')]
                bg-cover bg-center bg-no-repeat
                rotate-[-90deg]
-               -top-4 -left-1
+               -top-6 -left-3
                hidden md:block"
               ></div>
               {/* Mobile */}
@@ -119,7 +124,7 @@ export default function Home() {
                bg-[url('/src/assets/Rectangle183.svg')]
                bg-cover bg-center bg-no-repeat
                rotate-[-270deg]
-               -bottom-145 left-124
+               -bottom-146 left-128
                hidden md:block"
               ></div>
               {/* Mobile BOTTOM - match TOP */}
@@ -133,23 +138,17 @@ export default function Home() {
               >
               </div>
 
-
-
-
-
-
-
             </div>
             <div className=" md:h-140 md:w-165 bg-white/80 border-2 h-80 w-full p-5">
               <div className="flex flex-col gap-2 text-center">
-                <div className="md:mt-20 text-black">
-                  <p className="md:text-5xl font-Wasted my-5 font-extralight font-wasted">
+                <div className="flex flex-col -gap-10 md:mt-20 text-black">
+                  <p className="md:text-5xl font-Wasted my-5 font-extralight font-wasted md:-mb-1">
                     Welcome to
                   </p>
-                  <p className="md:text-6xl font-Wasted">Ridee Boutique</p>
+                  <p className="md:text-6xl font-wasted">Ridee Boutique</p>
                 </div>
-                <div className="text-black md:px-[50px] font-medium  md:py-6 text-center md:text-xl font-Wasted">
-                  <p className="font-source">
+                <div className="text-black md:px-[50px] font-medium  md:py-6 text-center md:text-xl ">
+                  <p className="font-source-pro">
                     Ridee Boutique is located in the last kingdom of Sri Lanka
                     Kandy. A beautific abode offering you the comfort of
                     privacy, this luxury hotel is conveniently placed in front
@@ -167,301 +166,673 @@ export default function Home() {
 
 
       {/* NEXT SECTION-3 - Experience the best we provide */}
-      <section className="relative w-full md:min-h-screen flex flex-col justify-center items-center overflow-hidden">
-        {/* Background shape */}
+      <section className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden">
+        {/* Background shape - responsive to 972x542 & angle 119deg */}
         <div
           className="
-      absolute
-      w-[90vw] h-[99vh]
-      md:w-[46vw] md:h-[130vh]
-      bg-[url('/src/assets/Rectangle-4.png')]
-      bg-no-repeat bg-center bg-contain
-      rotate-[300deg]
-      top-[-300px] right-[-60px]
-      md:rotate-[325deg]
-      md:top-[-30%] md:right-[-6%]
-      z-0
+    absolute
+    w-[42.2vw] h-[47vw]
+    bg-[url('/src/assets/Rectangle-4.png')]
+    bg-no-repeat bg-center bg-contain
+    rotate-[325deg]
+    right-[-6vw] top-[-10vh]
+    md:right-[-6vw] md:top-[-16vh]
+    z-0
+    pointer-events-none
+        opacity-18
+
     "
         />
 
-        {/* Dark overlay */}
+
+        {/* Dark overlay (make it vw/vh instead of px) */}
         <div
           className="
       absolute
-      left-0 top-1/5 -translate-y-1/2
-      w-[549px] md:h-[980px]
-      h-[1800px]
-      bg-black/10
+      left-0 top-[20%] -translate-y-1/2
+      w-[39vw] max-w-[700px]
+      h-[145vh] max-h-[99 0px]
+      bg-black/1
       z-0
+      pointer-events-none
     "
         />
-        {/* Horizontel */}
-        <div className="absolute flex p-5 w-full top-1 md:ml-19">
+
+        {/* Horizontal line (fix border-t-3 -> border-t-[3px]) */}
+        <div className="absolute w-full top-6 md:top-10 z-0 pointer-events-none">
           <div
-            className="absolute
-              border-t-3 border-gray-200 p-5 w-4/6 h-screen -right-8 mt-1 md:mt-14  md:mr-34
-    "
-          ></div>
+            className="
+        ml-auto
+        w-[80vw] md:w-[65vw]
+        border-t-[3px] border-black/1
+        mr-4 md:mr-12
+      "
+          />
         </div>
-        {/* Vertical */}
-        <div className="absolute flex p-5 mt-15 md:mr-21 right-1 top-1">
-          <div
-            className="absolute
-      border-r-3 border-gray-200 p-5 w-3/19  md:h-165 max-h-1000  h-1/6
-    "
-          ></div>
+
+        {/* Vertical line (fix invalid w-3/19 etc) */}
+        <div className="absolute right-6 md:right-12 top-10 z-0 pointer-events-none">
+          <div className="h-[18vh] md:h-[76vh] border-r-[3px] border-black/1" />
         </div>
 
         {/* Heading */}
-        <div className="relative z-10 p-5 mt-20 md:mt-10">
-          <p className="font-Wasted md:text-5xl text-3xl px-6 text-center">
-            Experience the best we provide
-          </p>
-          <p className="font-Wasted text-xl text-center md:px-72 mt-10">
-            Experience the perfect blend of elegance, comfort, and authentic Sri
-            Lankan charm at Ridee Boutique Hotel. Here’s why we are the ideal
-            choice for your stay in Kandy
-          </p>
-        </div>
-
-        {/* Cards */}
-        <div className="relative z-10 flex flex-col md:flex-row w-full gap-6 justify-evenly items-center px-4">
-          {/* LEFT */}
-          <div className="flex flex-col gap-6">
-            <div className="flex flex-col items-center p-5 md:w-[380px] text-center">
-              <IoRestaurant size={30} />
-              <p className="text-xl font-bold">DINING & BEVERAGES</p>
-              <p className="mt-4 font-bold">
-                Savor delightful meals and beverages with our on-site restaurant
-                and café.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center p-5 md:w-[380px] text-center">
-              <FaHouseChimneyUser size={30} />
-              <p className="text-xl font-bold">HOUSE KEEPING & MAINTENANCE</p>
-              <p className="mt-4 font-bold">
-                Daily housekeeping ensures your room remains pristine
-              </p>
-            </div>
-          </div>
-
-          {/* CENTER */}
-          <div className="flex flex-col items-center p-5 md:w-[380px] text-center">
-            <FaPerson size={30} />
-            <p className="text-xl font-bold">GUEST SERVICES</p>
-            <p className="mt-4 font-bold">
-              Our team is here to make every moment seamless — from 24-hour
-              reception
+        <div className="relative z-10 p-5 mt-20 md:mt-10 text-center">
+          {/* Heading */}
+          <div
+            className="
+      mx-auto
+      w-[44.2vw]
+      max-w-[637px]
+      min-w-[280px]
+    "
+          >
+            <p
+              className="
+        font-wasted
+        font-normal
+        text-[32px] sm:text-[40px] md:text-[48px]
+        leading-[90px]
+        tracking-normal
+        text-center
+        text-black
+      "
+            >
+              Experience the best we provide
             </p>
           </div>
 
-          {/* RIGHT */}
-          <div className="flex flex-col gap-6">
-            <div className="flex flex-col items-center p-5 md:w-[380px] text-center">
-              <IoRestaurant size={30} />
-              <p className="text-xl font-bold">Business & Connectivity</p>
-              <p className="mt-4 font-bold">
-                Stay connected with high-speed Wi-Fi and business-ready rooms
-              </p>
+          {/* Sub text ( already had this mostly right) */}
+          <div
+            className="
+    mx-auto
+    w-[59.3vw]
+    max-w-[854px]
+    min-w-[280px]
+    mt-6 md:mt-10
+    text-center
+  "
+          >
+            <p
+              className="
+    font-source-pro
+      font-normal
+      text-[16px] sm:text-[17px] md:text-[18px]
+      leading-[26px]
+      tracking-normal
+      px-16
+      text-black/90
+    "
+            >
+              Experience the perfect blend of elegance, comfort, and authentic Sri
+              Lankan charm at Ridee Boutique Hotel. Here’s why we are the ideal choice
+              for your stay in Kandy
+            </p>
+          </div>
+
+        </div>
+
+
+        {/* Cards */}
+        <div
+          className="
+    relative z-10
+    mx-auto
+    w-full md:w-[83.6vw]
+    max-w-[1205px]
+    px-4 sm:px-6 md:px-0
+    pb-10
+  "
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 items-start">
+            {/* LEFT column (2 cards) */}
+            <div className="flex flex-col gap-8">
+              <FeatureCard
+                icon={
+                  <img
+                    src={DININGBEVERAGES}
+                    alt="Dining & Beverages"
+                    className="w-[46px] h-[46px] object-contain"
+                  />
+                }
+
+                title="DINING & BEVERAGES"
+                desc="Savor delightful meals and beverages with our on-site restaurant and café."
+              />
+
+              <FeatureCard
+                icon={
+                  <img
+                    src={HousekeepingMaintanace}
+                    alt="HOUSE KEEPING & MAINTENANCE"
+                    className="w-[46px] h-[46px] object-contain"
+                  />
+                }
+
+                title="HOUSE KEEPING & MAINTENANCE"
+                desc="Daily housekeeping ensures your room remains pristine"
+              />
             </div>
 
-            <div className="flex flex-col items-center p-5 md:w-[380px] text-center">
-              <FaPersonRunning size={30} />
-              <p className="text-xl font-bold">LEISURE & RECREATION</p>
-              <p className="mt-4 font-bold">
-                Relax and unwind in our lounge areas, gardens, or outdoor
-                seating.
-              </p>
+            {/* CENTER column (1 card) */}
+            <div className="flex flex-col gap-8 md:pt-10">
+              <FeatureCard
+                icon={
+                  <img
+                    src={GUESTSERVICES}
+                    alt="GUEST SERVICES"
+                    className="w-[46px] h-[46px] object-contain"
+                  />
+                }
+
+                title="GUEST SERVICES"
+                desc="Our team is here to make every moment seamless — from 24-hour reception"
+              />
+            </div>
+
+            {/* RIGHT column (2 cards) */}
+            <div className="flex flex-col gap-8">
+              <FeatureCard
+                icon={
+                  <img
+                    src={BusinessConnectivity}
+                    alt="BUSINESS & CONNECTIVITY"
+                    className="w-[46px] h-[46px] object-contain"
+                  />
+                }
+
+                title="BUSINESS & CONNECTIVITY"
+                desc="Stay connected with high-speed Wi-Fi and business-ready rooms"
+              />
+
+              <FeatureCard
+                icon={
+                  <img
+                    src={LEISURERECREATION}
+                    alt="LEISURE & RECREATION"
+                    className="w-[46px] h-[46px] object-contain"
+                  />
+                }
+
+                title="LEISURE & RECREATION"
+                desc="Relax and unwind in our lounge areas, gardens, or outdoor seating."
+              />
             </div>
           </div>
         </div>
-        <div className="absolute bottom-1  bg-black/5 right-1 w-5/6 h-1/7"></div>
+
+
+
+
+
+
+        {/* Bottom shade (fix h-1/7 not valid) */}
+        <div className="absolute bottom-0 right-0 w-[77vw] h-[19vh] max-h-[190px] bg-black/1 z-0 pointer-events-none" />
       </section>
+
 
       {/* NEXT SECTION-4 - Explore Our Rooms */}
       <section
         className="
-    relative
-    min-h-[900px]
-    bg-[url('/src/assets/SECTION-4.jpg')]
-    bg-center bg-cover
-    overflow-hidden
-  "
+        relative
+        w-full
+        min-h-screen
+        bg-[url('/src/assets/SECTION-4.jpg')]
+        bg-center bg-cover
+        overflow-hidden
+        py-16 sm:py-20 md:py-24
+      "
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/50 z-0" />
 
         <div className="relative z-10 flex flex-col gap-6">
-          <h2 className="text-6xl font-Wasted text-center text-blue-300 mt-20">
-            Explore Our Rooms
-          </h2>
+          <div
+            className="
+    mx-auto
+    w-[28.2vw]
+    max-w-[406px]
+    min-w-[260px]
+    text-center
+  "
+          >
+            <h2
+              className="
+      font-wasted
+      font-normal
+      text-[32px] sm:text-[40px] md:text-[48px]
+      leading-[56px]
+      tracking-normal
+      text-white
+    "
+            >
+              Explore Our Rooms
+            </h2>
+          </div>
 
-          <p className="text-center text-xl text-white md:px-40 px-4 font-source">
-            Experience the perfect blend of elegance, comfort, and authentic Sri
-            Lankan charm at Ridee Boutique Hotel.
-          </p>
+
+          <div
+            className="
+    mx-auto
+    w-full md:w-[60.2vw]
+    max-w-[867px]
+    px-5 sm:px-8
+    text-center
+  "
+          >
+            <p
+              className="
+      font-source-serif
+      font-light
+      text-[16px] sm:text-[17px] md:text-[18px]
+      leading-[26px]
+      tracking-normal
+      text-white
+    "
+            >
+              Experience the perfect blend of elegance, comfort, and authentic Sri
+              Lankan charm at Ridee Boutique Hotel.
+            </p>
+          </div>
+
 
           {/* Grid wrapper */}
-          <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 p-10">
-            {/* DECOR SVGs */}
-            <div className="hidden md:block absolute top-[150px] left-[20px] w-[150px] h-[250px] bg-[url('/src/assets/Rectangle183.svg')] bg-cover -rotate-90 z-20" />
-            <div className="hidden md:block absolute top-[150px] left-1/2 -translate-x-1/2 w-[150px] h-[250px] bg-[url('/src/assets/Rectangle183.svg')] bg-cover -rotate-90 z-20" />
-            <div className="hidden md:block absolute top-[150px] right-[20px] w-[150px] h-[250px] bg-[url('/src/assets/Rectangle183.svg')] bg-cover -rotate-90 z-20" />
+          <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 px-5 sm:px-8 md:px-10 mt-6">
+            {/* BIG DECOR SVGs (Figma: 985x633 angle 122.71deg) */}
+
 
             {rooms.map((room) => (
               <div
                 key={room.id}
-                className="flex flex-col border border-black/40 bg-black/30"
+                className="
+                relative
+                flex flex-col
+                border border-black/40
+                bg-black/30
+                overflow-hidden
+              "
               >
+                {/* Image */}
                 <div
-                  className="w-full h-[300px] bg-center bg-cover"
+                  className="w-full h-[240px] sm:h-[280px] md:h-[300px] bg-center bg-cover"
                   style={{ backgroundImage: `url(${room.image})` }}
                 />
-                <div className="p-6 text-white">
-                  <p className="text-xl font-Wasted text-center">
+
+                {/* Content */}
+                <div className="relative p-6 text-white">
+                  <p
+                    className="
+    font-source-serif
+    font-normal
+    text-[18px]
+    leading-[20px]
+    tracking-normal
+    text-center
+    text-white
+    mx-auto
+    max-w-[275.615px]
+  "
+                  >
                     {room.title}
                   </p>
-                  <p className="mt-6 text-center">{room.description}</p>
-                  <div className="mt-10 text-center underline cursor-pointer">
+
+                  <p
+                    className="
+    mt-6
+    font-source-serif
+    font-light
+    text-[16px]
+    leading-[26px]
+    tracking-normal
+    text-center
+    text-white
+    mx-auto
+    max-w-[300.762px]
+  "
+                  >
+                    {room.description}
+                  </p>
+
+
+                  <div
+                    className="
+    mt-10
+    font-source-serif
+    font-normal
+    text-[18px]
+    leading-[20px]
+    tracking-normal
+    text-center
+    underline
+    cursor-pointer
+    mx-auto
+    max-w-[275.615px]
+    text-white
+  "
+                  >
                     VIEW ROOM
                   </div>
 
+
+                  {/* SMALL DECOR inside card (responsive + valid) */}
+                  {/* <div
+                    className="
+                    pointer-events-none
+                    absolute
+                    top-6 right-6
+                    w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14
+                    bg-[url('/src/assets/Rectangle183.svg')]
+                    bg-center bg-no-repeat bg-contain
+                    rotate-90
+                    invert
+                    opacity-80
+                  "
+                  />
                   <div
-                    className="absolute md:w-[150px] md:h-[150px] w-10 h-10 bg-[url('/src/assets/Rectangle183.svg')]
-       bg-center bg-no-repeat bg-cover md:top-117 md:-rotate-270 md:right-7 rotate-90 top-135 right-9 invert  "
-                  ></div>
-
+                    className="
+                    pointer-events-none
+                    absolute
+                    top-[110px] right-6
+                    w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14
+                    bg-[url('/src/assets/Rectangle183.svg')]
+                    bg-center bg-no-repeat bg-contain
+                    rotate-90
+                    invert
+                    opacity-80
+                  "
+                  />
                   <div
-                    className="absolute md:w-[150px] md:h-[150px] w-10 h-10 bg-[url('/src/assets/Rectangle183.svg')]
-       bg-center bg-no-repeat bg-cover md:top-117 md:-rotate-270 md:right-7 rotate-90 top-279 right-9 invert  "
-                  ></div>
-
-                  <div
-                    className="absolute md:w-[150px] md:h-[150px] w-10 h-10 bg-[url('/src/assets/Rectangle183.svg')]
-       bg-center bg-no-repeat bg-cover md:top-117  md:-rotate-270  md:right-12 rotate-90 top-425 left-102 invert  "
-                  ></div>
-
-
+                    className="
+                    pointer-events-none
+                    absolute
+                    bottom-6 left-6
+                    w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14
+                    bg-[url('/src/assets/Rectangle183.svg')]
+                    bg-center bg-no-repeat bg-contain
+                    rotate-90
+                    invert
+                    opacity-80
+                  "
+                  /> */}
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="flex justify-center items-center gap-2 text-xl text-white mt-10 cursor-pointer">
-            <span>SEE ALL</span>
-            <FaArrowRight />
+          <div
+            className="
+    mt-10
+    flex items-center justify-center gap-2
+    font-source-serif
+    font-normal
+    text-[18px]
+    leading-[24px]
+    tracking-normal
+    text-white
+    cursor-pointer
+    mx-auto
+    max-w-[112.66px]
+  "
+          >
+            <span className="text-center tracking-widest">SEE ALL</span>
+            <FaArrowRight size={18} />
           </div>
+
         </div>
       </section>
 
+
+
       {/* NEXT SECTION-5- Experience The City */}
-      <section className="relative w-full h-auto md:h-[370px] overflow-hidden">
-        {/* Rotated rectangle background */}
+      <section className="relative w-full md:h-[420px] py-16 sm:py-20">
+        {/* Rotated rectangle background (Figma: 982x259, angle 104.7349deg) */}
         <div
           className="
-      absolute
-      w-[40vw] h-[55vh]
-      md:w-[28vw] md:h-[85vh]
-      bg-[url('/src/assets/Rectangle-4.png')]
-      bg-no-repeat bg-center bg-contain
-      rotate-210
-      bottom-12 -left-5
-      md:-bottom-20 md:-left-25
-      pointer-events-none
-      z-10
-    "
-        ></div>
+    pointer-events-none
+    absolute
 
-        {/* Line SVG overlay */}
-        <div className="absolute flex p-5 w-full mt-20 md:ml-19">
-          <div
-            className="absolute
-      border-t-3 border-gray-200 p-5 w-3/19 h-screen
-    "
-          ></div>
+    /* MOBILE */
+    w-[25.7vw]
+    h-[28.6vw]
+
+    md:w-[27vw]
+    md:h-[30vw]
+
+    max-w-none
+    max-h-none
+
+    min-w-[260px]
+    min-h-[320px]
+
+    bg-[url('/src/assets/Rectangle-4.png')]
+    bg-no-repeat bg-center bg-contain
+    rotate-[240deg]
+
+    left-[-8.8vw]
+    top-4/10 -translate-y-1/2
+
+    z-10
+  "
+        />
+
+
+
+
+        {/* Decorative lines (fixed Tailwind classes) */}
+        {/* Horizontal line */}
+        <div className="pointer-events-none absolute left-0 top-[55%] w-full z-0">
+          <div className="w-[70vw] md:w-[55vw] border-t-[3px] border-gray-200/70 ml-6 md:ml-12" />
         </div>
 
-        <div className="absolute flex p-5 mt-20 md:ml-19">
-          <div
-            className="absolute
-      border-l-3 border-gray-200 p-5 w-3/19 h-screen
-    "
-          ></div>
+        {/* Vertical line */}
+        <div className="pointer-events-none absolute left-6 md:left-12 top-[55%] z-0">
+          <div className="h-[160px] md:h-[220px] border-l-[3px] border-gray-200/70" />
         </div>
 
         {/* Right overlay */}
-        <div className="absolute inset-y-0 right-1 w-7/9  bg-black/5 z-15"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-[78vw] md:w-[70vw] bg-black/5 z-0" />
 
         {/* Content */}
-        <div className="relative z-30 flex flex-col items-center justify-center px-6 py-20 md:py-30">
-          <h2 className="text-center text-4xl md:text-5xl font-Wasted">
-            Experience The City
-          </h2>
+        <div className="relative z-20 mx-auto max-w-6xl px-5 sm:px-8 text-center">
+          <div
+            className="
+    mx-auto
+    w-[28.3vw]
+    max-w-[408px]
+    min-w-[260px]
+  "
+          >
+            <h2
+              className="
+      font-wasted
+      font-normal
+      text-[32px] sm:text-[40px] md:text-[48px]
+      leading-[52px]
+      tracking-normal
+      text-justify
+      text-black
+    "
+            >
+              Experience The City
+            </h2>
+          </div>
 
-          <p className="text-base md:text-lg p-5 text-center md:px-60 font-medium">
-            Discover the heart of Kandy beyond your stay. From the sacred Temple
-            of the Tooth to the peaceful Kandy Lake and colorful local markets,
-            every corner tells a story.
-          </p>
+
+
+
+
+          <div
+            className="
+    mx-auto
+    w-full md:w-[59.7vw]
+    max-w-[860.039px]
+    px-5 sm:px-8
+    text-center
+    mt-5
+  "
+          >
+            <p
+              className="
+      font-source-serif
+      font-normal
+      text-[18px]
+      leading-[26px]
+      tracking-normal
+      text-center
+      text-black
+    "
+            >
+              Discover the heart of Kandy beyond your stay. From the sacred Temple of
+              the Tooth to the peaceful Kandy Lake and colorful local markets, every
+              corner tells a story.
+            </p>
+          </div>
+
+
+
+
+
         </div>
       </section>
+
 
       {/* NEXT SECTOIN-6- THE TEMPLE OF TOOTH RELIC  */}
       <section
         className="
     relative
-    aspect-[1/1] md:aspect-[16/8]
+    w-full
+    min-h-[520px] sm:min-h-[560px] md:min-h-[520px]
+    md:aspect-[16/8]
     bg-[url('/src/assets/temple.png')]
-    bg-no-repeat bg-cover
-    grid grid-rows-2 md:grid-rows-5
+    bg-no-repeat bg-cover bg-center
+    overflow-hidden
   "
       >
-        {/* ROW 1 – TITLE */}
-        <div className="md:px-24 md:py-16 p-12">
-          <p className="md:text-[55px] text-2xl font-source font-bold text-white">
+        {/* subtle dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/35 md:bg-black/25" />
+
+        {/* content wrapper */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-24 py-10 sm:py-12 md:py-16">
+          {/* TITLE */}
+          <p
+            className="
+    font-source-serif
+    font-bold
+    text-[32px] sm:text-[40px] md:text-[48px]
+    leading-[1]
+    tracking-normal
+    text-white
+  "
+          >
             THE TEMPLE OF TOOTH RELIC
           </p>
-        </div>
 
-        <div></div>
-        <div></div>
 
-        {/* TEXT BOX */}
-        <div className="flex items-start md:px-24 p-12">
-          <div
-            className="bg-zinc-800/80 backdrop-blur-md 
-        w-full md:w-[28vw]
-        lg:w-[40vw] lg:h-[25vh]
-        p-6 md:px-10 md:py-12
-        text-center text-white font-source"
-          >
-            <p>
-              Kandy is home to the iconic Temple of the Sacred Tooth Relic, one
-              of Buddhism’s most revered sites. You’ll also find other temples
-              and historic churches scattered around the city, each offering a
-              glimpse into the rich religious tapestry of the region
-            </p>
+          {/* spacer */}
+          <div className="h-6 sm:h-8 md:h-10" />
+
+          {/* TEXT BOX (mobile-first) */}
+          <div className="md:absolute   md:-bottom-125 md:left-1   flex justify-start ">
+            <div
+              className="
+          bg-zinc-800/80 backdrop-blur-md
+          text-white
+          shadow-lg
+          p-12 sm:p-5 md:px-6 md:py-8
+
+          w-full
+          max-w-[520px]
+          md:w-[28.9vw]
+
+          flex items-center
+        "
+            >
+              <p
+                className="
+            font-source-serif font-light
+            text-[16px] sm:text-[18px] md:text-[20px]
+            leading-[1.27]
+            text-justify
+            text-white/95
+          "
+              >
+                Kandy is home to the iconic Temple of the Sacred Tooth Relic, one of
+                Buddhism’s most revered sites. You’ll also find other temples and
+                historic churches scattered around the city, each offering a glimpse
+                into the rich religious tapestry of the region
+              </p>
+            </div>
           </div>
         </div>
 
+        {/* Buttons */}
         <div
           className="
       absolute
-      bottom-6 right-6
+      bottom-4 right-4
+      sm:bottom-6 sm:right-6
       md:bottom-12 md:right-24
       flex gap-3
+      z-20
     "
         >
           <button className="bg-gray-400/70 hover:bg-gray-500/80 transition rounded-full p-3">
-            <FaChevronLeft size={24} className="text-white" />
+            <FaChevronLeft size={22} className="text-white" />
           </button>
 
           <button className="bg-gray-400/70 hover:bg-gray-500/80 transition rounded-full p-3">
-            <FaChevronRight size={24} className="text-white" />
+            <FaChevronRight size={22} className="text-white" />
           </button>
         </div>
       </section>
+
+    </div>
+  );
+}
+
+
+function FeatureCard({ icon, title, desc }) {
+  return (
+    <div
+      className="
+        flex flex-col items-center text-center
+        w-full
+        max-w-[389px]
+        mx-auto
+        p-5
+      "
+    >
+      <div className="mb-3">{icon}</div>
+
+      <p
+        className="
+    font-source-pro
+    font-semibold
+    text-[18px]
+    leading-[24px]
+    tracking-wider
+    text-center
+    max-w-[357px]
+  "
+      >
+        {title}
+      </p>
+
+
+      <p
+        className="
+    mt-3
+    font-source-pro
+    font-normal
+    text-[18px]
+    leading-[26px]
+    tracking-normal
+    text-center
+    text-black/90
+  "
+      >
+        {desc}
+      </p>
+
     </div>
   );
 }

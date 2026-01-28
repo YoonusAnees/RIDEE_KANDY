@@ -53,19 +53,19 @@ export default function Navbar() {
               hidden md:flex
               items-center
               gap-12
-              font-Wasted
-              font-normal
-              text-[18px]
+font-source-pro             font-normal
+              text-[16px]
               leading-[24px]
+              uppercase
             "
           >
-            <span className="cursor-pointer hover:text-white/80">Home</span>
-            <span className="cursor-pointer hover:text-white/80">About Us</span>
-            <span className="cursor-pointer hover:text-white/80">
+            <span className="tracking-[3px] cursor-pointer hover:text-white/80">Home</span>
+            <span className="tracking-[3px] cursor-pointer hover:text-white/80">About Us</span>
+            <span className="tracking-[3px] cursor-pointer hover:text-white/80">
               Rooms & Suites
             </span>
-            <span className="cursor-pointer hover:text-white/80">Packages</span>
-            <span className="cursor-pointer hover:text-white/80">Contact Us</span>
+            <span className="tracking-[3px] cursor-pointer hover:text-white/80">Packages</span>
+            <span className="tracking-[3px] cursor-pointer hover:text-white/80">Contact Us</span>
           </div>
 
           {/* RIGHT SIDE */}
@@ -76,13 +76,16 @@ export default function Navbar() {
                 hidden md:flex
                 items-center justify-center
                 h-[55px]
-                px-[49px]
-                border border-white/60
+                px-[30px]
+                border-2 border-white/60
                 font-Wasted
-                text-[16px]
+                text-[18px]
                 leading-[24px]
                 hover:bg-white/10
                 transition
+                cursor-pointer
+                font-source-pro
+                tracking-[3px]
               "
             >
               Call Now
