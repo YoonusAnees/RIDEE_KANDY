@@ -518,7 +518,7 @@ export default function Home() {
                     className="
                     pointer-events-none
                     absolute
-                    -bottom-5 left-72
+                    -bottom-3 left-70
                     w-8 h-8 sm:w-10 sm:h-10 md:w-24 md:h-28
                     bg-[url('/src/assets/images/Rectangle183.svg')]
                     bg-center bg-no-repeat bg-contain
@@ -565,7 +565,7 @@ export default function Home() {
 
 
       {/* NEXT SECTION-5- Experience The City */}
-      <section className="relative w-full md:h-[420px] py-16 sm:py-20">
+      <section className="relative w-full md:h-[420px] py-16 sm:py-20 overflow-hidden">
         {/* Rotated rectangle background (Figma: 982x259, angle 104.7349deg) */}
         <div
           className="
@@ -576,23 +576,24 @@ export default function Home() {
     w-[25.7vw]
     h-[28.6vw]
 
-    md:w-[27vw]
-    md:h-[30vw]
+    md:w-[31vw]
+    md:h-[45vw]
 
     max-w-none
     max-h-none
 
-    min-w-[260px]
-    min-h-[320px]
+    min-w-[300px]
+    min-h-[920px]
 
     bg-[url('/src/assets/images/Rectangle-4.png')]
     bg-no-repeat bg-center bg-contain
     rotate-[240deg]
 
     left-[-8.8vw]
-    top-4/10 -translate-y-1/2
+    md:top-4/9 -translate-y-1/2
 
     z-10
+    
   "
         />
 
@@ -601,17 +602,20 @@ export default function Home() {
 
         {/* Decorative lines (fixed Tailwind classes) */}
         {/* Horizontal line */}
-        <div className="pointer-events-none absolute left-0 top-[55%] w-full z-0">
-          <div className="w-[70vw] md:w-[55vw] border-t-[3px] border-gray-200/70 ml-6 md:ml-12" />
+        <div className="pointer-events-none absolute left-0 top-[25%] w-full z-0">
+          <div className="w-[14vw] md:w-[22.5vw] border-t-[3px] border-gray-200/70 ml-6 md:ml-12" />
         </div>
 
         {/* Vertical line */}
-        <div className="pointer-events-none absolute left-6 md:left-12 top-[55%] z-0">
-          <div className="h-[160px] md:h-[220px] border-l-[3px] border-gray-200/70" />
+        <div className="mpointer-events-none absolute left-6 md:left-12 top-[25%] z-0">
+          <div className="h-[250px] md:h-[315px] border-l-[3px] border-gray-200/70" />
         </div>
 
         {/* Right overlay */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-[78vw] md:w-[70vw] bg-black/5 z-0" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-[78vw] md:w-[73.5vw] bg-black/5 z-0" />
+        {/* Down */}
+        <div className="pointer-events-none absolute md:inset-y-95 inset-y-85.5 left-0 bottom-0 w-[78vw] h[1vw] md:w-[45.5vw] md:h[12vw]  bg-black/5 z-0" />
+
 
         {/* Content */}
         <div className="relative z-20 mx-auto max-w-6xl px-5 sm:px-8 text-center">
@@ -627,11 +631,12 @@ export default function Home() {
               className="
       font-wasted
       font-normal
-      text-[32px] sm:text-[40px] md:text-[48px]
-      leading-[52px]
-      tracking-normal
+      text-[30px] sm:text-[40px] md:text-[48px]
+      md:leading-[52px]
+      md:tracking-normal
       text-justify
       text-black
+      mt-20
     "
             >
               Experience The City
