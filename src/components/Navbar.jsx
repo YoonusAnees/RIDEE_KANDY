@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import logo from "../assets/images/logo.svg"
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -41,7 +42,7 @@ export default function Navbar() {
           {/* LOGO */}
           <div className="w-14 lg:w-16">
             <img
-              src="/src/assets/images/logo.svg"
+              src={logo}
               alt="Ridee Boutique"
               className="w-full object-contain"
             />
