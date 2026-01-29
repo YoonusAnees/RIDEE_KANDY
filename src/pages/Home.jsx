@@ -510,8 +510,9 @@ export default function Home() {
                     className="
                     pointer-events-none
                     absolute
-                    -bottom-3 left-70
-                    w-8 h-8 sm:w-10 sm:h-10 md:w-24 md:h-28
+                    md:-bottom-3 md:left-70
+                    -bottom-3 left-78
+                    w-24 h-28
                     bg-[url('/src/assets/images/Rectangle183.svg')]
                     bg-center bg-no-repeat bg-contain
                     rotate-90
