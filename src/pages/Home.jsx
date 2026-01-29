@@ -8,27 +8,30 @@ import GUESTSERVICES from "../assets/images/GUESTSERVICES.svg";
 import LEISURERECREATION from "../assets/images/LEISURERECREATION.svg";
 import Temple from "../assets/images/temple.png";
 import Lake from "../assets/images/BG.png";
+import room1 from "../assets/images/Room1.jpg";
+import room2 from "../assets/images/Room2.jpg";
+import room3 from "../assets/images/Room3.jpg";
 
 export default function Home() {
   const rooms = [
     {
       id: 1,
       title: "PREMIUM ROOM",
-      image: "./src/assets/images/Room1.jpg",
+      image: room1,
       description:
         "Generously designed with a separate seating area. Enjoy a balcony with lush greenery or scenic views, ideal for indulgent or extended stays.",
     },
     {
       id: 2,
       title: "EXECUTIVE  SUITE",
-      image: "./src/assets/images/Room2.jpg",
+      image: room2,
       description:
         "Generously designed with a separate seating area. Enjoy a balcony with lush greenery or scenic views, ideal for indulgent or extended stays",
     },
     {
       id: 3,
       title: "EXECUTIVE SUITE",
-      image: "./src/assets/images/Room3.jpg",
+      image: room3,
       description:
         "Generously designed with a separate seating area. Enjoy a balcony with lush greenery or scenic views, ideal for indulgent or extended stays.",
     },
