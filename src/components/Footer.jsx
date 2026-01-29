@@ -1,4 +1,6 @@
 import { FaInstagram, FaYoutube, FaFacebookF } from "react-icons/fa";
+import logo from "../assets/images/logo.svg";
+import Rectangle183 from "../assets/images/Rectangle183.svg";
 
 export default function Footer() {
   return (
@@ -17,26 +19,26 @@ export default function Footer() {
           hidden md:block
           absolute
           w-[60px] h-[120px]
-          bg-[url('/src/assets/images/Rectangle183.svg')]
           bg-cover bg-center bg-no-repeat
           top-[350px] right-4
           rotate-[90deg]
           invert
           pointer-events-none
         "
+        style={{ backgroundImage: `url(${Rectangle183})` }}
       />
       <div
         className="
           hidden md:block
           absolute
           w-[60px] h-[120px]
-          bg-[url('/src/assets/images/Rectangle183.svg')]
           bg-cover bg-center bg-no-repeat
           top-[340px] left-2
           rotate-180
           invert
           pointer-events-none
         "
+        style={{ backgroundImage: `url(${Rectangle183})` }}
       />
 
       {/* Main content */}
@@ -45,11 +47,7 @@ export default function Footer() {
           {/* Col 1 */}
           <div>
             <div className="absolute top-13 left-1/12 mb-4 h-[94px] w-[69px]">
-              <img
-                src="/src/assets/images/logo.svg"
-                alt="logo"
-                className="w-full"
-              />
+              <img src={logo} alt="logo" className="w-full" />
             </div>
 
             <div className="mt-20">
