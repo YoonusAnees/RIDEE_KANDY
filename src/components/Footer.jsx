@@ -1,16 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
 import { FaInstagram, FaYoutube, FaFacebookF } from "react-icons/fa";
 import logo from "../assets/images/logo.svg";
 import Rectangle183 from "../assets/images/Rectangle183.svg";
-
-/**
- * ✅ Only animation on the decorative Rectangle183 SVGs (the two absolute divs)
- * - They "appear" when footer scrolls into view: fade + slight slide + rotate settle
- * Install: npm i framer-motion
- */
-
-const easeOut = [0.22, 1, 0.36, 1];
 
 export default function Footer() {
   return (
@@ -24,40 +14,31 @@ export default function Footer() {
       "
     >
       {/* Decorative SVGs (only show on md+) */}
-      <motion.div
+      <div
         className="
           hidden md:block
           absolute
           w-[60px] h-[120px]
           bg-cover bg-center bg-no-repeat
           top-[350px] right-4
-          rotate-[360deg]
+          rotate-[90deg]
           invert
           pointer-events-none
         "
         style={{ backgroundImage: `url(${Rectangle183})` }}
-        initial={{ opacity: 0, x: 14, y: 10, rotate: 82 }}
-        whileInView={{ opacity: 1, x: 0, y: 0, rotate: 90 }}
-        viewport={{ once: true, amount: 0.25 }}
-        transition={{ duration: 0.8, ease: easeOut }}
       />
-
-      <motion.div
+      <div
         className="
           hidden md:block
           absolute
           w-[60px] h-[120px]
           bg-cover bg-center bg-no-repeat
           top-[340px] left-2
-          rotate-[360deg]
+          rotate-180
           invert
           pointer-events-none
         "
         style={{ backgroundImage: `url(${Rectangle183})` }}
-        initial={{ opacity: 0, x: -14, y: 10, rotate: 170 }}
-        whileInView={{ opacity: 1, x: 0, y: 0, rotate: 180 }}
-        viewport={{ once: true, amount: 0.25 }}
-        transition={{ duration: 0.8, ease: easeOut, delay: 0.08 }}
       />
 
       {/* Main content */}
@@ -70,14 +51,14 @@ export default function Footer() {
             </div>
 
             <div className="mt-20">
-              <p className="font-source-pro tracking-widest text-[18px] leading-relaxed max-w-md">
+              <p className="font-source-pro tracking-widest text-[18px] leading-relaxed  max-w-md">
                 Where timeless Sri Lankan charm meets modern comfort. Stay with
                 us and make every moment unforgettable.
               </p>
             </div>
 
             <div className="flex gap-4 text-[24px] font-source-pro mt-4">
-              <FaFacebookF className="hover:text-gray-400 transition cursor-pointer" />
+              <FaFacebookF className="hover:text-gray-400 transition cursor-pointer " />
               <FaInstagram className="hover:text-gray-400 transition cursor-pointer" />
               <FaYoutube className="hover:text-gray-400 transition cursor-pointer" />
             </div>
@@ -152,7 +133,10 @@ export default function Footer() {
 
           {/* Col 4 */}
           <div>
-            <h4 className="uppercase text-[16px] mb-4 font-semibold tracking-widest font-source-pro md:whitespace-nowrap">
+            <h4
+              className="uppercase text-[16px] mb-4 font-semibold tracking-widest font-source-pro   md:whitespace-nowrap
+ "
+            >
               Subscribe to Our Newsletter
             </h4>
 
@@ -161,7 +145,10 @@ export default function Footer() {
             </p>
 
             <form
-              className="flex flex-col sm:flex-row gap-3 w-full max-w-md"
+              className="
+                flex flex-col sm:flex-row gap-3
+                w-full max-w-md
+              "
               onSubmit={(e) => e.preventDefault()}
             >
               <input
@@ -193,8 +180,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="px-2 mx-auto">
-        <div className="border-t border-black/2 w-[94%] mx-auto"></div>
-
+        <div className="border-t border-black/2  w-[94%] mx-auto"></div>
         <div
           className="
             max-w-[1600px] mx-auto
