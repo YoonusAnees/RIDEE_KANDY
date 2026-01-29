@@ -511,7 +511,7 @@ export default function Home() {
                     pointer-events-none
                     absolute
                     md:-bottom-3 md:left-70
-                    -bottom-3 left-78
+                    -bottom-3 left-75
                     w-24 h-28
                     bg-[url('/src/assets/images/Rectangle183.svg')]
                     bg-center bg-no-repeat bg-contain
