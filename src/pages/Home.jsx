@@ -1,8 +1,4 @@
 import React from "react";
-import { IoRestaurant } from "react-icons/io5";
-import { FaHouseChimneyUser } from "react-icons/fa6";
-import { FaPerson } from "react-icons/fa6";
-import { FaPersonRunning } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import HousekeepingMaintanace from "../assets/images/HousekeepingMaintanace.svg";
@@ -10,6 +6,8 @@ import BusinessConnectivity from "../assets/images/Business&Connectivity.svg";
 import DININGBEVERAGES from "../assets/images/DININGBEVERAGES.svg";
 import GUESTSERVICES from "../assets/images/GUESTSERVICES.svg";
 import LEISURERECREATION from "../assets/images/LEISURERECREATION.svg";
+import Temple from "../assets/images/temple.png";
+import Lake from "../assets/images/BG.png";
 
 export default function Home() {
   const rooms = [
@@ -35,6 +33,22 @@ export default function Home() {
         "Generously designed with a separate seating area. Enjoy a balcony with lush greenery or scenic views, ideal for indulgent or extended stays.",
     },
   ];
+
+  const slides = [
+    {
+      image: Temple,
+    },
+    {
+      image: Lake,
+    },
+  ];
+
+  const [current, setCurrent] = React.useState(0);
+
+  const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
+
+  const prevSlide = () =>
+    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
     <div className="w-full overflow-hidden">
@@ -88,7 +102,8 @@ export default function Home() {
         className="relative  w-full h-screen
        bg-[url('/src/assets/images/BG.png')]
        bg-center bg-no-repeat bg-cover
-       flex items-center justify-center text-center text-white bg-white"
+       flex items-center justify-center text-center text-white bg-white
+       "
       >
         <div className=" md:absolute md:-left-1 md: bg-black/3 md:w-[600px] md:h-[782px]" />
 
@@ -173,8 +188,7 @@ export default function Home() {
     md:right-[-6vw] md:top-[-16vh]
     z-0
     pointer-events-none
-        opacity-18
-
+     opacity-18
     "
         />
 
@@ -649,7 +663,13 @@ export default function Home() {
     bg-[url('/src/assets/images/temple.png')]
     bg-no-repeat bg-cover bg-center
     overflow-hidden
+    transition-all duration-500 ease-in-out
   "
+        style={{
+          backgroundImage: `url(${slides[current].image})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         {/* subtle dark overlay for readability */}
         <div className="absolute inset-0 bg-black/35 md:bg-black/25" />
@@ -708,6 +728,42 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Next slide previews (bottom-right) */}
+        <div
+          className="
+    absolute
+    right-4 sm:right-6 md:right-24
+    bottom-[15%]
+    flex gap-3
+    z-20
+  "
+        >
+          {[1, 2].map((offset) => {
+            const index = (current + offset) % slides.length;
+
+            return (
+              <div
+                key={index}
+                onClick={() => setCurrent(index)}
+                className="
+          w-20 h-14 sm:w-24 sm:h-16 md:w-60 md:h-60
+          bg-cover bg-center
+          cursor-pointer
+          border-2 border-white/60
+          rounded-lg
+          hover:border-white
+          transition-all duration-300
+          shadow-lg
+          hover:scale-110
+        "
+                style={{
+                  backgroundImage: `url(${slides[index].image})`,
+                }}
+              />
+            );
+          })}
+        </div>
+
         {/* Buttons */}
         <div
           className="
@@ -719,11 +775,17 @@ export default function Home() {
       z-20
     "
         >
-          <button className="bg-gray-400/70 hover:bg-gray-500/80 transition rounded-full p-3">
+          <button
+            onClick={prevSlide}
+            className="bg-gray-400/70 hover:bg-gray-500/80 transition rounded-full p-3"
+          >
             <FaChevronLeft size={22} className="text-white" />
           </button>
 
-          <button className="bg-gray-400/70 hover:bg-gray-500/80 transition rounded-full p-3">
+          <button
+            onClick={nextSlide}
+            className="bg-gray-400/70 hover:bg-gray-500/80 transition rounded-full p-3"
+          >
             <FaChevronRight size={22} className="text-white" />
           </button>
         </div>
