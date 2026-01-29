@@ -73,7 +73,7 @@ export default function CTA() {
               flex items-center justify-center
             "
           >
-            <p className="font-jacques font-normal text-[18px] leading-[24px] text-gray-800 text-center">
+            <p className="font-jacques font-normal text-[18px] leading-[24px] text-gray-800 text-center mt-2 md:mt-0">
               Step into Ridee Boutique Hotel, where modern comfort embraces the
               soul of old Sri Lankan charm. Set in the heart of Kandy, our
               serene retreat invites you to discover authentic hospitality, rich

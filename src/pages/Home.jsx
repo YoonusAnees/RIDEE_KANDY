@@ -241,7 +241,9 @@ export default function Home() {
         font-wasted
         font-normal
         text-[32px] sm:text-[40px] md:text-[48px]
-        leading-[90px]
+        md:leading-[90px]
+        leading-[50px]
+
         tracking-normal
         text-center
         text-black
