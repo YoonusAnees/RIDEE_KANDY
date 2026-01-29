@@ -8,6 +8,7 @@ import BusinessConnectivity from "../assets/images/Business&Connectivity.svg";
 import DININGBEVERAGES from "../assets/images/DININGBEVERAGES.svg";
 import GUESTSERVICES from "../assets/images/GUESTSERVICES.svg";
 import LEISURERECREATION from "../assets/images/LEISURERECREATION.svg";
+import Rectangle183 from "../assets/images/Rectangle183.svg";
 
 import Temple from "../assets/images/temple.png";
 import Lake from "../assets/images/BG.png";
@@ -169,12 +170,14 @@ export default function Home() {
 
       {/* SECTION 2 - Welcome */}
       <AnimatedSection
+        data-nav="light"
         className="
           relative w-full h-screen
           bg-[url('/src/assets/images/BG.png')]
           bg-center bg-no-repeat bg-cover
           flex items-center justify-center text-center
           text-white bg-white
+          overflow-hidden
         "
       >
         <motion.div
@@ -287,9 +290,12 @@ export default function Home() {
       </AnimatedSection>
 
       {/* SECTION 3 - Experience the best */}
-      <AnimatedSection className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden">
+      <AnimatedSection
+        data-nav="light"
+        className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden"
+      >
         {/* Background shape */}
-        <motion.div
+        <div
           className="
             absolute
             w-[42.2vw] h-[47vw]
@@ -300,10 +306,6 @@ export default function Home() {
             md:right-[-6vw] md:top-[-16vh]
             z-0 pointer-events-none opacity-18
           "
-          initial={{ opacity: 0, rotate: 315 }}
-          whileInView={{ opacity: 0.18, rotate: 325 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 1.1, ease: easeOut }}
         />
 
         {/* Dark overlay */}
@@ -501,7 +503,8 @@ export default function Home() {
               "
             >
               Experience the perfect blend of elegance, comfort, and authentic
-              Sri Lankan charm at Ridee Boutique Hotel.
+              Sri Lankan charm at Ridee Boutique Hotel. Here’s why we are the
+              ideal choice for your stay in Kandy.
             </p>
           </motion.div>
 
@@ -580,10 +583,17 @@ export default function Home() {
                       md:-bottom-3 md:left-70
                       -bottom-3 left-78 sm:left-70
                       w-24 h-28
-                      bg-[url('/src/assets/images/Rectangle183.svg')]
-                      bg-center bg-no-repeat bg-contain
                       rotate-90 invert opacity-80
                     "
+                    style={{
+                      backgroundImage: `url(${Rectangle183})`,
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                      backgroundSize: "contain",
+                      rotate: "90deg",
+                      filter: "invert(1)",
+                      opacity: "0.8",
+                    }}
                   />
                 </div>
               </motion.div>
@@ -611,8 +621,11 @@ export default function Home() {
       </AnimatedSection>
 
       {/* SECTION 5 - Experience The City */}
-      <AnimatedSection className="relative w-full md:h-[420px] py-16 sm:py-20 overflow-hidden">
-        <motion.div
+      <AnimatedSection
+        data-nav="light"
+        className="relative w-full md:h-[420px] py-16 sm:py-20 overflow-hidden"
+      >
+        <div
           className="
             pointer-events-none absolute
             w-[25.7vw] h-[28.6vw]
@@ -626,10 +639,6 @@ export default function Home() {
             md:top-4/9 -translate-y-1/2
             z-10 opacity-18
           "
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 0.18, x: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 1, ease: easeOut }}
         />
 
         <div className="pointer-events-none absolute left-0 top-[25%] w-full z-0">
@@ -738,8 +747,7 @@ export default function Home() {
             className="md:absolute md:-bottom-125 md:left-1 flex justify-start"
           >
             <motion.div
-              whileHover={{ y: -4 }}
-              transition={{ duration: 0.2 }}
+              variants={itemUp}
               className="
                 bg-zinc-800/80 backdrop-blur-md
                 text-white shadow-lg

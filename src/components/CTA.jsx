@@ -62,11 +62,9 @@ export default function CTA() {
             -top-[12vh] -right-[18vw]
             md:-top-[19vh] md:-right-[45vw]
             z-0
-            opacity-20
+            opacity-100
           "
           variants={itemFade}
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
 
         {/* Light overlay */}
@@ -74,38 +72,16 @@ export default function CTA() {
           className="pointer-events-none absolute inset-y-0 left-0 w-[46vw] bg-gray-200/10 z-0"
           variants={itemFade}
         />
-
         {/* Decorative lines (draw-in feel) */}
-        <motion.div
-          className="pointer-events-none absolute top-[15%] w-full z-0"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.8, ease: easeOut }}
-        >
-          <motion.div
-            className="ml-auto w-[49vw] border-t-[3px] border-gray-200/10 mr-6 md:mr-15"
-            initial={{ scaleX: 0, transformOrigin: "right" }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.8, ease: easeOut }}
-          />
+        <motion.div className="pointer-events-none absolute top-[15%] w-full z-0">
+          <motion.div className="ml-auto w-[49vw] border-t-[3px] border-gray-200/10 mr-6 md:mr-15" />
         </motion.div>
 
         <motion.div
           className="pointer-events-none absolute right-6 md:right-15 top-[15%] z-0"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.8, ease: easeOut }}
+          variants={itemFade}
         >
-          <motion.div
-            className="h-[18vh] md:h-[47vh] border-r-[3px] border-gray-200/10"
-            initial={{ scaleY: 0, transformOrigin: "top" }}
-            whileInView={{ scaleY: 1 }}
-            viewport={{ once: true, amount: 0.25 }}
-            transition={{ duration: 0.8, ease: easeOut }}
-          />
+          <motion.div className="h-[18vh] md:h-[47vh] border-r-[3px] border-gray-200/10" />
         </motion.div>
 
         {/* CONTENT */}
@@ -199,10 +175,7 @@ export default function CTA() {
         {/* Bottom graphic */}
         <motion.div
           className="absolute -bottom-5 md:-bottom-8 left-0 right-0 z-10 flex justify-center bg-gray-500/5 overflow-visible"
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.7, ease: easeOut }}
+          variants={itemUp}
         >
           <motion.div
             className="
@@ -212,8 +185,6 @@ export default function CTA() {
               bg-[url('/src/assets/images/SECTION-5.svg')]
               bg-no-repeat bg-center bg-contain
             "
-            animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
           />
         </motion.div>
       </div>
