@@ -53,7 +53,6 @@ export default function Home() {
 
         {/* content */}
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 text-center">
-
           {/* main heading — EXACT FIGMA */}
           <p
             className="
@@ -81,7 +80,6 @@ export default function Home() {
           >
             with Ridee Boutique Hotel
           </p>
-
         </div>
       </section>
 
@@ -95,11 +93,11 @@ export default function Home() {
         <div className=" md:absolute md:-left-1 md: bg-black/3 md:w-[600px] md:h-[782px]" />
 
         <div className="absolute  md:right-10 md:bottom-7 ">
-
           <div className="p-5">
             <div className="relative ">
               {/* TOP */}
-              <div className="absolute
+              <div
+                className="absolute
                w-[158px] h-[187px]
                bg-[url('/src/assets/images/Rectangle183.svg')]
                bg-cover bg-center bg-no-repeat
@@ -115,11 +113,12 @@ export default function Home() {
               bg-[url('/src/assets/images/Rectangle183.svg')]
               bg-cover bg-center
               rotate-[-90deg]
-              top-1 left-1">
-              </div>
+              top-1 left-1"
+              ></div>
 
               {/* BOTTOM - match TOP */}
-              <div className="absolute
+              <div
+                className="absolute
                w-[158px] h-[187px]
                bg-[url('/src/assets/images/Rectangle183.svg')]
                bg-cover bg-center bg-no-repeat
@@ -135,9 +134,7 @@ export default function Home() {
                 bg-cover bg-center
                 rotate-[-270deg]
                 -bottom-80 right-1"
-              >
-              </div>
-
+              ></div>
             </div>
             <div className=" md:h-140 md:w-165 bg-white/80 border-2 h-80 w-full p-5">
               <div className="flex flex-col gap-2 text-center">
@@ -162,9 +159,6 @@ export default function Home() {
         </div>
       </section>
 
-
-
-
       {/* NEXT SECTION-3 - Experience the best we provide */}
       <section className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden">
         {/* Background shape - responsive to 972x542 & angle 119deg */}
@@ -183,7 +177,6 @@ export default function Home() {
 
     "
         />
-
 
         {/* Dark overlay (make it vw/vh instead of px) */}
         <div
@@ -263,14 +256,12 @@ export default function Home() {
       text-black/90
     "
             >
-              Experience the perfect blend of elegance, comfort, and authentic Sri
-              Lankan charm at Ridee Boutique Hotel. Here’s why we are the ideal choice
-              for your stay in Kandy
+              Experience the perfect blend of elegance, comfort, and authentic
+              Sri Lankan charm at Ridee Boutique Hotel. Here’s why we are the
+              ideal choice for your stay in Kandy
             </p>
           </div>
-
         </div>
-
 
         {/* Cards */}
         <div
@@ -294,7 +285,6 @@ export default function Home() {
                     className="w-[46px] h-[46px] object-contain"
                   />
                 }
-
                 title="DINING & BEVERAGES"
                 desc="Savor delightful meals and beverages with our on-site restaurant and café."
               />
@@ -307,7 +297,6 @@ export default function Home() {
                     className="w-[46px] h-[46px] object-contain"
                   />
                 }
-
                 title="HOUSE KEEPING & MAINTENANCE"
                 desc="Daily housekeeping ensures your room remains pristine"
               />
@@ -323,7 +312,6 @@ export default function Home() {
                     className="w-[46px] h-[46px] object-contain"
                   />
                 }
-
                 title="GUEST SERVICES"
                 desc="Our team is here to make every moment seamless — from 24-hour reception"
               />
@@ -339,7 +327,6 @@ export default function Home() {
                     className="w-[46px] h-[46px] object-contain"
                   />
                 }
-
                 title="BUSINESS & CONNECTIVITY"
                 desc="Stay connected with high-speed Wi-Fi and business-ready rooms"
               />
@@ -352,7 +339,6 @@ export default function Home() {
                     className="w-[46px] h-[46px] object-contain"
                   />
                 }
-
                 title="LEISURE & RECREATION"
                 desc="Relax and unwind in our lounge areas, gardens, or outdoor seating."
               />
@@ -360,15 +346,9 @@ export default function Home() {
           </div>
         </div>
 
-
-
-
-
-
         {/* Bottom shade (fix h-1/7 not valid) */}
         <div className="absolute bottom-0 right-0 w-[77vw] h-[19vh] max-h-[190px] bg-black/1 z-0 pointer-events-none" />
       </section>
-
 
       {/* NEXT SECTION-4 - Explore Our Rooms */}
       <section
@@ -409,7 +389,6 @@ export default function Home() {
             </h2>
           </div>
 
-
           <div
             className="
     mx-auto
@@ -429,16 +408,14 @@ export default function Home() {
       text-white
     "
             >
-              Experience the perfect blend of elegance, comfort, and authentic Sri
-              Lankan charm at Ridee Boutique Hotel.
+              Experience the perfect blend of elegance, comfort, and authentic
+              Sri Lankan charm at Ridee Boutique Hotel.
             </p>
           </div>
-
 
           {/* Grid wrapper */}
           <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 px-5 sm:px-8 md:px-10 mt-6">
             {/* BIG DECOR SVGs (Figma: 985x633 angle 122.71deg) */}
-
 
             {rooms.map((room) => (
               <div
@@ -491,7 +468,6 @@ export default function Home() {
                     {room.description}
                   </p>
 
-
                   <div
                     className="
     mt-10
@@ -511,7 +487,6 @@ export default function Home() {
                     VIEW ROOM
                   </div>
 
-
                   {/* SMALL DECOR inside card (responsive + valid) */}
 
                   <div
@@ -527,7 +502,6 @@ export default function Home() {
                     opacity-80
                   "
                   />
-
                 </div>
               </div>
             ))}
@@ -552,17 +526,14 @@ export default function Home() {
     
   "
             >
-              <span className="text-center tracking-widest hover:text-gray-200 transition duration-300 ease-in-out">SEE ALL</span>
+              <span className="text-center tracking-widest hover:text-gray-200 transition duration-300 ease-in-out">
+                SEE ALL
+              </span>
               <FaArrowRight size={18} className="animate-bounce" />
             </div>
           </div>
-
-
-
         </div>
       </section>
-
-
 
       {/* NEXT SECTION-5- Experience The City */}
       <section className="relative w-full md:h-[420px] py-16 sm:py-20 overflow-hidden">
@@ -597,9 +568,6 @@ export default function Home() {
   "
         />
 
-
-
-
         {/* Decorative lines (fixed Tailwind classes) */}
         {/* Horizontal line */}
         <div className="pointer-events-none absolute left-0 top-[25%] w-full z-0">
@@ -615,7 +583,6 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-y-0 right-0 w-[78vw] md:w-[73.5vw] bg-black/5 z-0" />
         {/* Down */}
         <div className="pointer-events-none absolute md:inset-y-95 inset-y-85.5 left-0 bottom-0 w-[78vw] h[1vw] md:w-[45.5vw] md:h[12vw]  bg-black/5 z-0" />
-
 
         {/* Content */}
         <div className="relative z-20 mx-auto max-w-6xl px-5 sm:px-8 text-center">
@@ -643,10 +610,6 @@ export default function Home() {
             </h2>
           </div>
 
-
-
-
-
           <div
             className="
     mx-auto
@@ -668,19 +631,13 @@ export default function Home() {
       text-black
     "
             >
-              Discover the heart of Kandy beyond your stay. From the sacred Temple of
-              the Tooth to the peaceful Kandy Lake and colorful local markets, every
-              corner tells a story.
+              Discover the heart of Kandy beyond your stay. From the sacred
+              Temple of the Tooth to the peaceful Kandy Lake and colorful local
+              markets, every corner tells a story.
             </p>
           </div>
-
-
-
-
-
         </div>
       </section>
-
 
       {/* NEXT SECTOIN-6- THE TEMPLE OF TOOTH RELIC  */}
       <section
@@ -713,7 +670,6 @@ export default function Home() {
             THE TEMPLE OF TOOTH RELIC
           </p>
 
-
           {/* spacer */}
           <div className="h-6 sm:h-8 md:h-10" />
 
@@ -742,10 +698,11 @@ export default function Home() {
             text-white/95
           "
               >
-                Kandy is home to the iconic Temple of the Sacred Tooth Relic, one of
-                Buddhism’s most revered sites. You’ll also find other temples and
-                historic churches scattered around the city, each offering a glimpse
-                into the rich religious tapestry of the region
+                Kandy is home to the iconic Temple of the Sacred Tooth Relic,
+                one of Buddhism’s most revered sites. You’ll also find other
+                temples and historic churches scattered around the city, each
+                offering a glimpse into the rich religious tapestry of the
+                region
               </p>
             </div>
           </div>
@@ -771,11 +728,9 @@ export default function Home() {
           </button>
         </div>
       </section>
-
     </div>
   );
 }
-
 
 function FeatureCard({ icon, title, desc }) {
   return (
@@ -804,7 +759,6 @@ function FeatureCard({ icon, title, desc }) {
         {title}
       </p>
 
-
       <p
         className="
     mt-3
@@ -819,7 +773,6 @@ function FeatureCard({ icon, title, desc }) {
       >
         {desc}
       </p>
-
     </div>
   );
 }

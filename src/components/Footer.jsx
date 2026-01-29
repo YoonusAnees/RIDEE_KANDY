@@ -8,6 +8,7 @@ export default function Footer() {
         bg-black text-amber-50
         border-t border-gray-200
         overflow-hidden
+        px-4 sm:px-6 md:px-8
       "
     >
       {/* Decorative SVGs (only show on md+) */}
@@ -15,11 +16,11 @@ export default function Footer() {
         className="
           hidden md:block
           absolute
-          w-[50px] h-[100px]
+          w-[60px] h-[120px]
           bg-[url('/src/assets/images/Rectangle183.svg')]
           bg-cover bg-center bg-no-repeat
-          top-[90px] right-2
-          rotate-[270deg]
+          top-[350px] right-4
+          rotate-[90deg]
           invert
           pointer-events-none
         "
@@ -28,10 +29,10 @@ export default function Footer() {
         className="
           hidden md:block
           absolute
-          w-[50px] h-[100px]
+          w-[60px] h-[120px]
           bg-[url('/src/assets/images/Rectangle183.svg')]
           bg-cover bg-center bg-no-repeat
-          top-[90px] left-2
+          top-[340px] left-2
           rotate-180
           invert
           pointer-events-none
@@ -39,21 +40,27 @@ export default function Footer() {
       />
 
       {/* Main content */}
-      <div className="max-w-8xl mx-auto px-5 sm:px-8 md:px-10 pt-16 sm:pt-20 md:pt-24 pb-10">
+      <div className="relative max-w-8xl mx-auto px-5 sm:px-8 md:px-10 pt-16 sm:pt-20 md:pt-24 pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Col 1 */}
           <div>
-            <div className="mb-4 w-24 sm:w-28">
-              <img src="/src/assets/images/logo.svg" alt="logo" className="w-full" />
+            <div className="absolute top-13 left-1/12 mb-4 h-[94px] w-[69px]">
+              <img
+                src="/src/assets/images/logo.svg"
+                alt="logo"
+                className="w-full"
+              />
             </div>
 
-            <p className="font-source tracking-wider text-sm sm:text-base leading-relaxed mb-6 max-w-md">
-              Where timeless Sri Lankan charm meets modern comfort. Stay with us
-              and make every moment unforgettable.
-            </p>
+            <div className="mt-20">
+              <p className="font-source-pro tracking-widest text-[18px] leading-relaxed  max-w-md">
+                Where timeless Sri Lankan charm meets modern comfort. Stay with
+                us and make every moment unforgettable.
+              </p>
+            </div>
 
-            <div className="flex gap-4 text-xl">
-              <FaFacebookF className="hover:text-gray-400 transition cursor-pointer" />
+            <div className="flex gap-4 text-[24px] font-source-pro mt-4">
+              <FaFacebookF className="hover:text-gray-400 transition cursor-pointer " />
               <FaInstagram className="hover:text-gray-400 transition cursor-pointer" />
               <FaYoutube className="hover:text-gray-400 transition cursor-pointer" />
             </div>
@@ -61,10 +68,18 @@ export default function Footer() {
 
           {/* Col 2 */}
           <div>
-            <h4 className="uppercase text-sm mb-4 font-extrabold tracking-widest">
+            <h4 className="uppercase text-[16px] mb-4 font-semibold tracking-widest font-source-pro">
               Quick Links
             </h4>
-            <ul className="space-y-2 font-Wasted text-sm sm:text-[15px]">
+            <ul
+              className="
+                font-source
+                font-light
+                text-[16px]
+                leading-[120%]
+                tracking-normal
+              "
+            >
               <li>
                 <a href="/" className="hover:text-gray-400">
                   Home
@@ -95,10 +110,10 @@ export default function Footer() {
 
           {/* Col 3 */}
           <div>
-            <h4 className="uppercase text-sm mb-4 font-extrabold tracking-widest">
+            <h4 className="uppercase text-[16px] mb-4 font-semibold tracking-widest font-source-pro">
               Contact Us
             </h4>
-            <p className="font-Wasted text-sm sm:text-[15px] leading-relaxed">
+            <p className="font-source font-light text-[16px]">
               123, Walawwa Road,
               <br />
               Kandy,
@@ -106,13 +121,13 @@ export default function Footer() {
               Sri Lanka.
             </p>
 
-            <p className="mt-4 font-Wasted text-sm sm:text-[15px]">
+            <p className="mt-4 font-source font-light text-[16px]">
               +94 XX XXX XXXX
             </p>
 
             <a
               href="mailto:rideeboutique@gmail.com"
-              className="block mt-2 hover:text-gray-400 text-sm sm:text-[15px]"
+              className="block mt-2 hover:text-gray-400 font-source font-light text-[16px]"
             >
               rideeboutique@gmail.com
             </a>
@@ -120,11 +135,14 @@ export default function Footer() {
 
           {/* Col 4 */}
           <div>
-            <h4 className="uppercase text-sm mb-4 font-extrabold tracking-widest">
-              Newsletter
+            <h4
+              className="uppercase text-[16px] mb-4 font-semibold tracking-widest font-source-pro   md:whitespace-nowrap
+ "
+            >
+              Subscribe to Our Newsletter
             </h4>
 
-            <p className="text-sm sm:text-[15px] mb-4 max-w-sm">
+            <p className="mb-4 max-w-sm font-source font-light text-[16px]">
               Stay updated with exclusive offers and the latest news.
             </p>
 
@@ -163,7 +181,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-gray-200">
+      <div className="px-2 mx-auto">
+        <div className="border-t border-gray-200 w-[94%] mx-auto"></div>
         <div
           className="
             max-w-[1600px] mx-auto
@@ -173,20 +192,20 @@ export default function Footer() {
             items-start md:items-center
             justify-between
             gap-3 md:gap-4
-            text-xs sm:text-sm
+            text-[16px]
           "
         >
-          <p>© 2025 Ridee Boutique. All rights reserved.</p>
+          <p>rideeboutique@2025. All rights reserved.</p>
 
           <div className="flex flex-wrap gap-x-4 gap-y-2">
             <a href="/privacy" className="hover:text-gray-400">
               Privacy Policy
             </a>
             <a href="/terms" className="hover:text-gray-400">
-              Terms
+              Terms & Conditions
             </a>
             <a href="/help" className="hover:text-gray-400">
-              Help
+              Help & Support
             </a>
           </div>
         </div>
