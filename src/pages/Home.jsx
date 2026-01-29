@@ -578,6 +578,7 @@ export default function Home() {
     md:top-4/9 -translate-y-1/2
 
     z-10
+    opacity-18
     
   "
         />
@@ -585,16 +586,16 @@ export default function Home() {
         {/* Decorative lines (fixed Tailwind classes) */}
         {/* Horizontal line */}
         <div className="pointer-events-none absolute left-0 top-[25%] w-full z-0">
-          <div className="w-[14vw] md:w-[22.5vw] border-t-[3px] border-gray-200/70 ml-6 md:ml-12" />
+          <div className="w-[14vw] md:w-[22.5vw] border-t-[3px] border-black/2 ml-6 md:ml-12" />
         </div>
 
         {/* Vertical line */}
         <div className="mpointer-events-none absolute left-6 md:left-12 top-[25%] z-0">
-          <div className="h-[250px] md:h-[315px] border-l-[3px] border-gray-200/70" />
+          <div className="h-[250px] md:h-[315px] border-l-[3px] border-black/2" />
         </div>
 
         {/* Right overlay */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-[78vw] md:w-[73.5vw] bg-black/5 z-0" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-[78vw] md:w-[73.5vw] bg-black/2 z-0" />
         {/* Down */}
         <div className="pointer-events-none absolute md:inset-y-95 inset-y-85.5 left-0 bottom-0 w-[78vw] h[1vw] md:w-[45.5vw] md:h[12vw]  bg-black/5 z-0" />
 
@@ -746,16 +747,31 @@ export default function Home() {
                 key={index}
                 onClick={() => setCurrent(index)}
                 className="
-          w-20 h-14 sm:w-24 sm:h-16 md:w-60 md:h-60
-          bg-cover bg-center
-          cursor-pointer
-          border-2 border-white/60
-          rounded-lg
-          hover:border-white
-          transition-all duration-300
-          shadow-lg
-          hover:scale-110
-        "
+          w-20 h-14
+    sm:w-24 sm:h-16
+    md:w-60 md:h-60
+
+    bg-cover bg-center
+    cursor-pointer
+    rounded-xl
+
+    border-2 border-white/50
+    hover:border-white
+
+    shadow-[0_15px_40px_rgba(0,0,0,0.45)]
+    hover:shadow-[0_30px_70px_rgba(0,0,0,0.65)]
+
+    transition-all duration-500 ease-out
+
+    transform-gpu
+    [perspective:1200px]
+    rotate-y-[10deg]
+    skew-y-[-3deg]
+
+    hover:rotate-y-[-22deg]
+    hover:skew-y-[-5deg]
+    hover:scale-110
+  "
                 style={{
                   backgroundImage: `url(${slides[index].image})`,
                 }}

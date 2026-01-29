@@ -182,7 +182,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="px-2 mx-auto">
-        <div className="border-t border-gray-200 w-[94%] mx-auto"></div>
+        <div className="border-t border-black/2  w-[94%] mx-auto"></div>
         <div
           className="
             max-w-[1600px] mx-auto
