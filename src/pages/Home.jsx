@@ -671,7 +671,9 @@ export default function Home() {
                 text-[30px] sm:text-[40px] md:text-[48px]
                 md:leading-[52px] md:tracking-normal
                 text-justify text-black mt-20
+                
               "
+              data-nav="light"
             >
               Experience The City
             </h2>

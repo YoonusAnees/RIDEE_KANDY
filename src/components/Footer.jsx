@@ -20,7 +20,7 @@ export default function Footer() {
         px-4 sm:px-6 md:px-8
       "
     >
-      {/* Decorative SVGs (only show on md+) */}
+     
       <motion.div
         className="
           hidden md:block
