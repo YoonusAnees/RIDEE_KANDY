@@ -428,7 +428,8 @@ export default function Home() {
     "
             >
               Experience the perfect blend of elegance, comfort, and authentic
-              Sri Lankan charm at Ridee Boutique Hotel.
+              Sri Lankan charm at Ridee Boutique Hotel. Here’s why we are the
+              ideal choice for your stay in Kandy.
             </p>
           </div>
 
@@ -547,8 +548,8 @@ export default function Home() {
     
   "
             >
-              <span className="text-center tracking-widest hover:text-gray-200 transition duration-300 ease-in-out">
-                SEE ALL
+              <span className="tracking-widest hover:text-gray-200 transition">
+                SEE MORE
               </span>
               <FaArrowRight size={18} className="animate-bounce" />
             </div>

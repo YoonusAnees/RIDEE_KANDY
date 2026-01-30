@@ -18,7 +18,7 @@ export default function CTA() {
             -top-[12vh] -right-[18vw]
             md:-top-[19vh] md:-right-[45vw]
             z-0
-            opacity-20
+            opacity-18
           "
         />
 
@@ -73,7 +73,7 @@ export default function CTA() {
               flex items-center justify-center
             "
           >
-            <p className="font-jacques font-normal text-[18px] leading-[24px] text-gray-800 text-center mt-2 md:mt-0">
+            <p className="font-jacques font-normal text-[14px] md:text-[18px] leading-[24px] text-gray-800 text-center mt-24 md:mt-3">
               Step into Ridee Boutique Hotel, where modern comfort embraces the
               soul of old Sri Lankan charm. Set in the heart of Kandy, our
               serene retreat invites you to discover authentic hospitality, rich
@@ -88,21 +88,22 @@ export default function CTA() {
           <button
             className="
               font-wasted font-normal
-              text-[16px] sm:text-[18px] md:text-[20px]
+              text-[10px] sm:text-[10px] md:text-[20px]
               leading-[24px]
               tracking-[0.2em]
               text-white
 
               bg-[#1e1e1f] border-2 border-black
-              px-8 sm:px-10 md:px-[30px]
-              py-4 sm:py-[18px] md:py-[20px]
+              px-3 sm:px-10 md:px-[30px]
+              py-3 sm:py-[18px] md:py-[20px]
 
               min-w-[180px] md:w-[222px]
-              h-[56px] md:h-[65px]
+              h-[26px] md:h-[65px]
 
               flex items-center justify-center
               transition
               hover:bg-white hover:text-black
+              mt-12 md:mb-0
             "
           >
             <a href="/contact">Call to Book</a>
