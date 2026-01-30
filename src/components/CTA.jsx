@@ -1,10 +1,54 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+/**
+ * ✅ Add animations:
+ * - Section reveal on scroll (fade + slide)
+ * - Stagger heading, paragraph, button
+ * - Subtle float on background rectangle
+ * - Button hover/tap micro-interaction
+ *
+ */
+
+const easeOut = [0.22, 1, 0.36, 1];
+
+const sectionReveal = {
+  hidden: { opacity: 0, y: 26 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.85, ease: easeOut },
+  },
+};
+
+const staggerWrap = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.12, delayChildren: 0.08 },
+  },
+};
+
+const itemUp = {
+  hidden: { opacity: 0, y: 14 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: easeOut } },
+};
+
+const itemFade = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.8, ease: easeOut } },
+};
 
 export default function CTA() {
   return (
-    <section className="relative w-full overflow-hidden">
+    <motion.section
+      className="relative w-full overflow-hidden"
+      variants={sectionReveal}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
       <div className="relative h-[63vh] flex flex-col justify-center items-center px-4 sm:px-6 md:px-12">
-        {/* Rotated Figma Rectangle (1804x633, 109.316936deg) */}
+        {/* Rotated Figma Rectangle (animated float) */}
         <div
           className="
             pointer-events-none
@@ -20,22 +64,28 @@ export default function CTA() {
             z-0
             opacity-18
           "
+          // variants={itemUp}
         />
 
         {/* Light overlay */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-[46vw] bg-gray-200/10 z-0" />
+        <motion.div
+          className="pointer-events-none absolute inset-y-0 left-0 w-[46vw] bg-gray-200/10 z-0"
+          variants={itemFade}
+        />
+        {/* Decorative lines (draw-in feel) */}
+        <motion.div className="pointer-events-none absolute top-[15%] w-full z-0">
+          <motion.div className="ml-auto w-[49vw] border-t-[3px] border-gray-200/10 mr-6 md:mr-15" />
+        </motion.div>
 
-        {/* Decorative lines */}
-        <div className="pointer-events-none absolute top-[15%] w-full z-0">
-          <div className="ml-auto w-[49vw] border-t-[3px] border-gray-200/10 mr-6 md:mr-15" />
-        </div>
-
-        <div className="pointer-events-none absolute right-6 md:right-15 top-[15%] z-0">
-          <div className="h-[18vh] md:h-[47vh] border-r-[3px] border-gray-200/10" />
-        </div>
+        <motion.div
+          className="pointer-events-none absolute right-6 md:right-15 top-[15%] z-0"
+          variants={itemFade}
+        >
+          <motion.div className="h-[18vh] md:h-[47vh] border-r-[3px] border-gray-200/10" />
+        </motion.div>
 
         {/* CONTENT */}
-        <div
+        <motion.div
           className="
             relative z-10
             w-[74.2vw] h-[16.9vh]
@@ -44,11 +94,14 @@ export default function CTA() {
             mx-auto
             text-center
             flex flex-col justify-center
-            
-            
           "
+          variants={staggerWrap}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
         >
-          <h1
+          <motion.h1
+            variants={itemUp}
             className="
               font-wasted
               font-normal
@@ -56,14 +109,14 @@ export default function CTA() {
               leading-[38px]
               tracking-normal
               text-black
-              mb-10 md:mb-0
-              
+              mt-8 md:mb-0
             "
           >
             Discover the Soul of Sri Lankan Serenity
-          </h1>
+          </motion.h1>
 
-          <div
+          <motion.div
+            variants={itemUp}
             className="
               mx-auto
               w-[74.2vw] h-[5vw]
@@ -80,12 +133,19 @@ export default function CTA() {
               traditions, and the gentle beauty of a place that feels like home,
               yet unlike anywhere else.
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* CTA BUTTON */}
-        <div className="relative z-10 flex mb-10 mt-20 md:mt-0 md:mb-35 justify-center">
-          <button
+        <motion.div
+          className="relative z-10 flex mb-10 mt-20 md:mt-0 md:mb-35 justify-center"
+          variants={itemUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.25 }}
+        >
+          <motion.a
+            href="/contact"
             className="
               font-wasted font-normal
               text-[10px] sm:text-[10px] md:text-[20px]
@@ -105,14 +165,20 @@ export default function CTA() {
               hover:bg-white hover:text-black
               mt-12 md:mb-0
             "
+            whileHover={{ scale: 1.03, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.18 }}
           >
-            <a href="/contact">Call to Book</a>
-          </button>
-        </div>
+            Call to Book
+          </motion.a>
+        </motion.div>
 
         {/* Bottom graphic */}
-        <div className="absolute -bottom-5 md:-bottom-8 left-0 right-0 z-10  flex justify-center bg-gray-500/5  overflow-visible">
-          <div
+        <motion.div
+          className="absolute -bottom-5 md:-bottom-8 left-0 right-0 z-10 flex justify-center bg-gray-500/5 overflow-visible"
+          variants={itemUp}
+        >
+          <motion.div
             className="
               w-[31.7vw] h-[6.8vw]
               max-w-[456px] max-h-[98px]
@@ -121,8 +187,8 @@ export default function CTA() {
               bg-no-repeat bg-center bg-contain
             "
           />
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
