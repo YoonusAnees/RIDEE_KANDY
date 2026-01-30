@@ -434,7 +434,7 @@ export default function Home() {
                     />
                   }
                   title="BUSINESS & CONNECTIVITY"
-                  desc="Stay connected with high-speed Wi-Fi and business-ready rooms"
+                  desc="Stay connected with high-speed Wi-Fi and business-ready rooms "
                 />
               </motion.div>
 
