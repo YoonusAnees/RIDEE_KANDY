@@ -1,8 +1,15 @@
 import { FaInstagram, FaYoutube, FaFacebookF } from "react-icons/fa";
 import logo from "../assets/images/logo.svg";
+import { motion } from "framer-motion";
 import Rectangle183 from "../assets/images/Rectangle183.svg";
 
 export default function Footer() {
+  const easeOut = [0.22, 1, 0.36, 1];
+
+  const itemUp = {
+    hidden: { opacity: 0, y: 14 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: easeOut } },
+  };
   return (
     <footer
       className="
@@ -14,7 +21,7 @@ export default function Footer() {
       "
     >
       {/* Decorative SVGs (only show on md+) */}
-      <div
+      <motion.div
         className="
           hidden md:block
           absolute
@@ -24,10 +31,15 @@ export default function Footer() {
           rotate-[90deg]
           invert
           pointer-events-none
+          
         "
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
         style={{ backgroundImage: `url(${Rectangle183})` }}
+        variants={itemUp}
       />
-      <div
+      <motion.div
         className="
           hidden md:block
           absolute
@@ -38,7 +50,11 @@ export default function Footer() {
           invert
           pointer-events-none
         "
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
         style={{ backgroundImage: `url(${Rectangle183})` }}
+        variants={itemUp}
       />
 
       {/* Main content */}
