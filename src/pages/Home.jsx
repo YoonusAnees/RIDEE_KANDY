@@ -256,16 +256,16 @@ export default function Home() {
               transition={{ duration: 0.25, ease: easeOut }}
             >
               <div className="flex flex-col gap-2 text-center">
-                <div className="flex flex-col -gap-10 md:mt-20 text-black">
+                <div className="flex flex-col md:gap-2  md:mt-20 text-black">
                   <motion.p
                     variants={itemUp}
-                    className="md:text-5xl font-Wasted my-5 font-extralight font-wasted md:-mb-1"
+                    className="md:text-5xl text-lg font-Wasted md:my-5 my-0 font-extralight font-wasted md:-mb-1"
                   >
                     Welcome to
                   </motion.p>
                   <motion.p
                     variants={itemUp}
-                    className="md:text-6xl font-wasted"
+                    className="md:text-6xl text-xl font-wasted"
                   >
                     Ridee Boutique
                   </motion.p>
@@ -358,7 +358,7 @@ export default function Home() {
               className="
                 font-source-pro font-normal
                 text-[16px] sm:text-[17px] md:text-[18px]
-                leading-[26px] tracking-normal px-16 text-black/90
+                leading-[26px] tracking-normal md:px-16 px-4  text-black/90
               "
             >
               Experience the perfect blend of elegance, comfort, and authentic
@@ -459,14 +459,16 @@ export default function Home() {
       </AnimatedSection>
 
       {/* SECTION 4 - Explore Rooms */}
+
       <AnimatedSection
         className="
-          relative w-full min-h-screen
-          bg-[url('/src/assets/images/SECTION-4.jpg')]
-          bg-center bg-cover overflow-hidden
-          py-16 sm:py-20 md:py-24
-        "
+        relative w-full min-h-screen
+        bg-[url('/src/assets/images/SECTION-4.jpg')]
+        bg-center bg-cover
+        py-16 sm:py-20 md:py-24
+      "
       >
+        {/* dark overlay */}
         <div className="absolute inset-0 bg-black/50 z-0" />
 
         <motion.div
@@ -476,31 +478,33 @@ export default function Home() {
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
         >
+          {/* TITLE */}
           <motion.div
             variants={itemUp}
             className="mx-auto w-[28.2vw] max-w-[406px] min-w-[260px] text-center"
           >
             <h2
               className="
-                font-wasted font-normal
-                text-[32px] sm:text-[40px] md:text-[48px]
-                leading-[56px] tracking-normal text-white
-              "
+              font-wasted font-normal
+              text-[32px] sm:text-[40px] md:text-[48px]
+              leading-[56px] text-white
+            "
             >
               Explore Our Rooms
             </h2>
           </motion.div>
 
+          {/* SUBTEXT */}
           <motion.div
             variants={itemUp}
             className="mx-auto w-full md:w-[60.2vw] max-w-[867px] px-5 sm:px-8 text-center"
           >
             <p
               className="
-                font-source-serif font-light
-                text-[16px] sm:text-[17px] md:text-[18px]
-                leading-[26px] tracking-normal text-white
-              "
+              font-source-serif font-light
+              text-[16px] sm:text-[17px] md:text-[18px]
+              leading-[26px] text-white
+            "
             >
               Experience the perfect blend of elegance, comfort, and authentic
               Sri Lankan charm at Ridee Boutique Hotel. Here’s why we are the
@@ -508,9 +512,17 @@ export default function Home() {
             </p>
           </motion.div>
 
+          {/* ROOM GRID */}
           <motion.div
-            className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 px-5 sm:px-8 md:px-10 mt-6 overflow-hidden"
             variants={staggerWrap}
+            className="
+            relative max-w-7xl mx-auto
+            grid grid-cols-1 md:grid-cols-3
+            gap-8 md:gap-10
+            px-5 sm:px-8 md:px-10
+            mt-6
+            overflow-visible
+          "
           >
             {rooms.map((room) => (
               <motion.div
@@ -519,35 +531,38 @@ export default function Home() {
                 whileHover={{ y: -8 }}
                 transition={{ duration: 0.2 }}
                 className="
-                  relative flex flex-col
-                  border border-black/40 bg-black/30
-                  overflow-hidden
-                "
+                relative flex flex-col
+                border border-black/40
+                bg-black/30
+                overflow-hidden
+              "
               >
+                {/* IMAGE */}
                 <div
                   className="w-full h-[240px] sm:h-[280px] md:h-[320px] bg-center bg-cover"
                   style={{ backgroundImage: `url(${room.image})` }}
                 />
 
-                <div className="relative p-6 text-white w-full">
+                {/* CONTENT */}
+                <div className="relative p-6 text-white">
                   <p
                     className="
-                      font-source-serif font-normal
-                      text-[18px] leading-[20px]
-                      tracking-normal text-center text-white
-                      mx-auto max-w-[275.615px]
-                    "
+                    font-source-serif font-normal
+                    text-[18px] leading-[20px]
+                    text-center
+                    mx-auto max-w-[275px]
+                  "
                   >
                     {room.title}
                   </p>
 
                   <p
                     className="
-                      mt-6 font-source-serif font-light
-                      text-[16px] leading-[26px]
-                      tracking-normal text-center text-white
-                      mx-auto max-w-[358.762px]
-                    "
+                    mt-6 font-source-serif font-light
+                    text-[16px] leading-[26px]
+                    text-center
+                    mx-auto max-w-[360px]
+                  "
                   >
                     {room.description}
                   </p>
@@ -556,43 +571,29 @@ export default function Home() {
                     whileHover={{ letterSpacing: "0.18em" }}
                     transition={{ duration: 0.2 }}
                     className="
-                      mt-10 font-source-serif font-normal
-                      text-[18px] leading-[20px]
-                      tracking-normal text-center underline cursor-pointer
-                      mx-auto max-w-[275.615px] text-white
-                    "
+                    mt-10 font-source-serif font-normal
+                    text-[18px] leading-[20px]
+                    text-center underline cursor-pointer
+                  "
                   >
                     VIEW ROOM
                   </motion.div>
 
-                  {/* <div
-                    className="
-                      pointer-events-none absolute
-                      md:-bottom-3 md:left-70
-                      -bottom-3 left-78 sm:left-70
-                      w-24 h-28
-                      bg-[url('/src/assets/images/Rectangle183.svg')]
-                      bg-center bg-no-repeat bg-contain
-                      rotate-90 invert opacity-80
-                    "
-                  /> */}
-
+                  {/* DECOR SVG */}
                   <div
                     className="
-                      pointer-events-none absolute
-                      md:-bottom-3 md:left-70
-                      -bottom-3 left-78 sm:left-70
-                      w-24 h-28
-                      rotate-90 invert opacity-80
-                    "
+                    pointer-events-none absolute
+                    -bottom-3 md:left-[75%]
+                    left-[78%]
+                    w-24 h-28
+                    rotate-90 opacity-80
+                  "
                     style={{
                       backgroundImage: `url(${Rectangle183})`,
-                      backgroundPosition: "center",
                       backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
                       backgroundSize: "contain",
-                      rotate: "90deg",
                       filter: "invert(1)",
-                      opacity: "0.8",
                     }}
                   />
                 </div>
@@ -601,18 +602,20 @@ export default function Home() {
 
             <motion.div
               variants={itemUp}
-              className="
-                absolute flex items-center justify-center gap-2
-                font-source-serif font-normal text-[18px] leading-[24px]
-                tracking-normal text-white cursor-pointer text-center
-                mx-auto max-w-[112.66px]
-                -bottom-15 left-1/2 -translate-x-1/2 z-10
-              "
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
+              className="
+              absolute flex items-center justify-center gap-2
+              font-source-serif font-normal
+              text-[18px] leading-[24px]
+              text-white cursor-pointer
+              -bottom-[60px]
+              left-1/2 -translate-x-1/2
+              z-10
+            "
             >
-              <span className="text-center tracking-widest hover:text-gray-200 transition duration-300 ease-in-out">
-                SEE ALL
+              <span className="tracking-widest hover:text-gray-200 transition">
+                SEE MORE
               </span>
               <FaArrowRight size={18} className="animate-bounce" />
             </motion.div>
