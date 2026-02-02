@@ -468,24 +468,129 @@ function TestimonialCard({ item }) {
         bg-black/45
         backdrop-blur-xs
         overflow-hidden
+        group
+        transition-all duration-500
+        hover:scale-[1.02]
+        hover:shadow-2xl
       "
     >
+      {/* Glowing Border Lines */}
+      <div className="absolute inset-0 rounded-[8px] p-[1px]">
+        {/* Top border glow */}
+        <div
+          className="
+          absolute top-0 left-0 right-0 h-[1px]
+          bg-gradient-to-r from-transparent via-gray-300 to-transparent
+          animate-pulse
+          group-hover:animate-glow-horizontal
+          group-hover:via-gray-300
+        "
+        />
+
+        {/* Bottom border glow */}
+        <div
+          className="
+          absolute bottom-0 left-0 right-0 h-[1px]
+          bg-gradient-to-r from-transparent via-gray-300 to-transparent
+          animate-pulse
+          group-hover:animate-glow-horizontal
+          group-hover:via-gray-300
+        "
+        />
+
+        {/* Left border glow */}
+        <div
+          className="
+          absolute top-0 left-0 bottom-0 w-[1px]
+          bg-gradient-to-b from-transparent via-gray-300 to-transparent
+          animate-pulse
+          group-hover:animate-glow-vertical
+          group-hover:via-gray-300
+        "
+        />
+
+        {/* Right border glow */}
+        <div
+          className="
+          absolute top-0 right-0 bottom-0 w-[1px]
+          bg-gradient-to-b from-transparent via-gray-300 to-transparent
+          animate-pulse
+          group-hover:animate-glow-vertical
+          group-hover:via-gray-300
+        "
+        />
+      </div>
+
+      {/* Background accent - animated particles */}
+      <div
+        className="
+        absolute inset-0
+        opacity-0 group-hover:opacity-20
+        transition-opacity duration-700
+      "
+      >
+        <div
+          className="
+          absolute top-1/4 left-1/4 w-1 h-1
+          bg-gray-300 rounded-full
+          animate-float
+        "
+        />
+        <div
+          className="
+          absolute top-1/3 right-1/3 w-1 h-1
+          bg-gray-300 rounded-full
+          animate-float
+          animation-delay-200
+        "
+        />
+        <div
+          className="
+          absolute bottom-1/4 left-1/3 w-1 h-1
+          bg-gray-300 rounded-full
+          animate-float
+          animation-delay-400
+        "
+        />
+      </div>
+
       <div
         className="absolute bottom-0 right-0
         w-[56px] h-[56px]
         bg-cover bg-center bg-no-repeat
         invert
         rotate-90
+        opacity-50 group-hover:opacity-80
+        transition-all duration-500
       "
         style={{ backgroundImage: `url(${Rectangle183})` }}
       />
-      <div className="absolute top-[30px] left-[25px] w-[356px] h-[78px]">
-        <div className="absolute top-0 left-0 w-[81px] h-[78px] rounded-full overflow-hidden bg-white/10">
+
+      <div
+        className="
+        absolute top-[30px] left-[25px] w-[356px] h-[78px]
+        transition-all duration-500
+        group-hover:left-[20px]
+      "
+      >
+        <div
+          className="
+          absolute top-0 left-0 w-[81px] h-[78px]
+          rounded-full overflow-hidden bg-white/10
+          border border-white/20
+          group-hover:border-gray-300/50
+          group-hover:shadow-lg group-hover:shadow-gray-300/20
+          transition-all duration-500
+        "
+        >
           {item?.avatar ? (
             <img
               src={item.avatar}
               alt={item.name}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover
+                group-hover:scale-110
+                transition-transform duration-500
+              "
             />
           ) : null}
         </div>
@@ -500,6 +605,8 @@ function TestimonialCard({ item }) {
             text-[22px]
             leading-[24px]
             text-white
+            group-hover:text-gray-300
+            transition-colors duration-500
           "
         >
           {item?.name || "Tilany Nethminy"}
@@ -517,6 +624,9 @@ function TestimonialCard({ item }) {
           leading-[24px]
           text-white/90
           text-justify
+          group-hover:text-white
+          transition-all duration-500
+          group-hover:left-[20px]
         "
       >
         {item?.review ||
