@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+
+
+
 /* Wasted Vindey */
 @font-face {
   font-family: "Wasted Vindey";
@@ -29,7 +32,7 @@
 
 /* Tailwind v4 theme tokens */
 @theme {
-  --font-wasted: "Wasted Vindey", serif;  
+  --font-wasted: "Wasted Vindey", serif;
   --font-source: "Source Serif 4", serif;
   --font-source-pro: "Source Serif 4 Pro", serif;
   --font-jacques: "Jacques Francois", serif;

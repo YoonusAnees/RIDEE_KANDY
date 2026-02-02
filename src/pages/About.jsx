@@ -465,25 +465,17 @@ function TestimonialCard({ item }) {
         w-full md:w-[406px]
         h-[280px]
         rounded-[8px]
-        bg-white/10
+        bg-black/45
+        backdrop-blur-xs
         overflow-hidden
       "
     >
       <div
-        className="absolute top-0 right-0
+        className="absolute bottom-0 right-0
         w-[56px] h-[56px]
         bg-cover bg-center bg-no-repeat
         invert
-      "
-        style={{ backgroundImage: `url(${Rectangle183})` }}
-      />
-
-      <div
-        className="absolute bottom-0 left-0
-        w-[56px] h-[56px]
-        bg-cover bg-center bg-no-repeat
-        invert
-        rotate-180
+        rotate-90
       "
         style={{ backgroundImage: `url(${Rectangle183})` }}
       />
@@ -498,7 +490,6 @@ function TestimonialCard({ item }) {
           ) : null}
         </div>
 
-        {/* Name (253x19 at top 60 left 128) */}
         <p
           className="
             absolute
@@ -515,7 +506,6 @@ function TestimonialCard({ item }) {
         </p>
       </div>
 
-      {/* REVIEW TEXT (356x119 at top 122 left 25) */}
       <p
         className="
           absolute
