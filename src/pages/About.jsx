@@ -2,8 +2,53 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Rectangle183 from "../assets/images/Rectangle183.svg";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import vision from "../assets/images/vision.jpg";
+import mission from "../assets/images/mission.jpg";
+import reviewBg from "../assets/images/review.jpg";
 
 export default function About() {
+  const slides = [
+    {
+      name: "Tilany Nethminy",
+      avatar:
+        "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      review:
+        "Staying at Hotel Ridee felt like stepping into history with all the comforts of today. The staff were incredibly warm, and every corner of the hotel carried a sense of heritage and charm. Truly unforgettable!",
+    },
+    {
+      name: "Johny Deph",
+      review: "Beautiful design, calm atmosphere, and great breakfast.",
+    },
+    {
+      name: "Sarah",
+      review:
+        "From the moment we arrived, we were treated like family. The rooms were elegant, the food was authentic Sri Lankan, and the peaceful setting made our holiday in Kandy so special. We will definitely return!",
+    },
+    {
+      name: "Kai Cenet",
+      review:
+        "From the moment we arrived, we were treated like family. The rooms were elegant, the food was authentic Sri Lankan, and the peaceful setting made our holiday in Kandy so special. We will definitely return!",
+    },
+
+    {
+      name: "ridee",
+      review:
+        "From the moment we arrived, we were treated like family. The rooms were elegant, the food was authentic Sri Lankan, and the peaceful setting made our holiday in Kandy so special. We will definitely return!",
+    },
+  ];
+
+  const [current, setCurrent] = React.useState(0);
+
+  const nextSlide = () => {
+    if (!slides.length) return;
+    setCurrent((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    if (!slides.length) return;
+    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
   const easeOut = [0.22, 1, 0.36, 1];
 
   const sectionReveal = {
@@ -55,7 +100,7 @@ export default function About() {
       <AnimatedSection
         className="
           relative w-full min-h-screen
-          bg-[url('/src/assets/images/Home.jpg')]
+          bg-[url('/src/assets/images/AboutUs.png')]
           bg-center bg-no-repeat bg-cover
           flex items-center justify-center
           text-white
@@ -221,7 +266,33 @@ export default function About() {
           />
 
           {/* CARD base (taller) */}
-          <div className="bg-gray-200/50 p-8 shadow-md min-h-[320px] md:min-h-[380px] lg:min-h-[420px]" />
+          <div
+            className="bg-gray-200/50 p-8 shadow-md min-h-[320px] md:min-h-[380px] lg:min-h-[420px] flex items-center justify-center"
+            style={{
+              backgroundImage: `url(${vision})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <motion.h2
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="
+        text-white
+        text-center
+        font-source-pro
+        font-semibold
+        tracking-[0.08em]
+        text-[clamp(28px,4.5vw,48px)]
+        leading-[clamp(36px,5vw,56px)]
+      "
+            >
+              V I S I O N
+            </motion.h2>{" "}
+          </div>
 
           <div className="bg-gray-200/50 p-8 shadow-md min-h-[320px] md:min-h-[380px] lg:min-h-[420px] flex justify-center items-center">
             <p className="max-w-[562px] font-source-pro font-normal text-[18px] md:text-[20px] leading-[26px] md:leading-[28px] text-center text-gray-800">
@@ -242,8 +313,32 @@ export default function About() {
             </p>
           </div>
 
-          <div className="bg-gray-200/50 p-8 shadow-md min-h-[320px] md:min-h-[380px] lg:min-h-[420px]">
-            Content 4
+          <div
+            className="bg-gray-200/50 p-8 shadow-md min-h-[320px] md:min-h-[380px] lg:min-h-[420px] flex justify-center items-center"
+            style={{
+              backgroundImage: `url(${mission})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <motion.h2
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="
+        text-white
+        text-center
+        font-source-pro
+        font-semibold
+        tracking-[0.08em]
+        text-[clamp(28px,4.5vw,48px)]
+        leading-[clamp(36px,5vw,56px)]
+      "
+            >
+              M I S S I O N
+            </motion.h2>
           </div>
         </motion.div>
       </AnimatedSection>
@@ -260,7 +355,15 @@ export default function About() {
     px-4 sm:px-6
     py-12 md:py-0
   "
+        style={{
+          backgroundImage: `url(${reviewBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
       >
+        {/* dark overlay */}
+        <div className="absolute inset-0 bg-black/60" />
         {/* INNER CONTAINER */}
         <div
           className="
@@ -282,48 +385,67 @@ export default function About() {
         text-white
         text-center
         mb-10 md:mb-[58px]
+        z-10
       "
           >
             What people Say
           </h2>
 
-          {/* GRID */}
-          <div
-            className="
-        grid
-        grid-cols-1
-        md:grid-cols-3
-        gap-6 md:gap-[27px]
-        w-full
-        place-items-center
-      "
-          >
-            {/* CARD 1 */}
-            <div className="w-full md:w-[406px] h-[271px] rounded-[8px] bg-white/10" />
+          <div className="relative w-full">
+            <div className="md:hidden w-full flex justify-center">
+              <div className="w-full max-w-[406px]">
+                {slides.length ? (
+                  <TestimonialCard item={slides[current]} />
+                ) : (
+                  <div className="w-full h-[271px] rounded-[8px] bg-white/10" />
+                )}
+              </div>
+            </div>
 
-            {/* CARD 2 */}
-            <div className="w-full md:w-[406px] h-[271px] rounded-[8px] bg-white/10" />
-
-            {/* CARD 3 */}
-            <div className="w-full md:w-[406px] h-[271px] rounded-[8px] bg-white/10" />
+            <div className="hidden md:grid grid-cols-3 gap-[27px] w-full place-items-center">
+              {slides.length ? (
+                [0, 1, 2].map((offset) => {
+                  const idx = (current + offset) % slides.length;
+                  return (
+                    <div key={idx} className="w-[406px]">
+                      <TestimonialCard item={slides[idx]} />
+                    </div>
+                  );
+                })
+              ) : (
+                <>
+                  <div className="w-[406px] h-[271px] rounded-[8px] bg-white/10" />
+                  <div className="w-[406px] h-[271px] rounded-[8px] bg-white/10" />
+                  <div className="w-[406px] h-[271px] rounded-[8px] bg-white/10" />
+                </>
+              )}
+            </div>
 
             <motion.div
               className="
-                        absolute bottom-4 right-[1/2]
-                        sm:bottom-6 sm:right-6
-                        md:bottom-[20%] md:right-[48%]
-                        flex gap-3 z-20                     "
+      absolute -bottom-24  left-1/2 -translate-x-1/2
+      
+      flex gap-3 z-20
+    "
             >
               <button
-                // onClick={prevSlide}
-                className="bg-gray-400/70 hover:bg-gray-500/80 transition rounded-full p-3"
+                onClick={prevSlide}
+                disabled={!slides.length}
+                className="
+        bg-gray-400/70 hover:bg-gray-500/80 transition
+        rounded-full p-3 disabled:opacity-40 disabled:cursor-not-allowed
+      "
               >
                 <FaChevronLeft size={22} className="text-white" />
               </button>
 
               <button
-                // onClick={nextSlide}
-                className="bg-gray-400/70 hover:bg-gray-500/80 transition rounded-full p-3"
+                onClick={nextSlide}
+                disabled={!slides.length}
+                className="
+        bg-gray-400/70 hover:bg-gray-500/80 transition
+        rounded-full p-3 disabled:opacity-40 disabled:cursor-not-allowed
+      "
               >
                 <FaChevronRight size={22} className="text-white" />
               </button>
@@ -331,6 +453,85 @@ export default function About() {
           </div>
         </div>
       </AnimatedSection>
+    </div>
+  );
+}
+
+function TestimonialCard({ item }) {
+  return (
+    <div
+      className="
+        relative
+        w-full md:w-[406px]
+        h-[280px]
+        rounded-[8px]
+        bg-white/10
+        overflow-hidden
+      "
+    >
+      <div
+        className="absolute top-0 right-0
+        w-[56px] h-[56px]
+        bg-cover bg-center bg-no-repeat
+        invert
+      "
+        style={{ backgroundImage: `url(${Rectangle183})` }}
+      />
+
+      <div
+        className="absolute bottom-0 left-0
+        w-[56px] h-[56px]
+        bg-cover bg-center bg-no-repeat
+        invert
+        rotate-180
+      "
+        style={{ backgroundImage: `url(${Rectangle183})` }}
+      />
+      <div className="absolute top-[30px] left-[25px] w-[356px] h-[78px]">
+        <div className="absolute top-0 left-0 w-[81px] h-[78px] rounded-full overflow-hidden bg-white/10">
+          {item?.avatar ? (
+            <img
+              src={item.avatar}
+              alt={item.name}
+              className="w-full h-full object-cover"
+            />
+          ) : null}
+        </div>
+
+        {/* Name (253x19 at top 60 left 128) */}
+        <p
+          className="
+            absolute
+            top-[30px] left-[103px]
+            w-[253px] h-[19px]
+            font-source-serif
+            font-normal
+            text-[22px]
+            leading-[24px]
+            text-white
+          "
+        >
+          {item?.name || "Tilany Nethminy"}
+        </p>
+      </div>
+
+      {/* REVIEW TEXT (356x119 at top 122 left 25) */}
+      <p
+        className="
+          absolute
+          top-[122px] left-[25px]
+          w-[356px] h-[119px]
+          font-source-serif
+          font-light
+          text-[16px]
+          leading-[24px]
+          text-white/90
+          text-justify
+        "
+      >
+        {item?.review ||
+          `Staying at Hotel Ridee felt like stepping into history with all the comforts of today. The staff were incredibly warm, and every corner of the hotel carried a sense of heritage and charm. Truly unforgettable!`}
+      </p>
     </div>
   );
 }
