@@ -156,7 +156,7 @@ export default function CTA() {
               text-white
 
               bg-[#1e1e1f] border-2 border-black
-              px-20 sm:px-10 md:px-[30px]
+              px-12 sm:px-10 md:px-[30px]
               py-8 sm:py-[18px] md:py-[20px]
 
               min-w-[180px] md:w-[222px]
