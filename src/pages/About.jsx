@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import Rectangle183 from "../assets/images/Rectangle183.svg";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
@@ -43,7 +43,6 @@ function AnimatedSection({ children, className, ...props }) {
   );
 }
 
-/* ✅ CARD */
 const TestimonialCard = React.memo(function TestimonialCard({ item }) {
   return (
     <div
@@ -116,21 +115,20 @@ const TestimonialCard = React.memo(function TestimonialCard({ item }) {
   );
 });
 
-/* ✅ ISOLATE SLIDER (only this part re-renders on setCurrent) */
 function TestimonialsSlider({ slides }) {
-  const [current, setCurrent] = React.useState(0);
+  const [current, setCurrent] = useState(0);
 
-  const nextSlide = React.useCallback(() => {
+  const nextSlide = useCallback(() => {
     if (!slides.length) return;
     setCurrent((p) => (p + 1) % slides.length);
   }, [slides.length]);
 
-  const prevSlide = React.useCallback(() => {
+  const prevSlide = useCallback(() => {
     if (!slides.length) return;
     setCurrent((p) => (p - 1 + slides.length) % slides.length);
   }, [slides.length]);
 
-  // Desktop slider measurements (your design)
+  // Desktop slider measurements
   const CARD_W = 406;
   const GAP = 27;
   const STEP = CARD_W + GAP;
@@ -138,7 +136,7 @@ function TestimonialsSlider({ slides }) {
 
   const L = slides.length;
 
-  const loopSlides = React.useMemo(() => {
+  const loopSlides = useMemo(() => {
     if (!L) return [];
     return [...slides, ...slides, ...slides];
   }, [slides, L]);
@@ -428,7 +426,7 @@ export default function About() {
           />
 
           <div
-            className="bg-gray-200/50 p-8 shadow-md min-h-[320px] md:min-h-[380px] lg:min-h-[420px] flex items-center justify-center"
+            className="bg-gray-200/50 p-8 shadow-md min-h-[320px] md:min-h-[380px] lg:min-h-[420px] flex items-center justify-center max-sm:order-1"
             style={{
               backgroundImage: `url(${vision})`,
               backgroundSize: "cover",
@@ -452,7 +450,7 @@ export default function About() {
             </motion.h2>
           </div>
 
-          <div className="bg-gray-200/50 p-8 shadow-md min-h-[320px] md:min-h-[380px] lg:min-h-[420px] flex justify-center items-center">
+          <div className="bg-gray-200/50 p-8 shadow-md min-h-[320px] md:min-h-[380px] lg:min-h-[420px] flex justify-center items-center max-sm:order-2">
             <p className="max-w-[562px] font-source-pro font-normal text-[18px] md:text-[20px] leading-[26px] md:leading-[28px] text-center text-gray-800">
               To be recognized as Sri Lanka’s leading heritage-inspired hotel,
               offering guests an authentic experience that blends timeless
@@ -461,7 +459,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="bg-gray-200/50 p-8 shadow-md min-h-[320px] md:min-h-[380px] lg:min-h-[420px] flex justify-center items-center">
+          <div className="bg-gray-200/50 p-8 shadow-md min-h-[320px] md:min-h-[380px] lg:min-h-[420px] flex justify-center items-center max-sm:order-4">
             <p className="max-w-[562px] font-source-pro font-normal text-[18px] md:text-[20px] leading-[26px] md:leading-[28px] text-center text-gray-800">
               "At Hotel Ridee, our mission is to preserve and celebrate the
               heritage of Sri Lanka while providing exceptional service that
@@ -472,7 +470,7 @@ export default function About() {
           </div>
 
           <div
-            className="bg-gray-200/50 p-8 shadow-md min-h-[320px] md:min-h-[380px] lg:min-h-[420px] flex justify-center items-center"
+            className="bg-gray-200/50 p-8 shadow-md min-h-[320px] md:min-h-[380px] lg:min-h-[420px] flex justify-center items-center max-sm:order-3"
             style={{
               backgroundImage: `url(${mission})`,
               backgroundSize: "cover",
@@ -502,11 +500,14 @@ export default function About() {
         className="
           relative
           w-full
-          min-h-[764px] md:h-[764px]
+          h-[750px]
           overflow-hidden
           flex justify-center items-start
           px-4 sm:px-6
           py-12 md:py-0
+          max-sm:h-[600px]
+          mx-auto
+          px-auto
         "
         style={{
           backgroundImage: `url(${reviewBg})`,

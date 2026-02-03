@@ -17,16 +17,6 @@ import room1 from "../assets/images/Room1.jpg";
 import room2 from "../assets/images/Room2.jpg";
 import room3 from "../assets/images/Room3.jpg";
 
-/**
- * ✅ Animations added:
- * - Each section: smooth reveal on scroll (fade + slide)
- * - Headings + texts: stagger
- * - Cards: stagger + hover lift
- * - Rooms cards: reveal + hover
- * - Section 6: background crossfade + subtle zoom (Ken Burns feel)
- *
- */
-
 const easeOut = [0.22, 1, 0.36, 1];
 
 const sectionReveal = {
@@ -614,7 +604,7 @@ export default function Home() {
               z-10
             "
             >
-              <span className="tracking-widest hover:text-gray-200 transition">
+              <span className="tracking-widest hover:text-gray-200 transition max-sm:mb-5">
                 SEE MORE
               </span>
               <FaArrowRight size={18} className="animate-bounce" />
@@ -670,7 +660,7 @@ export default function Home() {
                 font-wasted font-normal
                 text-[30px] sm:text-[40px] md:text-[48px]
                 md:leading-[52px] md:tracking-normal
-                text-justify text-black mt-20
+                text-justify text-black mt-2 md:mt-20
                 
               "
               data-nav="light"
@@ -737,9 +727,11 @@ export default function Home() {
           <motion.p
             variants={itemUp}
             className="
-              font-source-serif font-bold
-              text-[32px] sm:text-[40px] md:text-[48px]
-              leading-[1] tracking-normal text-white
+    max-sm:text-center
+    font-source-serif font-bold
+    text-[32px] sm:text-[40px] md:text-[48px]
+    leading-[1] tracking-normal text-white
+
             "
           >
             THE TEMPLE OF TOOTH RELIC

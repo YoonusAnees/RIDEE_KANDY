@@ -172,52 +172,59 @@ export default function Navbar() {
       </nav>
 
       {/* MOBILE MENU – also with glass effect */}
-      <div
-        className={`
-          fixed inset-0 z-40 md:hidden
-          transition-opacity duration-500
-          ${open ? "opacity-100" : "opacity-0 pointer-events-none"}
-        `}
+     <div
+  className={`
+    fixed inset-0 z-40 md:hidden
+    transition-opacity duration-500
+    ${open ? "opacity-100" : "opacity-0 pointer-events-none"}
+  `}
+>
+  <div
+    className="
+      absolute inset-0
+      bg-black/60 backdrop-blur-2xl
+      flex flex-col items-center justify-center gap-10
+      text-white font-Wasted text-2xl
+      overflow-y-auto
+      overscroll-contain
+    "
+  >
+    {navLinks.map((link) => (
+      <NavLink
+        key={link.to}
+        to={link.to}
+        end={link.to === "/"}
+        onClick={() => setOpen(false)}
+        className={({ isActive }) =>
+          `relative transition-all duration-300
+           ${
+             isActive
+               ? "opacity-100 scale-110"
+               : "opacity-80 hover:opacity-100 hover:scale-105"
+           }`
+        }
       >
-        <div
-          className={`
-            absolute inset-0
-            bg-black/60 backdrop-blur-2xl
-            flex flex-col items-center justify-center gap-10
-            text-white font-Wasted text-2xl
-          `}
-        >
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              end={link.to === "/"}
-              onClick={() => setOpen(false)}
-              className={({ isActive }) =>
-                `relative transition-all duration-300
-                 ${isActive ? "opacity-100 scale-110" : "opacity-80 hover:opacity-100 hover:scale-105"}`
-              }
-            >
-              {({ isActive }) => (
-                <>
-                  {link.label}
-                  <span
-                    className={`
-                      block mx-auto mt-3 h-[3px] rounded-full bg-white/70
-                      transition-all duration-400
-                      ${isActive ? "w-16 opacity-100" : "w-0 opacity-0"}
-                    `}
-                  />
-                </>
-              )}
-            </NavLink>
-          ))}
+        {({ isActive }) => (
+          <>
+            {link.label}
+            <span
+              className={`
+                block mx-auto mt-3 h-[3px] rounded-full bg-white/70
+                transition-all duration-400
+                ${isActive ? "w-16 opacity-100" : "w-0 opacity-0"}
+              `}
+            />
+          </>
+        )}
+      </NavLink>
+    ))}
 
-          <div className="mt-10 px-10 py-5 border border-white/30 text-xl tracking-wider hover:bg-white/10 transition">
-            Call Now
-          </div>
-        </div>
-      </div>
+    <div className="mt-10 px-10 py-5 border border-white/30 text-xl tracking-wider hover:bg-white/10 transition">
+      Call Now
+    </div>
+  </div>
+</div>
+
     </>
   );
 }
