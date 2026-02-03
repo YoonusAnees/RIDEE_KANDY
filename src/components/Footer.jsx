@@ -17,10 +17,10 @@ export default function Footer() {
         bg-black text-amber-50
         border-t border-gray-200
         overflow-hidden
-        px-4 sm:px-6 md:px-8
+        flex flex-col items-center justify-center
+      
       "
     >
-      {/* Decorative SVGs (only show on md+) */}
       <motion.div
         className="
           hidden md:block
@@ -58,11 +58,11 @@ export default function Footer() {
       />
 
       {/* Main content */}
-      <div className="relative max-w-8xl mx-auto px-5 sm:px-8 md:px-10 pt-16 sm:pt-20 md:pt-24 pb-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+      <div className="relative mx-auto px-5 sm:px-8 md:px-1  pt-16 sm:pt-20 md:pt-24 pb-10">
+        <div className="flex flex-col md:flex-row gap-16">
           {/* Col 1 */}
-          <div>
-            <div className="absolute top-13 left-1/12 mb-4 h-[94px] w-[69px]">
+          <div className="flex flex-col gap-8">
+            <div className="absolute top-13 left-1/30 md:left-1 mb-4 h-[94px] w-[69px]">
               <img src={logo} alt="logo" className="w-full" />
             </div>
 
@@ -90,7 +90,7 @@ export default function Footer() {
                 font-source
                 font-light
                 text-[16px]
-                leading-[120%]
+                leading-[180%]
                 tracking-normal
               "
             >
@@ -151,15 +151,15 @@ export default function Footer() {
           <div>
             <h4
               className="uppercase text-[16px] mb-4 font-semibold tracking-widest font-source-pro   md:whitespace-nowrap
+              leading-[80%]
  "
             >
               Subscribe to Our Newsletter
             </h4>
-
-            <p className="mb-4 max-w-sm font-source font-light text-[16px]">
-              Stay updated with exclusive offers and the latest news.
+            <p className="mb-4 max-w-sm font-source font-light text-[16px] leading-[180%]">
+              Stay updated with exclusive offers and the latest news from Ridee
+              Boutique.
             </p>
-
             <form
               className="
                 flex flex-col sm:flex-row gap-3
@@ -169,19 +169,20 @@ export default function Footer() {
             >
               <input
                 type="email"
-                placeholder="Your email"
+                placeholder="Enter Your email"
                 className="
-                  w-full flex-1
                   border border-gray-300
                   bg-white text-gray-900
                   px-3 py-3
                   focus:outline-none focus:ring-1 focus:ring-black
+                  text-center
                 "
               />
               <button
                 type="submit"
                 className="
-                  w-full sm:w-auto
+                flex-1
+                  md:w-[10%] sm:w-auto
                   bg-gray-400 text-black
                   px-6 py-3
                   cursor-pointer
@@ -195,8 +196,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="px-2 mx-auto">
-        <div className="border-t border-white  w-[94%] mx-auto"></div>
+      <div className=" px-12 w-full ">
+        <div className=" absolute border-t border-white w-[90%] mx-auto left-0 right-0"></div>
         <div
           className="
             max-w-[1600px] mx-auto
@@ -209,7 +210,9 @@ export default function Footer() {
             text-[16px]
           "
         >
-          <p>rideeboutique@2025. All rights reserved.</p>
+          <div>
+            <p>rideeboutique@2025. All rights reserved.</p>
+          </div>
 
           <div className="flex flex-wrap gap-x-4 gap-y-2">
             <a href="/privacy" className="hover:text-gray-400">

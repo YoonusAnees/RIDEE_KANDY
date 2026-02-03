@@ -1,21 +1,21 @@
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import About from "./pages/About";
 import Home from "./pages/Home";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-
-      {/* <main className="pt-[clamp(64px,8vh,90px)]"> */}
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
       <CTA />
       <Footer />
-      {/* </main> */}
-    </>
+    </BrowserRouter>
   );
 }
 
 export default App;
-

@@ -17,16 +17,6 @@ import room1 from "../assets/images/Room1.jpg";
 import room2 from "../assets/images/Room2.jpg";
 import room3 from "../assets/images/Room3.jpg";
 
-/**
- * ✅ Animations added:
- * - Each section: smooth reveal on scroll (fade + slide)
- * - Headings + texts: stagger
- * - Cards: stagger + hover lift
- * - Rooms cards: reveal + hover
- * - Section 6: background crossfade + subtle zoom (Ken Burns feel)
- *
- */
-
 const easeOut = [0.22, 1, 0.36, 1];
 
 const sectionReveal = {
@@ -614,7 +604,7 @@ export default function Home() {
               z-10
             "
             >
-              <span className="tracking-widest hover:text-gray-200 transition">
+              <span className="tracking-widest hover:text-gray-200 transition max-sm:mb-5">
                 SEE MORE
               </span>
               <FaArrowRight size={18} className="animate-bounce" />
@@ -670,8 +660,10 @@ export default function Home() {
                 font-wasted font-normal
                 text-[30px] sm:text-[40px] md:text-[48px]
                 md:leading-[52px] md:tracking-normal
-                text-justify text-black mt-20
+                text-justify text-black mt-2 md:mt-20
+                
               "
+              data-nav="light"
             >
               Experience The City
             </h2>
@@ -735,9 +727,11 @@ export default function Home() {
           <motion.p
             variants={itemUp}
             className="
-              font-source-serif font-bold
-              text-[32px] sm:text-[40px] md:text-[48px]
-              leading-[1] tracking-normal text-white
+    max-sm:text-center
+    font-source-serif font-bold
+    text-[32px] sm:text-[40px] md:text-[48px]
+    leading-[1] tracking-normal text-white
+
             "
           >
             THE TEMPLE OF TOOTH RELIC
@@ -784,10 +778,6 @@ export default function Home() {
             absolute right-4 sm:right-6 md:right-24
             bottom-[15%] flex gap-3 z-20
           "
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.7, ease: easeOut }}
         >
           {[1, 2].map((offset) => {
             const index = (current + offset) % slides.length;
@@ -803,13 +793,6 @@ export default function Home() {
                   hover:border-white
                   shadow-[0_15px_40px_rgba(0,0,0,0.45)]
                   hover:shadow-[0_30px_70px_rgba(0,0,0,0.65)]
-                  transition-all duration-500 ease-out
-                  transform-gpu
-                  [perspective:1200px]
-                  rotate-y-[10deg] skew-y-[-3deg]
-                  hover:rotate-y-[-22deg]
-                  hover:skew-y-[-5deg]
-                  hover:scale-110
                 "
                 style={{ backgroundImage: `url(${slides[index].image})` }}
                 whileTap={{ scale: 0.98 }}

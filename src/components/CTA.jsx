@@ -46,6 +46,7 @@ export default function CTA() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
+      data-nav="light"
     >
       <div className="relative h-[63vh] flex flex-col justify-center items-center px-4 sm:px-6 md:px-12">
         {/* Rotated Figma Rectangle (animated float) */}
