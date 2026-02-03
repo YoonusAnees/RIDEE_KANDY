@@ -786,10 +786,6 @@ export default function Home() {
             absolute right-4 sm:right-6 md:right-24
             bottom-[15%] flex gap-3 z-20
           "
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.7, ease: easeOut }}
         >
           {[1, 2].map((offset) => {
             const index = (current + offset) % slides.length;
@@ -805,13 +801,6 @@ export default function Home() {
                   hover:border-white
                   shadow-[0_15px_40px_rgba(0,0,0,0.45)]
                   hover:shadow-[0_30px_70px_rgba(0,0,0,0.65)]
-                  transition-all duration-500 ease-out
-                  transform-gpu
-                  [perspective:1200px]
-                  rotate-y-[10deg] skew-y-[-3deg]
-                  hover:rotate-y-[-22deg]
-                  hover:skew-y-[-5deg]
-                  hover:scale-110
                 "
                 style={{ backgroundImage: `url(${slides[index].image})` }}
                 whileTap={{ scale: 0.98 }}
