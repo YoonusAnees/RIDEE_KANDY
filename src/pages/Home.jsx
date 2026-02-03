@@ -89,7 +89,15 @@ export default function Home() {
     },
   ];
 
-  const slides = [{ image: Temple }, { image: Lake }];
+  const slides = [
+    {
+      image: Temple,
+      title: "THE TEMPLE OF TOOTH RELIC",
+      description:
+        "Kandy is home to the iconic Temple of the Sacred Tooth Relic, one of Buddhism’s most revered sites. You’ll also find other temples and historic churches scattered around the city, each offering a glimpse into the rich religious tapestry of the region",
+    },
+    { image: Lake, title: "LAKE" },
+  ];
 
   const [current, setCurrent] = React.useState(0);
 
@@ -734,7 +742,7 @@ export default function Home() {
 
             "
           >
-            THE TEMPLE OF TOOTH RELIC
+            {slides[current].title}
           </motion.p>
 
           <div className="h-6 sm:h-8 md:h-10" />
@@ -762,11 +770,7 @@ export default function Home() {
                   text-justify text-white/95
                 "
               >
-                Kandy is home to the iconic Temple of the Sacred Tooth Relic,
-                one of Buddhism’s most revered sites. You’ll also find other
-                temples and historic churches scattered around the city, each
-                offering a glimpse into the rich religious tapestry of the
-                region
+                {slides[current].description}
               </p>
             </motion.div>
           </motion.div>

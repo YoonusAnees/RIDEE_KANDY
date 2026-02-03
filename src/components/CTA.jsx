@@ -149,14 +149,15 @@ export default function CTA() {
             href="/contact"
             className="
               font-wasted font-normal
-              text-[10px] sm:text-[10px] md:text-[20px]
+              text-[16px] sm:text-[20px] md:text-[20px]
+              
               leading-[24px]
               tracking-[0.2em]
               text-white
 
               bg-[#1e1e1f] border-2 border-black
-              px-3 sm:px-10 md:px-[30px]
-              py-3 sm:py-[18px] md:py-[20px]
+              px-20 sm:px-10 md:px-[30px]
+              py-8 sm:py-[18px] md:py-[20px]
 
               min-w-[180px] md:w-[222px]
               h-[26px] md:h-[65px]
