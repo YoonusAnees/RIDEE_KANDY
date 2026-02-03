@@ -174,7 +174,7 @@ export default function Navbar() {
       {/* MOBILE MENU – also with glass effect */}
       <div
         className={`
-    fixed inset-0 z-40 md:hidden
+    fixed inset-0 z-40 md:hidden mt-18
     transition-opacity duration-500
     ${open ? "opacity-100" : "opacity-0 pointer-events-none"}
   `}
